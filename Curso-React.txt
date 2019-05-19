@@ -1,0 +1,42 @@
+
+
+Curso: Aprende React.js desde cero
+: Youtube
+Link: https://www.youtube.com/watch?v=bG53Pw17tog&list=PLeWI3XlFEVOX6jACDygzApsvigQiDrun8
+Canal: Dev Education
+
+
+===================================================================
+Video 1
+
+- Que es React?
+React.js es una librería de JavaScript desarrollada por Facebook
+para crear interfaces de usuarios.
+
+Se utiliza para crear componentes interactivos y reutilizables.
+Uno de los puntos más sobresalientes de React.js es que no solo se utiliza 
+en el lado del cliente, sino que también puede funcionar en el servidor y trabajar juntos.
+
+REACT                                       Angular 2 & 4
+
+- Es una libreria                           - Es un Framework
+- Creado por Feacebook                      - Creado por Google
+- Utiliza un Virtual DOM                    - Utiliza el DOM Regular
+- Curva de aprendizaje de 2 a 3 semanas     - Curva de aprendizaje de 4 a 8 semanas
+- V (Es solo la vista)                      - MVC (Modelo Vista Controlador) Contiene todo
+- Utiliza ES6 - EcmaScript6                 - Utiliza TypeScript
+- JSX                                       - Templates
+
+
+- Comandos para crear un proyecto en react
+
+npm install –g create-react-app         // Comando para instalar de manera global
+create-react-app hello-world            // Crear el proyecto
+cd hello-world                          // Entrar al proyecto
+npm start                               // Ejecutar el proyecto
+
+
+===================================================================
+Video 2
+
+- Todas las clases de los componentes necesitan un render
