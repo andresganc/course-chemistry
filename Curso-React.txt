@@ -40,3 +40,13 @@ npm start                               // Ejecutar el proyecto
 Video 2
 
 - Todas las clases de los componentes necesitan un render
+
+
+===================================================================
+Video 3
+
+- prop-types: Realiza validacion al pasar propiedades de un componente a otro
+- Instalamos la dependencia prop-types (Propiedades y tipos)
+$ yarn add prop-types
+
+
