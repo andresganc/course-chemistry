@@ -43,10 +43,26 @@ Video 2
 
 
 ===================================================================
-Video 3
+Video 3 - PROP-TYPES
 
+- Se usa para agregar propiedades que no suelen cambiar mucho.
 - prop-types: Realiza validacion al pasar propiedades de un componente a otro
 - Instalamos la dependencia prop-types (Propiedades y tipos)
 $ yarn add prop-types
+
+
+
+===================================================================
+Video 4 - STATE
+
+STATE
+- Se usa para datos o estados que suelen cambiar mucho.
+- Es la que maneja el comportamiento de la aplicacion.
+- Cada vez que cambia el state se renderiza el metodo render del componente.
+
+
+METODOS PARA CONTROLAR EL FLUJO DE VIDA DE UN COMPONENTE
+
+- componentDidMount: Metodo que verifica si el componente ya cargo
 
 
