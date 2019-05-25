@@ -66,3 +66,11 @@ METODOS PARA CONTROLAR EL FLUJO DE VIDA DE UN COMPONENTE
 - componentDidMount: Metodo que verifica si el componente ya cargo
 
 
+===================================================================
+Video 5 - ROUTER
+
+ROUTER: Es donde se asignan las rutas de la plataforma web.
+
+- Instalar la dependencia
+$ yarn add react-router-dom
+
