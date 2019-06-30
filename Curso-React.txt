@@ -74,3 +74,123 @@ ROUTER: Es donde se asignan las rutas de la plataforma web.
 - Instalar la dependencia
 $ yarn add react-router-dom
 
+
+===================================================================
+Video 8 - REDUX
+
+- REDUX: Es una libreria que se encarga de emitir actualizaciones de (state) en respuesta a acciones (actions). 
+En vez de modificar directamente el estado, la modificacion se maneja a traves de objetos sencillos llamados acciones. 
+Despues se escriben funciones especiales llamadas reductores (reducers) para definir como cada accion transformara el estado de la aplicacion.
+Todos los cambios de estado son manejados en un solo lugar llamado store.
+
+- Principios fundamentales.
+1. Unica fuente de verdad inmutable (store)
+2. Las acciones (actions) disparan cambios.
+3. Los reducers actualizan el state (el cual es read-only)
+
+- Que es una Accion (action)
+Las acciones son cargas utiles de informacion que envian datos desde la aplicacion a su store. Los envia al store mediante el metodo
+store.dispactch().
+Las acciones son simples objetos de JS. Las acciones deben tener una propiedad llamada type que indica el tipo de accion que se esta realizando.
+
+- Como se crea una Accion (action) - Action Creators
+
+const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
+
+// Action Creators
+incrementCounter(counter){
+    // Action
+    {
+        type: INCREMENT_COUNTER,
+        counter: counter
+    }
+}
+
+- Como crear un store
+
+let store = createStore (rootReducer, initialState, [middlewares]);
+
+// Store API
+store.dispatch(action); Despacha una accion. Esta es la unica forma de realizar un cambio de estado.
+store.subscribe(listener); El callback que sera invocado cuando la accion es despachada y el state cambia.
+store.getState(); Es igual al ultimo valor regresado por los reducers del store.
+replaceReducer(nexReducer); Reemplaza el reducer actualmente usado en el store para calcular el estado.
+
+- Que es inmutabilidad
+La inmutabilidad es un concepto fundamental en redux. Para cambiar el estado, se debe retornar un nuevo objeto.
+
+Tipos Inmutables en JS
+*Number
+*String
+*Boolean
+*Undefined
+*Null
+
+Tipos Mutables en JS
+*Objects
+*Arrays
+*Functions
+
+- Herramientas de inmutabilidad
+ES6
+*Object.assign
+*Spread Operator(...)
+
+ES5
+*Object.assign
+*lodash merge
+*lodash extend
+
+Librerias
+*Immutable.js
+
+- Que es un reducer
+El reducer se asemeja a una picadora de carne. En la picadora de carne agregamos los ingredientes en la parte
+superior (state & action) y por el otro lado obtenemos el resultado (new state).
+
+function  theReducer(state, action){
+    // Pasamos el nuevo state basado en una accion especifica.
+    switch(action.type){
+        case "INCREMENT_COUNTER":
+            return Object.assign({}, state, {counter:state.counter+1});
+    }
+}
+
+- Tipos de componentes
+
+Contenedor (Container)
+* Se enfoca en como funciona las cosas.
+* Esta conectado a Redux.
+* Despacha acciones de Redux.
+* Generados por react-redux.
+
+Presentacion (Presentational)
+* Se enfoca en como se ven las cosas.
+* No esta conectado a Redux.
+* Se le pasan los datos y/o funciones via props.
+* Muchas veces son Stateless.
+
+- React-Redux
+Provider
+* Añade la store a la aplicacion.
+
+Connect
+* Crea componentes de tipo container
+
+- React-Redux Provider
+
+<Provider store={store}>
+    <App />
+</Provider>
+
+- Redux Connect
+
+import * as actions from '../../containers/Blog/actions';
+
+export default connect(state =>({
+    // mapStateToProps,
+    posts: state.blog.posts
+    // mapDispatchToProps (Es el actions)
+})actions)(Post);
+
+
