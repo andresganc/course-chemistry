@@ -69,9 +69,64 @@ Ejemplo
 
 * Soporte para todos los eventos que puedas necesitar desde click y double click, Hasta eventos moviles como touchstart y touchend.
 
+<br>
+
+### Server Side Rendering
+
+* Puedes renderizar tu aplicacion de React desde el servidor, Perfecto para SEO y performance.
+
+<br>
 
 
+### JSX
 
+* Cosas que se pueden hacer con JSX
+
+const element = <h1> Hola Mundo </h1>;
+
+------------------------------------------------
+
+const element = <h1> { 2 + 2 } Hola Mundo </h1>;
+
+------------------------------------------------
+
+function multiplicar (a, b) {
+    return a * b
+}
+
+const element = <h1> { multiplicar (2, 2) } Hola Mundo </h1>;
+
+<br>
+
+* Expresiones ternarias
+
+function multiplicar (a, b) {
+    return a * b
+}
+
+const mostrarMultiplicacion = true
+
+const element = <h1> { mostrarMultiplicacion ?  multiplicar (2, 2) : 'Nada que mostrar' } Hola Mundo </h1>;
+
+
+* Atributos
+
+const image = <img src='http://url-con-image.jpg' />
+
+-------------------------------------------------------
+
+const url = 'http://url-con-image.jpg' 
+const image = <img src={url}>
+
+<br>
+
+* Children (2 elementos de react guardados en una misma variable)
+
+// Esto mo se puede hacer  
+const element = <h1> Hola</h1> <h2> Hola 2</h2> 
+
+// De esta forma si (Metidos en un DIV)
+const element = <div> <h1> Hola</h1> <h2> Hola 2</h2> </div> 
 
 
 
