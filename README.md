@@ -5,7 +5,7 @@
 ## Tabla de contenido
 
 - [REQUISITOS](#requisitos)
-  - [1. Instalacion de NodeJS](#1.-instalacion-de-nodejs)
+  - [1. Instalacion de NodeJS](#1.-Instalacion-de-NodeJS)
   - [2. Instalacion de NPM, YARN o NPX](#2.-instalacion-de-npm,-yarn-o-npx)
   - [3. Instalacion de Create React](#3.-Instalacion-de-Create-React-App)
 
