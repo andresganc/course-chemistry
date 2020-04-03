@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 function HolaMundo () {
 
     return (
-        <h2> !! Hola Mundo !! </h2>
+        <h2> !! Hola Mundo !! { 2 + 2 } </h2>
     );
 }
 

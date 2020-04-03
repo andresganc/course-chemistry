@@ -1,68 +1,349 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# REACT - CURSOS, CONVENCION (ACUERDOS), EJERCICIOS Y PROYECTOS
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+## Tabla de contenido
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [REQUISITOS](#requisitos)
+  - [1. Instalacion de NodeJS](#1.-Instalacion-de-NodeJS)
+  - [2. Instalacion de NPM, YARN o NPX](#2.-instalacion-de-npm,-yarn-o-npx)
+  - [3. Instalacion de Create React](#3.-Instalacion-de-Create-React-App)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- [CONVENSIONES & ACUERDOS - NC](#CONVENSIONES-&-ACUERDOS---NC)
+    - [1. CREACION DE PROYECTOS](#1.-CREACION-DE-PROYECTOS)
+    - [2. CARPETA ASSETS](#2.-CARPETA-ASSETS)
+    - [3. CARPETA IMG](#3.-CARPETA-IMG)
+    - [4. CARPETA STYLES](#4.-CARPETA-STYLES)
+    - [5. CARPETA COMPONENTS](#5.-CARPETA-COMPONENTS)
+    - [6. CARPETA DATA](#6.-CARPETA-DATA)
+    - [7. CARPETA LANGUAGE](#7.-CARPETA-LANGUAGE)
+    - [8. CARPETA ROUTES](#8.-CARPETA-ROUTES)
+    - [9. CARPETA TESTS](#9.-CARPETA-TESTS)
+    - [10. CARPETA VIEWS](#10.-CARPETA-VIEWS)
+    - [11. CARPETA UTILS](#11.-CARPETA-UTILS)
+    - [12. CARPETA MUTATIONS](#12.-CARPETA-MUTATIONS)
+    - [13. CARPETA QUERYS](#13.-CARPETA-QUERYS)
 
-### `npm test`
+<br><br>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## REQUISITOS
 
-### `npm run build`
+### 1. Instalacion de NodeJS
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    * Desde Linux
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+        Pagina web: https://nodejs.org
+        <br>
+        Instalacion: https://nodejs.org/es/download/package-manager/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    * Desde Windows
 
-### `npm run eject`
+        Pagina web: https://nodejs.org
+        <br>
+        Instalacion: https://nodejs.org/es/download/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    * Desde Mac
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+        Pagina web: https://nodejs.org
+        <br>
+        Instalacion: https://nodejs.org/es/download/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br>
 
-## Learn More
+### 2. Instalacion de NPM, YARN o NPX
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    * NPX (Recomendado)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+        Pagina web : https://www.npmjs.com/
+        <br>
+        Instalacion : https://yarnpkg.com/getting-started/install
 
-### Code Splitting
+    * NPM
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+        Pagina web : https://www.npmjs.com/
+        <br>
+        Instalacion : https://yarnpkg.com/getting-started/install
 
-### Analyzing the Bundle Size
+    * YARN
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+        Pagina web : https://yarnpkg.com/
+        <br>
+        Instalacion : https://yarnpkg.com/getting-started/install
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<br>
 
-### Advanced Configuration
+### 3. Instalacion de Create React App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+    * Instalacion desde cualquier consola del SO
 
-### Deployment
+    npm install -g create-react-app
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+    npm create-react-app my-app
+    cd my-app
+    npm start
 
-### `npm run build` fails to minify
+    NOTA IMPORTANTE: Es recomendable usar NPX ( No necesita instalacion previa y siempre busca y descarga la ultima version )
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+    npx create-react-app my-app
+    cd my-app
+    npm start
+
+
+<br><br>
+
+
+* =======================================================================================================================================
+
+
+## CONVENSIONES & ACUERDOS - NC
+
+### 1. CREACION DE PROYECTOS
+    * La creacion de proyectos se hara con el paquete o comando create-react-app, Y se usara NPX en lugar de NPM.
+
+        Ejemplo de carpeta:
+
+        npx create-react-app myapp
+
+    
+### 2. CARPETA ASSETS
+
+    * ASSETS : Carpeta donde se guardara las imagenes y estilos, Su nombre debe estar escrito totalmente en minuscula.
+
+        Ejemplo de carpeta: assets
+
+
+### 3. CARPETA IMG
+               
+    * IMG : Carpeta donde se almacenaran las imagenes, Su nombre debe de estar escrito totalmente en minuscula.
+            Debe de estar dentro de assets.
+
+            Ejemplo de carpeta: img
+
+### 4. CARPETA STYLES
+                
+    * STYLES : Carpeta donde se almacenaran los estilos, Su nombre debe de estar escrito totalmente en minuscula.
+        Debe de estar dentro de assets, Y sus estilos se haran en JavaScript.
+
+        Ejemplo de carpeta: styles
+
+
+    * NOTAS IMPORTANTES : 
+
+        No se usara la carpeta CSS ni archivos con extension .css, En su lugar se haran los estilos en JavaScript con extension .js
+        No usar la extension .jss , En su lugar hacerlo con .js
+
+### 5. CARPETA COMPONENTS
+
+    * COMPONENTS : Carpeta donde almacenara los componentes creados por NC, Su nombre debe de estar escrito totalmente en minuscula.
+        Deben estar hechos en extension .js
+
+        Ejemplo de carpeta : components
+
+### 6. CARPETA DATA
+
+    * CARPETA DATA : La carpeta de DATA es donde se almacenara todos los datos del proyecto (Datos que se usaran DropDowList, Tablas alternas y algunos componentes )
+        Su nombre debe de estar escrito totalmente en minuscula.
+        Nota aclaratoria: Estos datos no son los de la base de datos del proyecto (Datos alternos a la base de datos principal).
+
+        Ejemplo de carpeta : data
+        Ejemplo de datos: Paises, Tipos de documentacion, etc.
+
+
+
+### 7. CARPETA LANGUAGE
+
+    * CARPETA LANGUAGE : La carpeta language se usa para almacenar los lenguajes del proyecto en caso de que el proyecto se vaya a desarrollar en varios idiomas.
+        Si el proyecto solo va a tener un lenguaje no sera necesario crearla. Su nombre debe de estar escrito totalmente en minuscula.
+
+        Ejemplo de la carpeta: language
+
+
+### 8. CARPETA ROUTES
+
+    * CARPETA ROUTES : La carpeta routes almacenara todas las rutas del proyecto, Su nombre debe de estar escrito totalmente en minuscula.
+        
+        Ejemplo de carpeta : routes
+
+
+### 9. CARPETA TESTS
+
+    * CARPETA TESTS : La carpeta tests es donde se almacenaran todos los scripts para hacer los testeos al proyecto, Su nombre debe de estar escrito 
+        totalmente en minuscula.
+        Deben de estar hechos con extension .test.js  nombre.test.js 
+
+        Ejemplo de carpeta: tests
+
+
+### 10. CARPETA VIEWS
+
+    * CARPETA VIEWS : La carpeta views es donde se almacenaran todos los archivos o objetos visuales, Su nombre debe de estar escrito totalmente en minuscula.
+        Si el proyecto es muy grande se pueden crear subcarpetas para una mejor organizacion.    
+
+        Nota importante: En modo de desarrollo(Cuando se esta haciendo) pueden estar en .jsx si se prefiere, Una vez finalizado deben cambiarse a .js
+
+        Ejemplo de carpeta: views
+
+
+### 11. CARPETA UTILS
+
+    * CARPETA UTILS :  La carpeta utils es donde se almacenara todas las utilidades del componente visual como archivos logicos, procesos y 
+        archivos que complementen el desarrollo del objeto visual, Su nombre debe de estar escrito totalmente en minuscula.
+        Debe de estar dentro de views y si se crearon subcarpetas, Dentro de estas
+
+        Ejemplo de carpeta: utils
+
+
+### 12. CARPETA MUTATIONS
+
+    * CARPETA MUTATIONS : La carpeta mutations es donde se almacenaran todas las mutaciones en caso de que el proyecto este enlazando con bases de datos 
+    y use GraphQL y/o Apollo.
+    Su nombre debe de estar escrito totalmente en minuscula. Va dentro de views o la subcarpeta del objeto.
+
+    Ejemplo de carpeta : mutations
+
+
+### 13. CARPETA QUERYS
+
+    * CARPETA QUERYS : La carpeta querys se usa para almacenar las consultas en caso de que el proyecto este enlazando con bases de datos 
+    y use GraphQL y/o Apollo.
+    Su nombre debe de estar escrito totalmente en minuscula. Va dentro de views o la subcarpeta del objeto.
+
+    Ejemplo de carpeta : querys
+
+
+
+
+
+<br><br>
+* =======================================================================================================================================
+
+
+## REACT
+<br><br>
+
+### React es Declarativa
+
+Programación Declarativa vs Programación Imperativa
+
+* Diferencias
+En los programas imperativos un porcentaje muy alto del código está dedicado a controlar la secuencia de ejecución. En un lenguaje declarativo no existen dichas instrucciones.
+Los lenguajes declarativos ofrecen menores costos de desarrollo y mayor ﬁabilidad debido al menor número de líneas que son requeridas, lo que conlleva a un menor número de errores
+
+* Programación Declarativa Programación Imperativa
+La programación declarativa describe el problema que se quiere solucionar, pero no las instrucciones necesarias para hacerlo, mientras que en la programación imperativa se detallan las instrucciones necesarias para llegar a la solución.
+Los programas declarativos incluyen menos detalles que sus contrapartidas imperativas.
+
+Ejemplo
+
+* Imperativo
+    1. Ve a la cocina
+    2. Abre la nevera
+    3. Coge el pollo
+    4. Prepara el pollo
+    5. Sirve el pollo
+
+* Declarativa
+
+    1. Quiero pollo
+
+<br><br>
+
+### React esta basada en componentes
+
+
+* Divide la interfaz en trozos mas pequeños y reusables.
+
+* Puedes crear nuevos componentes usando componentes mas pequeños.
+
+* Cada componente encapsula su estado.
+
+* Codigo mas reusable, Pequeño y mantenible.
+
+<br><br>
+
+### Programacion reactiva
+
+* Cada componente "Reacciona" y se vueleve a renderizar cuando se produze un cambio de estado o le llegan nuevas propiedades
+
+<br><br>
+
+
+### Usa el Virtual DOM y Diffing
+
+* Genera una copia del arbol de elementos del navegador para solo hacer los minimos cambios necesarios para reflejar el estado de nuestro componentes.
+<br>
+
+<img src="src/assets/img/virtual-dom.png" width="500px">
+
+<br><br><br>
+
+
+### Eventos sinteticos (Soluciona el problema antiguo de los eventos click)
+
+* Abstracion de los eventos nativos de los navegadores
+
+* Compatibilidad cross browsing sin necesidad de mas librerias
+
+* Soporte para todos los eventos que puedas necesitar desde click y double click, Hasta eventos moviles como touchstart y touchend.
+
+<br>
+
+### Server Side Rendering
+
+* Puedes renderizar tu aplicacion de React desde el servidor, Perfecto para SEO y performance.
+
+<br>
+
+
+### JSX
+
+* Cosas que se pueden hacer con JSX
+
+const element = <h1> Hola Mundo </h1>;
+
+------------------------------------------------
+
+const element = <h1> { 2 + 2 } Hola Mundo </h1>;
+
+------------------------------------------------
+
+function multiplicar (a, b) {
+    return a * b
+}
+
+const element = <h1> { multiplicar (2, 2) } Hola Mundo </h1>;
+
+<br>
+
+* Expresiones ternarias
+
+function multiplicar (a, b) {
+    return a * b
+}
+
+const mostrarMultiplicacion = true
+
+const element = <h1> { mostrarMultiplicacion ?  multiplicar (2, 2) : 'Nada que mostrar' } Hola Mundo </h1>;
+
+
+* Atributos
+
+const image = <img src='http://url-con-image.jpg' />
+
+-------------------------------------------------------
+
+const url = 'http://url-con-image.jpg' 
+const image = <img src={url}>
+
+<br>
+
+* Children (2 elementos de react guardados en una misma variable)
+
+// Esto mo se puede hacer  
+const element = <h1> Hola</h1> <h2> Hola 2</h2> 
+
+// De esta forma si (Metidos en un DIV)
+const element = <div> <h1> Hola</h1> <h2> Hola 2</h2> </div> 
