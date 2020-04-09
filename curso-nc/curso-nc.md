@@ -27,6 +27,7 @@
     - [14. IMAGEN DE LA ESTRUCTURA DE CARPETAS](#14.-IMAGEN-DE-LA-ESTRUCTURA-DE-CARPETAS)
 
 - [REACT - REACT.JS - REACTJS](#REACT---REACT.JS---REACTJS)
+    - [Que es React](#Que-es-React)
     - [React es Declarativa](#React-es-Declarativa)
     - [React esta basada en componentes](#React-esta-basada-en-componentes)
     - [Programacion reactiva](#Programacion-reactiva)
@@ -34,6 +35,13 @@
     - [Eventos sinteticos (Soluciona el problema antiguo de los eventos click)](#Eventos-sinteticos-(Soluciona-el-problema-antiguo-de-los-eventos-click))
     - [Server Side Rendering](#Server-Side-Rendering)
     - [JSX](#JSX)
+    - [WebPack](#WebPack)
+    - [Carpetas y archivos creados por create-react-app](#Carpetas-y-archivos-creados-por-create-react-app)
+
+- [DESARROLLO](#DESARROLLO)
+    - [REACT Y REACT DOM](#REACT-Y-REACT-DOM)
+
+
 
 
 
@@ -247,6 +255,16 @@
 
 ## REACT - REACT.JS - REACTJS
 
+
+### Que es React
+
+    * React (también llamada React.js o ReactJS) es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página. Es mantenido por Facebook y la comunidad de software libre. Han participado en el proyecto más de mil desarrolladores diferentes. 1​
+
+    React intenta ayudar a los desarrolladores a construir aplicaciones que usan datos que cambian todo el tiempo. Su objetivo es ser sencillo, declarativo y fácil de combinar. React sólo maneja la interfaz de usuario en una aplicación; React es la Vista en un contexto en el que se use el patrón MVC (Modelo-Vista-Controlador) o MVVM (Modelo-vista-modelo de vista). También puede ser utilizado con las extensiones de React-based que se encargan de las partes no-UI (que no forman parte de la interfaz de usuario) de una aplicación web.
+
+    React fue creada por Jordan Walke, un ingeniero de software en Facebook, inspirado por los problemas que tenía la compañía con el mantenimiento del código de los anuncios dentro de su plataforma. Enfocado en la experiencia del usuario y la eficiencia para sus programadores, influenciado por XHP (un marco de componentes de HTML para PHP), nace el prototipo ReactJS.
+
+
 <br>
 
 ### React es Declarativa
@@ -299,7 +317,8 @@
 
 ### Usa el Virtual DOM y Diffing
 
-    * Genera una copia del arbol de elementos del navegador para solo hacer los minimos cambios necesarios para reflejar el estado de nuestro componentes.
+    * DOM - Document Object Model 
+    Genera una copia del arbol de elementos del navegador para solo hacer los minimos cambios necesarios para reflejar el estado de nuestro componentes.
 
 <br>
 <img src="src/assets/img/virtual-dom.png" width="500px">
@@ -372,3 +391,72 @@
 
     // De esta forma si (Metidos en un DIV)
     const element = <div> <h1> Hola</h1> <h2> Hola 2</h2> </div> 
+
+
+
+### WebPack
+
+    * Webpack es un paquete de módulos JavaScript de código abierto . [2] [3] [4] [5] [6] Es un paquete de módulos principalmente para JavaScript, pero puede transformar activos front-end como HTML, CSS e imágenes si se incluyen los cargadores correspondientes. [7] webpack toma módulos con dependencias y genera activos estáticos que representan esos módulos. [8]
+
+    webpack toma las dependencias y genera un gráfico de dependencia que permite a los desarrolladores web utilizar un enfoque modular para sus propósitos de desarrollo de aplicaciones web. Se puede usar desde la línea de comandos o se puede configurar usando un archivo de configuración que se denomina webpack.config.js . Este archivo se utiliza para definir reglas, complementos, etc., para un proyecto. (Webpack es altamente extensible a través de reglas que permiten a los desarrolladores escribir tareas personalizadas que desean realizar al agrupar archivos).
+
+    Node.js es necesario para usar webpack.
+
+
+### Carpetas y archivos creados por create-react-app
+
+    * CARPETAS
+
+        - SRC : Carpeta Source. Es la carpeta donde se realiza todo el desarrollo del proyecto
+
+        - NODE_MODULES : Es la carpeta donde se almacenan todas las dependencias del proyecto
+
+        - PUBLIC : Es la carpeta donde estan todos los archivos iniciales de HTML
+
+
+    * ARCHIVOS
+
+        * FUERA DEL SOURCE
+        
+            - .GITIGNORE : Archivo que contiene todas la lista de cosas que se van a ignorar al usar GIT.
+
+            - PACKAGE.JSON : El archivo package.json almacena toda la configuracion del proyecto
+
+            - PACKAGE-LOCK.JSON : El archivo package-lock.json se genera cuando se hace el npm install. Y contiene todo el registro detallado
+                de las dependencias instaladas.
+
+            - README.md : El archivo README.md es un archivo de texto con esxtension .md (Markdown - Marcado Ligero). Y nos permite crear un manual
+                o archivo de lectura con textos enriquezidos, Links, Titulos, Subtitulos, Textos, Imagenes, Videos. De una forma muy rapida.
+
+        
+        * DENTRO DEL SOURCE
+
+            - INDEX.JS : El archivo index.js es el archivo de arranque del proyecto.
+
+            - APP.JS : El App.js es un componente de ejemplo.
+
+            - APP.CSS : El App.js tiene los estilos de el componente App.js
+
+            - INDEX.CSS : El index.css tiene los estilos del index.js
+
+            - SERVICEWORKER.JS : El modulo serviceWorker.js le aporta ciertas capacidades a la tecnologia React como: Crear aplicaciones de escritorio,
+                Aplicaciones web, App (Aplicaciones moviles), Poder ejecutar un a aplicacion web sin estar conectado a internet.
+
+            - SETUPTESTS.JS : setupTest.js es donde se almacena la configuracion de los testeos del proyecto.
+
+
+
+
+<br><br>
+* =======================================================================================================================================
+<br><br>
+
+
+
+## DESARROLLO
+<br>
+
+
+### REACT Y REACT DOM
+
+    * 

@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import HolaMundo from './views/basico/hola-mundo.jsx'
+import HolaMundo from './views/basico/hola-mundo.js'
 
 ReactDOM.render(
   <React.StrictMode>
-    <HolaMundo />
-    {/* <App /> */}
+    {/* <HolaMundo /> */}
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
