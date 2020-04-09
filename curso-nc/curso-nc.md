@@ -459,4 +459,42 @@
 
 ### REACT Y REACT DOM
 
-    * 
+    * REACT : React es el punto de entrada a la biblioteca de React. Si se carga React desde una etiqueta <script>, estas API de alto nivel estarán 
+        disponibles en el   React global. Si se usa ES6 con npm se puede escribir import React from 'react'. 
+        Si se usa ES5 con npm, se puede escribir var React = require('react').
+
+
+    * REACT DOM : El paquete react-dom proporciona métodos específicos del DOM que pueden ser utilizados en el nivel más alto de tu aplicación 
+        como una vía de escape del modelo de React si así lo necesitas. La mayoría de tus componentes no deberían necesitar usar este módulo.
+
+        Si cargas React desde una etiqueta <script>, estas APIs de alto nivel estarán disponibles en la variable global ReactDOM. 
+        Si usas ES6 con npm, puedes escribir import ReactDOM from 'react-dom'. Si usas ES5 con npm, puedes escribir var ReactDOM = require('react-dom').
+
+
+
+### COMPONENTES
+
+    * Existen 2 formas en react para crear componentes. Con Funciones o con Clases
+
+    * Crear Componentes con funciones
+
+        import React from "react";
+
+        // Styles
+        import '../assets/css/main.css'
+
+        // Componente Hola Mundo
+
+        function HolaMundo() {
+
+            return (
+
+                <div>
+                    <h2> !!! Hola Mundo !!! </h2>
+                </div>
+                
+            );
+
+        }
+
+        export default HolaMundo;
