@@ -2,10 +2,10 @@
 import React from 'react';
 
 // Styles
-import StylesBuscar from '../assets/styles/buscar';
+import StylesBuscar from '../../assets/styles/buscar';
 
 // Assets
-import ImagenBuscar from '../assets/img/buscar.svg'; 
+import ImagenBuscar from '../../assets/img/buscar.svg'; 
 
 class Buscar extends React.Component {
 

@@ -5,11 +5,11 @@ import React from 'react';
 
 
 // Styles
-import StylesNav from '../assets/styles/nav';
+import StylesNav from '../../assets/styles/nav';
 
 // Assets
-import ImagenInicio from '../assets/img/home.svg';
-import ImagenMenu from '../assets/img/menu.svg';
+import ImagenInicio from '../../assets/img/home.svg';
+import ImagenMenu from '../../assets/img/menu.svg';
 
 
 class Menu extends React.Component {

@@ -2,14 +2,14 @@
 import React from 'react';
 
 // Components
-import Buscar from './Buscar';
+import Buscar from '../Searchs/BuscarSimple';
 
 // Styles
-import StylesNav from '../assets/styles/nav-buscar';
+import StylesNav from '../../assets/styles/nav-buscar';
 
 // Assets
-import ImagenInicio from '../assets/img/home.svg';
-import ImagenMenu from '../assets/img/menu.svg';
+import ImagenInicio from '../../assets/img/home.svg';
+import ImagenMenu from '../../assets/img/menu.svg';
 
 
 class Menu extends React.Component {
@@ -19,21 +19,20 @@ class Menu extends React.Component {
             return(
                 <div>
                     
-
                     <nav style={StylesNav.nav} >
-                        
+
                         <div style={StylesNav.div_nav} >
                             <ul>
                                 <img src={ImagenInicio} alt="" width="20px" />
-                                <li style={StylesNav.li} > <a style={StylesNav.a} href=""> Inicio </a> </li>
+                                <li style={StylesNav.li} > <a style={StylesNav.a} href="#"> Inicio </a> </li>
                                 <img src={ImagenMenu} alt="" width="20px" />
-                                <li style={StylesNav.li} > <a style={StylesNav.a} href=""> Menu 1 </a> </li>
+                                <li style={StylesNav.li} > <a style={StylesNav.a} href="#"> Menu 1 </a> </li>
                                 <img src={ImagenMenu} alt="" width="20px" />
-                                <li style={StylesNav.li} > <a style={StylesNav.a} href=""> Menu 2 </a> </li>
+                                <li style={StylesNav.li} > <a style={StylesNav.a} href="#"> Menu 2 </a> </li>
                                 <img src={ImagenMenu} alt="" width="20px" />
-                                <li style={StylesNav.li} > <a style={StylesNav.a} href=""> Menu 3 </a> </li>
+                                <li style={StylesNav.li} > <a style={StylesNav.a} href="#"> Menu 3 </a> </li>
                                 <img src={ImagenMenu} alt="" width="20px" />
-                                <li style={StylesNav.li} > <a style={StylesNav.a} href=""> Menu 4 </a> </li>
+                                <li style={StylesNav.li} > <a style={StylesNav.a} href="#"> Menu 4 </a> </li>
                             </ul>
                         </div>
 

@@ -3,8 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Componentes
-import Menu from './components/Nav';
-import MenuBuscar from './components/Nav-Buscar'
+import Menu from './components/Menus/Nav';
+import MenuBuscar from './components/Menus/Nav-Buscar';
+import Alarma from './components/Curso/State';
 
 
 /*
@@ -16,13 +17,11 @@ import ComponentesConClases from './components/ComponentesConClases';
 */
 
 
-
-
-
 ReactDOM.render(
   <React.StrictMode>
     <Menu />
     <MenuBuscar />
+    <Alarma />
   </React.StrictMode>,
   document.getElementById('root')
 );
