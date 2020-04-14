@@ -1,0 +1,2430 @@
+CURSO REACTJS AVANZADO - FULL STACK REACT, GRAPHQL, APOLLO, MONGODB
+
+
+
+Preparacion del editor de codigo
+************************************************************
+
+Visual studio Code
+
+Extensiones basicas
+- Spanish Language Pack for Visual Studio Code
+- vscode-icons
+- Color Picker
+- Txt Syntax
+- Prettier Now    (Para darle formato o orden al codigo)
+- Prettier - Code formatter   (Para darle formato o orden al codigo)
+
+Extensiones React, GraphQL, ES7
+
+- GraphQL for VSCode
+- ES7 React/Redux/GraphQL/React-Native snippets
+- GraphQL
+- GraphQL Language Support
+
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 01 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INTRODUCCION AL CURSO
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 01 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Introducción al Curso
+************************************************************
+======================================================================================
+Proyecto completo con las siguientes tecnologías:
+(Video 1 - Seccion 1)
+======================================================================================
+ReactJs
+GraphQL
+Apollo Cliente y Apollo Server
+MongoDB
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 02 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INTRODUCCION A GRAPHQL
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 02 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+======================================================================================
+Que es GraphQL?
+(Video 2 - Seccion 2)
+======================================================================================
+GraphQL = Graph Query Language
+
+Creador: Facebook - Se creo como necesidad para consultar datos por los inconvenientes que tenían con las otras tecnologías al obtener las entradas o estados de los amigos de un perfil. Es muy útil para manejar grandes volúmenes de datos.
+
+Desarrollado en el 2012 y se convirtio Open Sources en el 2015.
+
+Independiente de cualquier lenguaje, Base de datos o FrameWork.
+
+Puedes usarlo asi ya tengas un proyecto hecho.
+
+
+======================================================================================
+GraphQL y SQL
+(Video 3 - Seccion 2)
+======================================================================================
+
+Similar a SQL en el servicio que presta mas no en su sintaxis ni en funcionalidad
+
+Se usa para hacer la conexión entre UI y Base de Datos. Se pueden realizar consultas y leer resultados.
+
+Es seguro por que hay separacion entre el cliente y la base de datos.
+
+Necesario tener instalado GraphQL en el servidor. 
+
+Mucha compatibilidad con versiones anteriores.
+
+GraphiQL: Herramienta visual de GraphQL ejecutada en el navegador web para realizar las consultas
+
+
+======================================================================================
+GraphQL vs REST API´s: 
+(Video 4 - Seccion 2)
+======================================================================================
+
+- La gran diferencia esta en los End Points que en REST son fijos y te mando siempre los mismos y el total de los datos esto genera mas trafico de datos y una app mas pesada, tendrias que hacer muchos end points para traer solo los que necesites. En GraphQL con las QUERY puedes traer solo los datos que necesites.
+
+Las consulta es variable gracias al Schema
+
+EL CRUD de GraphQL = Query - Mutation
+
+
+======================================================================================
+QUERY - MUTATION (Terminologia)
+(Video 5 - Seccion 2)
+======================================================================================
+
+Query = Leer
+Mutation = Crear, Modificar y Eliminar
+
+Son universales: Funcionan con cualquier Lenguaje, base de datos o Framework
+
+CRUD: El Query de GraphQL es la R del CRUD. Osea Leer
+CRUD: El mutation de GraphQL es la C, U y D del CRUD. Osea Crear, Actualizar y Eliminar.
+
+QUERY - Ejemplos:
+
+query { 
+nombredelQuery{
+Id
+Nombre
+Precio
+stock
+}
+}
+
+QUERY - Ejemplos:
+
+mutation eliminarProducto($id : ID)
+{
+eliminarProducto(id: $id)
+}
+
+
+======================================================================================
+RESOLVER - SCHEMA (Terminologia)
+(Video 6 - Seccion 2)
+======================================================================================
+
+Resolver:  Los Resolver se utilizan para gestionar las bases de datos con un backend
+
+- Se puede usar en cualquier lenguaje pero es especifico del lenguaje que se use y las interaciones a la base de datos. (EJ: Si se usa en JavaScript hay que escribirlo en JavaScript)
+
+Resolver1: JavaScript y SQL
+Resolver2: JavaScript y MongoDB
+
+Ejemplo resolver hecho en MongoDB
+
+getCliente : (root, {id}) => {
+Return new Promise((resolver, object) => {
+Clientes.findById(
+})
+}
+
+
+Schema:
+
+-Es lo que describe tus tipos de objeto, Queries y datos de tu aplicacion.
+-El Schema en GraphQL utiliza un typing en el que le defines si un campo sera de tipo String, Int, Boolean u otro tipo de dato.
+- El Schema y el resolver estan muy relacionados, El Shema define la forma de los datos mientras que el resolver la comunicacion con el lenguaje del servidor y la base de datos.
+
+Ejemplo:
+
+type Cliente {
+Id: ID
+nombre: String
+apellido: String
+empresa: String
+emails: [Email]		// Se usa [] para guardar multiples datos (Varios emails)
+edad: Int
+
+}
+type Email {
+email: String
+}
+
+La estructura del Schema debe de ser similar o iguales a la de la base de datos.
+
+
+Como trabajan en conjunto el Schema y el Resolver
+
+- En el Schema (Creo una consulta que se llama getCliente)
+- Este Schema es esclusivo de GraphQL
+
+type Query {
+getCliente(id: ID) : Cliente
+}
+
+- En el Resolver (Uso el mismo nombre de la consulta y le digo como traer los datos)
+- Este Resolver es esclusivo del lenguaje de programacion en el server y la base de datos que se use.
+
+getCliente : (root, {id}) => {
+return new Promise((resolve, object) => {
+Clientes.findById (id, (error, cliente)) => {
+if (error) rejects (error)
+else resolve (cliente)
+});
+});
+},
+
+Previa-mente se ha tenido que crear el type cliente
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+type Cliente {
+id: ID
+nombre: String
+apellido: String
+empresa: String
+emails: [Email]
+edad: Int
+}
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 03 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+BASICOS DE GRAPHQL CON GRAPHiQL
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 03 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+GraphQL 101 - Básicos de GraphQL con
+GraphiQL
+======================================================================================
+QUERIES Y QUERIES CON ARGUMENTOS (Consultas con GraphQL)
+(Video 7 - Seccion 3)
+======================================================================================
+
+- En el curso se usaran dos GraphiQL de internet. La de Github y la de GraphQL Hub
+
+Github GraphiQL url
+https://developer.github.com/v4/explorer/
+
+GraphQL Hub url
+https://www.graphqlhub.com/
+
+
+Ej Consulta 1 en GraphiQL de Github: 
+viewer: muestra los datos del usuario logeado en github 
+
+query {
+viewer {
+name
+company
+createdAt
+}
+}
+
+
+======================================================================================
+Queries con Argumentos y Donde Encontrar los argumentos
+(Video 8 - Seccion 3)
+======================================================================================
+
+Ej Consulta en Graph Hub con argumentos:
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Ej1:
+
+query {
+twitter {
+Search (q: “GraphQL”) {
+text
+retweet_count
+}
+}
+}
+
+
+Ej2:
+
+query { 
+  repositoryOwner (login: "andresganc"){
+    id
+    url
+    resourcePath
+    
+  }
+}
+
+
+Ej3:
+
+{
+hn{
+topStories(limit: 2){
+id
+time
+text
+url
+title
+}
+}
+}
+
+======================================================================================
+Argumentos obligatorios y como identificarlos
+(Video 9 - Seccion 3)
+======================================================================================
+
+Se identifican con una ! y se debe de buscar en la documentacion de la API
+
+Ej:
+
+FIELDS
+repository(owner: String!, name: String!)
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+{
+  repository(owner:"google" name:"fonts"){
+    id
+    description
+  }
+}
+
+======================================================================================
+Que es el Schema de GraphQL
+(Video 10 - Seccion 3)
+======================================================================================
+
+- El Schema de GraphQL son como las tablas en SQL. 
+- Tambien muestra los objetos y los tipos de datos
+- Y lo que corresponderia a las columnas
+
+Todo es el Schema
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+{
+hn{						// Es como la base de datos en SQL
+topStories(limit: 2){		// Es como la tabla en SQL
+Id					// Son como las columnas en SQL
+time
+text
+url
+title
+}
+}
+}
+
+
+======================================================================================
+Aliases en los Queries
+(Video 11 - Seccion 3)
+======================================================================================
+
+Sin Aliases (Genera un error de duplicidad de argumentos search)
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+{
+  twitter{
+    search(q:"ReactJS")
+    {
+      id
+      created_at
+      text
+      user {
+        id
+      }
+    }
+    
+    search(q:"GraphQL")
+    {
+      id
+      created_at
+      text
+      user {
+        id
+      }
+    }
+  }
+}
+
+
+Con Aliases (No genera error)
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+{
+  twitter{
+    AliasesReacJS: search(q:"ReactJS")
+    {
+      id
+      created_at
+      text
+      user {
+        id
+      }
+    }
+    
+    AliasesGraphQL: search(q:"GraphQL")
+    {
+      id
+      created_at
+      text
+      user {
+        id
+      }
+    }
+  }
+}
+
+
+======================================================================================
+Consulta con Fragments
+(Video 12 - Seccion 3)
+======================================================================================
+
+- Los fragments se usan cuando tenemos muchos schemas con consultas parecidas y necesitamos agregar consultas a todas. para cambiar schemas repetitivos de varias partes sin necesidad de repetir y escribir en cada schema.}
+
+- Las modificaciones se hacen en una sola y se ven reflejadas en todas las que queramos
+
+Sin Fragments
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+{
+  twitter{
+    AliasesReacJS: search(q:"ReactJS")
+    {
+      id
+      created_at
+      text
+      user {
+        id
+      }
+    }
+    
+    AliasesGraphQL: search(q:"GraphQL")
+    {
+      id
+      created_at
+      text
+      user {
+        id
+      }
+      
+    AliasesJavaScript: search(q:"JavaScript")
+    {
+      id
+      created_at
+      text
+      user {
+        id
+      }
+      
+    }
+  }
+}
+
+
+Con Fragments
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+{
+  twitter{
+    AliasesReacJS: search(q:"ReactJS")
+    {
+      ...camposTweet
+    }
+    
+    AliasesGraphQL: search(q:"GraphQL")
+    {
+      ...camposTweet
+    }
+    
+    AliasesJavaScript: search(q:"JavaScript")
+    {
+      ...camposTweet
+  # Puedo usar un campo que no se comparta en cualquiera
+    }
+    
+  }
+}
+
+fragment camposTweet on Tweet {
+  		id
+      created_at
+      text
+      user {
+        id
+      }
+  
+}
+
+
+======================================================================================
+Campos anidados
+(Video 13 - Seccion 3)
+======================================================================================
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+{
+  twitter{
+    AliasesReacJS: search(q:"ReactJS")
+    {
+      ...camposTweet
+    }
+    
+    AliasesGraphQL: search(q:"GraphQL")
+    {
+      ...camposTweet
+    }
+    
+    AliasesJavaScript: search(q:"JavaScript")
+    {
+      ...camposTweet
+  # Puedo usar un campo que no se comparta en cualquiera
+    }
+    
+  }
+}
+
+fragment camposTweet on Tweet {
+  		id
+      created_at
+      text
+      user {
+        id
+        name
+        screen_name
+      }
+  
+}
+
+
+======================================================================================
+Conexiones en GraphQL
+(Video 14 - Seccion 3)
+======================================================================================
+
+Es cuando un objeto tiene varios nodos. (De uno a muchos)
+
+Se llama por medio de los objetos conection
+En este caso edges es el objeto conection
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+{
+  viewer{
+    id
+    name
+    repositories(last: 5){
+      edges{
+        node{
+          id
+          name
+        }
+      }
+    }
+  }
+}
+
+
+======================================================================================
+Multiples campos anidados
+(Video 15 - Seccion 3)
+======================================================================================
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+{
+  twitter{
+    ReactTweets: search(q: "ReactJS"){
+      id
+      text
+      retweet_count
+      user{
+        name
+        screen_name
+        description
+        tweets_count
+        url
+        tweets(limit: 5){
+          id
+          retweet_count
+        }
+        
+      }
+    }
+  }
+}
+
+
+======================================================================================
+Paginando resultados en GraphQL (Offsets y Limits)
+(Video 16 - Seccion 3)
+======================================================================================
+
+- Con el offset voy paginando
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+{
+  hn{
+    topStories(limit: 10, offset:1){
+      id
+      text
+      title
+      url
+    }
+  }
+}
+
+======================================================================================
+Querys con Nombres
+(Video 17 - Seccion 3)
+======================================================================================
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+query Cosulta1_NC{
+  twitter{
+    search(q: "JavaScript"){
+      id
+      text
+    }
+  }
+}
+
+
+======================================================================================
+Pasar variables a las consultas
+(Video 18 - Seccion 3)
+======================================================================================
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+query Cosulta1_NC($tweet: String!){
+  twitter{
+    search(q: $tweet){
+      id
+      text
+    }
+  }
+}
+
+QUERY VARIABLES
+{
+  "tweet": "Java"
+}
+
+
+
+======================================================================================
+Pasar multiples variables a las consultas
+(Video 19 - Seccion 3)
+======================================================================================
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+query Cosulta1_NC($tweet: String!, $total: Int){
+  twitter{
+    search(q: $tweet, count: $total){
+      id
+      text
+    }
+  }
+}
+
+QUERY VARIABLES
+{
+  "tweet": "Java",
+  "total": 5
+}
+
+
+======================================================================================
+Mutations: Que son y como utilizarlos
+(Video 20 - Seccion 3)
+======================================================================================
+
+- Para obtener los datos de una API con GraphQL hemos utilizado Query
+- Si deseas Editar o Eliminar un registro, Debertas utilizar un mutation
+- Los datos se pasan como Payload
+- GraphQL hace los cambios
+La API es la que define que cambios se puedenrealizar y que parametros tomar, Igual que una base de datos o aplicacion web.
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTAS GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+mutation NuevoComentario($input: SetValueForKeyInput!){
+  keyValue_setValue(input: $input){
+    clientMutationId
+      item{
+        id
+        value
+      }
+    
+  }
+}
+
+query LeerComentario{
+  keyValue{
+    getValue(id:"123456"){
+      id
+      value
+    }
+  }
+}
+
+QUERY VARIABLES
+
+{
+  "input":{
+    "id": "123456",
+    "value": "Hola soy NC",
+    "clientMutationId": "654321"
+  }
+} 
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 04 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+CREANDO UN SERVIDOR DE GRAPHQL
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 04 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+======================================================================================
+Editor de Codigo
+(Video 21 - Seccion 4
+======================================================================================
+
+Visual studio Code
+
+Extensiones
+
+- GraphQL for VSCode
+- ES7 React/Redux/GraphQL/React-Native snippets
+- GraphQL
+- GraphQL Language Support
+- Prettier Now
+
+Andres
+- Spanish Language Pack for Visual Studio Code
+- vscode-icons
+- Color Picker
+- Txt Syntax
+
+
+======================================================================================
+Instalando el servidor express nodemon y dependencias babel
+(Video 22 - Seccion 4
+======================================================================================
+
+- Creamos la carpeta del proyecto (No se puede llamar graphql porque crea conflicto con las dependencias que se van a instalar)
+- Entramos en consola a la carpeta y Escribimos npm init para generar el package.json
+
+$ npm init
+
+
+Dependencias a instalar 
+
+Primero se escribe en consola npm install --save y el nombre de las dependencias separadas por un espacio.
+(save) Ya casi no se usa, Ya en las nuevas versiones de npm se guarda automaticamente
+
+$ npm install --save dependenciaservidor1 dependenciaservidor2 dependenciaservidor3
+
+$ npm install --save-dev dependenciadesarrollo1 dependenciadesarrollo2 dependenciadesarrollo3
+
+Dependencias del servidor a instalar
+$ npm install --save nodemon express
+
+--save : Es para que guarde en el archivo, Ya no se usa en las nuevas versiones de npm
+porque guarda automaticamente.
+
+nodemon : Sirve para que el proyecto recargue automaticamente el servidor al realizar un cambio.
+express : Servidor web de NodeJS
+
+
+Dependencias de desarrollo a instalar
+$ npm install --save-dev babel-cli babel-preset-env babel-preset-stage-0
+
+babel-cli : Babel es una herramienta que nos permite transformar nuestro código JS de última generación (o con funcionalidades extras) a JS que cualquier navegador o versión de Node.js entienda. (podemos hacer que entienda código de JSX y lo convierta a código JS normal.)
+
+babel-preset-env :
+
+babel-preset-stage-0 :
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (index.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Creamos la configuracion de express (Como se instalo babel no es necesario hacer require)
+// Configuracion del servidor express
+import express from 'express';
+
+// Almacenamos el server en una constante llamada app
+const app = express();
+
+// Ruta / (Raiz)
+app.get('/', (req, res) => {
+    res.send('Todo Listo');
+});
+
+// Configuracion del puerto
+app.listen(8000, () => {
+    console.log('El servidor esta funcionando')
+})
+
+
+
+======================================================================================
+GraphiQL y servidor para GraphiQL
+(Video 23 - Seccion 4
+======================================================================================
+
+Dependencias a instalar
+
+- express-graphql : Dependencia para conectar GraphQL con Express
+- graphql : GraphQL
+
+$ npm install --save express-graphql graphql
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (schema.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Schema Hola
+const schema = buildSchema(`
+    type Query {
+        hola: String
+    }
+`);
+
+export default schema;
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (index.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import graphqlHTTP from 'express-graphql';          // Dependencia para conectar Express con GraphQL
+import schema from './schema';
+
+// Resolver para hola
+const root = {hola: ()=> "Hola Mundo desde GraphQL"};
+
+// URL /graphql
+app.use('/graphql', graphqlHTTP({
+    // Schema que se va a usar
+    //schema : schema,          // Forma antigua llave y valor
+    schema,                     // Forma con nueva sintaxis con ESC6
+    // El resolver se pasa como rootValue
+    rootValue: root,
+    // Utilizar graphiql
+    graphiql : true
+}));
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTA GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+query{
+  hola
+}
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 05 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+PRIMEROS PASOS CON EL SERVIDOR - SECCION 5
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 05 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+======================================================================================
+Agregando los primeros Types y Queries
+(Video 24 - Seccion 5
+======================================================================================
+
+Creando Schema y Resolver Cliente (Basico)
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (schema.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Schema Cliente
+const schema = buildSchema(`
+    type Cliente {
+        id: ID
+        nombre: String
+        apellido: String
+        empresa: String
+        emails: String
+    }
+    
+    // Type
+    type Query{
+        cliente: Cliente
+    }
+
+export default schema;
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (index.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Resolver para cliente con Arrow Funtion =>
+const root = {cliente: ()=>{
+    return{
+        "id": 1,
+        "nombre": "Andres", 
+        "apellido": "Giraldo",
+        "empresa": "NC",
+        "emails": "info@newsoftcomputer.com"
+    }
+}};
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTA GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+query{
+  cliente{
+    id
+    nombre
+    apellido
+    empresa
+    email
+  }
+}
+
+
+======================================================================================
+TypeChecking y Campos Anidados en GraphQL
+(Video 25 - Seccion 5
+======================================================================================
+
+Agregando campo anidado al Schema y Resolver Cliente
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (schema.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Schema Cliente
+const schema = buildSchema(`
+    type Cliente {
+        id: ID
+        nombre: String
+        apellido: String
+        empresa: String
+        emails: [Email]
+    }
+
+type Email{
+        email: String
+    }
+   
+type Query{
+        cliente: Cliente
+    }
+
+export default schema;
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (index.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Resolver para cliente con Arrow Funtion =>
+const root = {cliente: ()=>{
+    return{
+        "id": 1,
+        "nombre": "Andres",
+        "apellido": "Giraldo",
+        "empresa": "NC",
+        "emails": [
+            {email:"info@newsoftcomputer.com"},
+            {email:"andres@newsoftcomputer.com"}
+        ]
+    }
+}};
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CONSULTA GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+query{
+  cliente{
+    id
+    nombre
+    apellido
+    empresa
+    emails{
+      email
+    }
+  }
+}
+
+
+======================================================================================
+Creando un Mutation e Input para Nuestros Clientes
+(Video 26 - Seccion 5
+======================================================================================
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (schema.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+type Cliente {
+        id: ID
+        nombre: String
+        apellido: String
+        empresa: String
+        emails: [Email]
+    }
+    
+    type Email{
+        email: String
+    }
+   
+    type Query{
+        cliente: Cliente
+    }
+
+    input ClienteInput {
+        id: ID
+        nombre: String!
+        apellido: String!
+        empresa: String!
+        email: String!
+    }
+
+    type Mutation {
+        crearCliente(input: ClienteInput) : Cliente
+    }
+
+    export default schema;
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (index.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Cliente para mutations
+class Cliente {
+    constructor(id, {nombre, apellido, empresa, email}){
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.empresa = empresa;
+        this.email = email;
+    }
+}
+
+
+// Resolver para cliente con Arrow Funtion =>
+const root = {cliente: ()=>{
+    return{
+        "id": 1,
+        "nombre": "Andres",
+        "apellido": "Giraldo",
+        "empresa": "NC",
+        "emails": [
+            {email:"info@newsoftcomputer.com"},
+            {email:"andres@newsoftcomputer.com"}
+        ]
+    }
+}};
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+MUTATION GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Mutation y mostrando solo id
+mutation{
+  crearCliente(input:{
+    nombre: "Marco"
+    apellido: "Giraldo"
+    empresa: "NC"
+    email: "marco@newsoftcomputer.com"
+  })
+
+
+  // Mutation y mostrando todos los datos
+  mutation{
+  crearCliente(input:{
+    nombre: "Marco"
+    apellido: "Giraldo"
+    empresa: "NC"
+    email: "marco@newsoftcomputer.com"
+  }){
+    id
+    nombre
+    apellido
+    empresa
+    email
+  }
+}
+
+
+======================================================================================
+Mas sobre los Resolvers y obtener un registro por id
+(Video 27 - Seccion 5
+======================================================================================
+- Creamos un archivo nuevo para los resolver que es lo mas recomendado
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (resolvers.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Mutatios para Cliente
+class Cliente {
+    constructor(id, {nombre, apellido, empresa, email}){
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.empresa = empresa;
+        this.email = email;
+    }
+}
+
+// Base de datos en memoria
+const clientesDB = {};
+
+// Resolver para cliente con Arrow Funtion =>
+const resolvers = {
+    getCliente : ({id}) => {
+        return new Cliente(id, clientesDB[id]);
+    },
+    crearCliente : ({input}) => {
+        const id = require('crypto').randomBytes(10).toString('hex');
+        clientesDB[id] = input;
+        return new Cliente(id, input);
+    }
+};
+
+export default resolvers;
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (schema.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+- Borramos el type query anterior para poner el getCliente
+
+import {buildSchema} from 'graphql';
+
+// Schema Cliente
+const schema = buildSchema(`
+    type Cliente {
+        id: ID
+        nombre: String
+        apellido: String
+        empresa: String
+        email: String
+    }
+    
+    type Query{
+        getCliente(id: ID) : Cliente
+    }
+
+    input ClienteInput {
+        id: ID
+        nombre: String!
+        apellido: String!
+        empresa: String!
+        email: String!
+    }
+
+    type Mutation {
+        crearCliente(input: ClienteInput) : Cliente
+    }
+
+`);
+
+export default schema;
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (index.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+- Se quita los resolver de index para ponerlos en el archivo resolvers.js
+
+// Creamos la configuracion de express (Como se instalo babel no es necesario hacer require)
+
+// Configuracion del servidor express
+import express from 'express';
+// GraphQL
+import graphqlHTTP from 'express-graphql';          // Dependencia para conectar Express con GraphQL
+import schema from './schema';
+// Resolvers
+import resolvers from './resolvers';
+const root = resolvers;     // Le pasamos el mismo nombre de root para no cambiarlo en el index
+
+// Almacenamos el server en una constante llamada app
+const app = express();
+
+// URL /
+app.get('/', (req, res) => {
+    res.send('Todo Listo');
+});
+
+// URL /graphql
+app.use('/graphql', graphqlHTTP({
+    // Schema que se va a usar
+    //schema : schema,          // Forma antigua llave y valor
+    schema,                     // Forma con nueva sintaxis con ESC6
+    // El resolver se pasa como rootValue
+    rootValue: root,
+    // Utilizar graphiql
+    graphiql : true
+}));
+
+// Configuracion del puerto
+app.listen(8000, () => {
+    console.log('El servidor esta funcionando')
+})
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+MUTATION GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Mutation y mostrando solo id
+mutation{
+  crearCliente(input:{
+    nombre: "Marco"
+    apellido: "Giraldo"
+    empresa: "NC"
+    email: "marco@newsoftcomputer.com"
+  })
+
+
+  // Mutation y mostrando todos los datos
+  mutation{
+  crearCliente(input:{
+    nombre: "Marco"
+    apellido: "Giraldo"
+    empresa: "NC"
+    email: "marco@newsoftcomputer.com"
+  }){
+    id
+    nombre
+    apellido
+    empresa
+    email
+  }
+}
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+QUERY GETCLIENTE
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+query{
+  getCliente(id: "a938de3ae167f223f3f3"){
+    nombre
+    apellido
+    
+    
+  }
+}
+
+
+======================================================================================
+Tipos de Datos en GraphQL
+(Video 28 - Seccion 5
+======================================================================================
+
+- Existen muchos tipos de datos en GraphQL. Pero tambien se pueden crear los propios
+
+Existentes basicos
+  INT = Numero Entero
+  FLOAT = Numero con decimal
+  STRING = Cadena de textos
+  ID = Numero unico
+  BOOLEAN = True o False
+
+
+======================================================================================
+Tipos de Datos enum o enumerados
+(Video 29 - Seccion 5
+======================================================================================
+
+- Los tipos de datos enumerados se usan para hacer estilos listas desplegables en el shema y se ponen en el esquema
+
+Ejemplos
+enum TipoCliente
+{
+  BASICO
+  PREMIUM
+}
+
+enum TipoCliente
+{
+  1
+  2
+  3
+}
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (schema.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import {buildSchema} from 'graphql';
+
+// Schema Cliente
+const schema = buildSchema(`
+    type Cliente {
+        id: ID
+        nombre: String
+        apellido: String
+        empresa: String
+        email: String
+        tipo: TipoCliente
+    }
+
+    enum TipoCliente
+    {
+      BASICO
+      PREMIUM
+    }
+    
+    type Query{
+        getCliente(id: ID) : Cliente
+    }
+
+    input ClienteInput {
+        id: ID
+        nombre: String!
+        apellido: String!
+        empresa: String!
+        email: String!
+        tipo: TipoCliente!
+    }
+
+    type Mutation {
+        crearCliente(input: ClienteInput) : Cliente
+    }
+
+`);
+
+export default schema;
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (resolvers.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Mutatios para Cliente
+class Cliente {
+    constructor(id, {nombre, apellido, empresa, email, tipo}){
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.empresa = empresa;
+        this.email = email;
+        this.tipo = tipo;
+    }
+}
+
+// Base de datos en memoria
+const clientesDB = {};
+
+// Resolver para cliente con Arrow Funtion =>
+const resolvers = {
+    getCliente : ({id}) => {
+        return new Cliente(id, clientesDB[id]);
+    },
+    crearCliente : ({input}) => {
+        const id = require('crypto').randomBytes(10).toString('hex');
+        clientesDB[id] = input;
+        return new Cliente(id, input);
+    }
+};
+
+export default resolvers;
+
+
+======================================================================================
+Como agregar campos anidados en nuestro codigo
+(Video 30 - Seccion 5
+======================================================================================
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (schema.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import {buildSchema} from 'graphql';
+
+/*
+const schema = buildSchema(`
+// Type Checking    
+type Query {
+        hola: String
+    }
+`);
+*/
+
+// Schema Cliente
+const schema = buildSchema(`
+    type Cliente {
+        id: ID
+        nombre: String
+        apellido: String
+        empresa: String
+        email: String
+        edad: Int
+        tipo: TipoCliente
+        pedidos: [Pedido]
+    }
+
+    type Pedido {
+        producto: String
+        precio: Int
+    }
+
+    enum TipoCliente {
+        BASICO
+        PREMIUM
+    }
+    
+    type Query{
+        getCliente(id: ID) : Cliente
+    }
+
+    input ClienteInput {
+        id: ID
+        nombre: String!
+        apellido: String!
+        empresa: String!
+        email: String!
+        edad: Int!
+        tipo: TipoCliente!
+        pedidos: [PedidoInput]
+    }
+
+    input PedidoInput {
+        producto: String
+        precio: Int
+    }
+
+    type Mutation {
+        crearCliente(input: ClienteInput) : Cliente
+    }
+
+`);
+
+export default schema;
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (resolvers.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Resolver para hola
+//const root = {hola: ()=> "Hola Mundo desde GraphQL"};
+
+// Mutatios para Cliente
+class Cliente {
+    constructor(id, {nombre, apellido, empresa, email, edad, tipo, pedidos}){
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.empresa = empresa;
+        this.email = email;
+        this.edad = edad;
+        this.tipo = tipo;
+        this.pedidos = pedidos;
+    }
+}
+
+// Base de datos en memoria
+const clientesDB = {};
+
+// Resolver para cliente con Arrow Funtion =>
+const resolvers = {
+    getCliente : ({id}) => {
+        return new Cliente(id, clientesDB[id]);
+    },
+    crearCliente : ({input}) => {
+        const id = require('crypto').randomBytes(10).toString('hex');
+        clientesDB[id] = input;
+        return new Cliente(id, input);
+    }
+};
+
+export default resolvers;
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+MUTATION GRAPHQL
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  // Mutation
+  mutation{
+  crearCliente(input:{
+    nombre: "Marco"
+    apellido: "Giraldo"
+    empresa: "NC"
+    email: "marco@newsoftcomputer.com"
+    edad: 1
+    tipo: PREMIUM
+    pedidos :[
+      {
+        producto: "Comedor bebe"
+        precio: 50000
+      }
+      {
+        producto: "Caminador"
+        precio: 60000
+      }
+    ]
+  }){
+    id
+    nombre
+    apellido
+    empresa
+    email
+    edad
+    pedidos {
+      producto
+      precio
+    }
+  }
+}
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+QUERY GETCLIENTE
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+query{
+  getCliente(id: "6ee5c4b6c6db4c2c2b67"){
+    nombre
+    apellido
+    pedidos{
+      producto
+      precio
+    }
+    
+    
+  }
+}
+
+
+======================================================================================
+Comentarios en GraphQL
+(Video 31 - Seccion 5
+======================================================================================
+
+- Comentarios en GraphQL
+
+# Este es un tipo de comentario que no se muestra en ningun lado
+""" Comentario que se desea agregar """ Este tipo de comentario si se muestra en GraphiQL en la zona de Comentary y la parte de abajo en detalles
+
+""" Mutation Cliente"""
+    type Mutation {
+        """ Te permite crear nuevos clientes (Detalles)"""
+        # NombreResolver(Input con datos) : Valor que retorna
+        crearCliente(input: ClienteInput) : Cliente
+    }
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 06 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+SERVIDOR DE GRAPHQL CON MONGODB (PREPARACION) - SECCION 06
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 06 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Actualizar librerias para no tener vulnerabilidades de seguridad
+$ npm run audit
+$ npm audit
+
+======================================================================================
+Creando un Schema.graphql
+(Video 32 - Seccion 6
+======================================================================================
+
+- Instalando las herramientas a usar
+
+GraphQl Tools: Herramienta para crear servidores GraphQL
+GraphQL Import: Nos permite importar Schemas 
+
+$ npm install --save graphql-tools graphql-import
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 07 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Instalando MongoDB - SECCION 07
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 07 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+======================================================================================
+Instalando MongoDB en Windows 10
+(Video 34 - Seccion 7
+======================================================================================
+
+- Instalamos la libreria Mongoose
+
+Mongoose: Libreria para conecxiones, consultas etc, Con Bases de datos MongoDB
+
+$ npm install --save mongoose
+
+COMANDOS MONGODB
+
+- Arrancar servidor MongoDb: $ mongod
+- Parar servidor MongoDB: $ Ctrl + C
+- Si no arranca el servidor (Es porque puede estar arrancada en otra instancia): $ brew services stop mongodb
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 08 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Utilizando la Base de Datos de MongoDB en
+nuestro proyecto (GraphQL y MongoDB) - SECCION 08
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 08 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+======================================================================================
+Mutation: Crear Registros en MongoDB
+(Video 37 - Seccion 8
+======================================================================================
+
+- Resolver para conectar con MongoDB
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (resolvers.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import mongoose from 'mongoose';
+import {Clientes} from './db';
+import { rejects } from 'assert';
+
+// Export Nuevo con schema.graphql, GraphQL Tools y GraphQL Import
+export const resolvers = {
+    // Query y Mutation Funciones de GraphQL Tools para hacer Mapeo
+    Query: {
+        getCliente : ({id}) => {
+            return new Cliente(id, clientesDB[id]);
+        },
+    },
+    Mutation: {
+        crearCliente : (root, {input}) => {
+            const nuevoCliente = new Clientes ({
+                nombre : input.nombre,
+                apellido : input.apellido,
+                empresa : input.empresa,
+                email : input.email,
+                edad : input.edad,
+                tipo : input.tipo,
+                pedidos : input.pedidos
+            });
+            // Propiedad del id
+            nuevoCliente.id = nuevoCliente._id;
+
+            // Con el Promise guardamos en la base de datos de MongoDB
+            return new Promise((resolve, Object) => {
+                nuevoCliente.save((error) => {
+                    if(error) rejects(error)
+                    else resolve(nuevoCliente)
+                
+                })
+            });
+        }
+    }
+}
+
+
+======================================================================================
+Instalando Robo 3T
+(Video 38 - Seccion 8
+======================================================================================
+
+- Hacer Mutation para comprobar la conexion, Crear y verificar por el cliente que se use si si grabo
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+GRAPHQL - MUTATION CREAR
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+mutation {
+  crearCliente(input:{
+    nombre: "Marco"
+    apellido: "Giraldo"
+    empresa: "NC"
+    email: "marcogiraldo@gmail.com"
+    edad:2
+    tipo: PREMIUM
+    pedidos:[{
+      producto: "Celular"
+      precio: 800000
+    }
+    {
+    	producto: "Piano"
+      precio: 4000000
+    }
+    ]
+  })
+}
+
+
+
+======================================================================================
+Mutation: Actualizar Registros en MongoDB
+(Video 39 - Seccion 8
+======================================================================================
+
+- Mutation actualizar
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (schema.graphql)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+""" Mutation Cliente"""
+    type Mutation {
+        """ Te permite actualizar los clientes"""
+        # Actualizar cliente
+        actualizarCliente(input: ClienteInput): Cliente
+    }
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (resolvers.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+actualizarCliente: (root, {input}) => {
+            return new Promise((resolve, object) => {
+                Clientes.findOneAndUpdate({ _id: input.id}, input, {new: true}, (error, cliente) => {
+                    if(error) rejects(error)
+                    else resolve(cliente)
+                });
+            });
+        }    
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+GRAPHQL - MUTATION ACTUALIZAR
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+mutation {
+  actualizarCliente(input: {
+    id: "5d66fd512f51b3416c11fbf4"
+    nombre: "Daniela"
+    apellido:"Giraldo"
+    empresa: "Newsoft Computer"
+    email: "danielagiraldo@nc.com"
+    edad: 15
+    tipo: PREMIUM
+    pedidos: [
+      {
+        producto: "Iphone"
+        precio: 1500000
+      },
+      {
+        producto: "Universidad"
+        precio: 6000000
+      }
+    ]
+  }) {
+    id
+    nombre
+    apellido
+    empresa
+    edad
+  }
+}
+
+
+
+======================================================================================
+Mutation: Eliminar Registros en MongoDB
+(Video 40 - Seccion 8
+======================================================================================
+
+- Mutation eliminar
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (schema.graphql)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ """ Mutation Cliente"""
+    type Mutation {
+        """ Te permite eliminar un cliente"""
+        # Eliminar cliente
+        eliminarCliente(id: ID!) : String
+    }
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (resolvers.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+eliminarCliente: (root, {id}) => {
+            return new Promise((resolve, object) => {
+                //Clientes.remove   // Se puede usar remove tambien
+                Clientes.findOneAndRemove({_id: id}, (error) => {
+                    if (error) rejects(error)
+                    else resolve("Se elimino correctamente")
+                });
+            });
+        }    
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+GRAPHQL - MUTATION ELIMINAR
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+mutation {
+  eliminarCliente(id: "5d66fd512f51b3416c11fbf4")
+}
+
+
+
+======================================================================================
+Query: Obtener Clientes
+(Video 41 - Seccion 8
+======================================================================================
+
+- Consultar todos los clientes
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (schema.graphql)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+""" CONSULTAS CLIENTE """
+    type Query {
+        # Consultar todos los clienes
+        getClientes: [Cliente]
+        # Consultar un solo cliente
+        getCliente(id: ID) : Cliente
+    }
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (resolvers.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Query y Mutation Funciones de GraphQL Tools para hacer Mapeo
+    Query: {
+        getClientes: () => {
+            return Clientes.find({})
+        },
+        getCliente : ({id}) => {
+            return new Cliente(id, clientesDB[id]);
+        },
+    },
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+GRAPHQL - QUERY TODOS LOS CLIENTES
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+query {
+  getClientes{
+    id
+    nombre
+    apellido
+    empresa
+    
+  }
+}
+
+
+======================================================================================
+Query: Obtener Clientes con un limite de registros
+(Video 42 - Seccion 8
+======================================================================================
+
+- Consultar todos los clientes
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (schema.graphql)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    # Consultar clientes con un limite de registros
+        getClientesLimite(limite: Int): [Cliente]
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (resolvers.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Resolver para obtener clientes con un limite de registros (getClientesLimite)
+  getClientesLimite: (root, {limite}) => {
+    return Clientes.find({}).limit(limite)
+  },
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+GRAPHQL - QUERY TODOS LOS CLIENTES
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+query {
+  getClientesLimite(limite: 3){
+    id
+    nombre
+    apellido
+    empresa
+    
+  }
+}
+
+
+======================================================================================
+Query: Obtener Cliente con ID
+(Video 43 - Seccion 8
+======================================================================================
+
+- Obtener cliente con un ID
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (schema.graphql)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# Consultar un solo cliente desde su ID
+  getCliente(id: ID) : Cliente
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CODIGO (resolvers.js)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+getCliente : (root, {id}) => {
+            return new Promise((resolve, object) => {
+                Clientes.findById(id, (error, cliente) => {
+                    if(error) rejects(error)
+                    else resolve(cliente)
+                });
+            });
+        }
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+GRAPHQL - QUERY TODOS LOS CLIENTES
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+query {
+  getCliente(id: "5d671c535eb3c431ac6b939d"){
+    id
+    nombre
+    apellido
+    empresa
+    
+  }
+}
+
+
+======================================================================================
+Query: Queries con Alias
+(Video 44 - Seccion 8
+======================================================================================
+
+- Queries con Alias
+
+Cuando ejecutas 2 o mas consultas sin un alias marca error Ejemplo
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+QUERY SIN ALIAS (MARCA ERROR)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+c
+
+  getCliente(id: "5d671ca15eb3c431ac6b939e"){
+    id
+    nombre
+    apellido
+    empresa
+  }
+
+}
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+QUERY CON ALIAS (FORMA CORRECTA DE CONSULTAR - NO MARCA ERROR)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+query {
+
+  alias1: getCliente(id: "5d671c535eb3c431ac6b939d"){
+    id
+    nombre
+    apellido
+    empresa
+  }
+
+  alias2: getCliente(id: "5d671ca15eb3c431ac6b939e"){
+    id
+    nombre
+    apellido
+    empresa
+  }
+
+}
+
+
+======================================================================================
+Query: Crear Queries con Fragments
+(Video 45 - Seccion 8
+======================================================================================
+
+- Crear Queries con Fragments
+
+Se usa cuando tenemos muchas consultas para no tener que hacer una por una. Pueden personalizarse
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+QUERY SIN ALIAS (MARCA ERROR)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+query {
+
+  alias1: getCliente(id: "5d671c535eb3c431ac6b939d"){
+    ...clientes
+  }
+
+  alias2: getCliente(id: "5d671ca15eb3c431ac6b939e"){
+    ...clientes
+  }
+  
+  alias3: getCliente(id: "5d671ca15eb3c431ac6b939e"){
+    ...clientes
+    edad
+  }
+  
+  alias4: getCliente(id: "5d671ca15eb3c431ac6b939e"){
+    ...clientes
+    tipo
+    
+  }
+  
+   alias5: getCliente(id: "5d671ca15eb3c431ac6b939e"){
+    ...clientes
+  }
+
+}
+
+fragment clientes on Cliente {
+  nombre
+  apellido
+  empresa
+}
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 09 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Configurando Apollo Server - SECCION 08
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 09 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+======================================================================================
+Que es Apollo Client y Apollo Server
+(Video 46 - Seccion 09
+======================================================================================
+
+- Apollo es una plataforma que te permitira realizar consultas a tus datos de GraphQL.
+- API para realizar Querys y Mutations.
+- Con Apollo sera muy sencillo conectar tus aplicaciones (React, React Native, JavaScript).
+- Tecnologías similares (Redux, Relay(Facebook), GraphQL-Yoga).
+- Permite chekear las consultas y los datos.
+- Es necesario configurar un Cliente y un Servidor (Apollo Client - Apollo Server).
+- Sintaxis similar a redux.
+
+
+======================================================================================
+Instalando Apollo Server
+(Video 47 - Seccion 09
+======================================================================================
+
+- Entrar a la carpeta del server
+- $ npm install --save apollo-server-express
+
+- No se usa (makeExecutableShema - bodyParser) porque ya esta incluido en Apollo Server
+
+
+======================================================================================
+Configurar Apollo Server
+(Video 48 - Seccion 09
+======================================================================================
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 10 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Configurando Apollo Client - SECCION 10
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 10 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+======================================================================================
+Creando el Proyecto del Cliente con create-react-app e
+instalando Dependencias
+(Video 49 - Seccion 10
+======================================================================================
+
+- Usamos el create-react-app para crear react con sus dependencias basicas.
+
+- Instalamos primero la libreria
+$ npm install -g create-react-app
+
+- Creamos el proyecto
+$ create-react-app client
+
+- Instalamos Apollo Client
+$ npm install --save apollo-boost react-apollo graphql graphql-tag
+
+- apollo-boost - react-apollo (Conforman Apollo Client)
+
+
+======================================================================================
+Creando el Proyecto del Cliente con create-react-app
+Configurando Apollo Client
+(Video 50 - Seccion 10
+======================================================================================
+
+- Apollo provider - es similar al context API(React) y al Store(Redux) 
+- Context API: Context provee una forma de pasar datos a través del árbol de componentes sin tener que pasar props manualmente en cada nivel.
+
+- Apollo Provider:
+ara conectar Apollo Client a React, deberá utilizar el ApolloProvidercomponente exportado desde @apollo/react-hooks. 
+El ApolloProvideres similar a React Context.Provider. Envuelve su aplicación React y coloca al cliente en el contexto, 
+lo que le permite acceder desde cualquier parte de su árbol de componentes.
+
+import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
+
+const client = new ApolloClient({
+  uri: "http://localhost:4000/graphql",
+  onError: ({networkError, graphQLErrors}) => {
+    console.log('graphQLErrors', graphQLErrors);
+    console.log('networkError', networkError);
+  }
+});
+
+function App() {
+  return (
+    <ApolloProvider client={client}>
+      <div className="App">
+        <h1>NC - Newsoft Computer</h1>
+
+        {/*
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>
+              Edit <code>src/App.js</code> and save to reload.
+            </p>
+            <a
+              className="App-link"
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn React
+            </a>
+          </header>
+        */}
+      </div>
+    </ApolloProvider>
+  );
+}
+
+export default App;
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 11 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Creando la Aplicación de CRM - SECCION 11
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 11 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+======================================================================================
+Primeros Pasos con la Aplicación
+(Video 51 - Seccion 11
+======================================================================================
+
+- Agregar linea de estilos de bootstrap en public index.html
+
+<link href="https://bootswatch.com/4/flatly/bootstrap.min.css" rel="stylesheet"> 
+
+- Creamos una carpeta para los componentes
+- Creamos el componente Header.js
+- Importamos desde App.js
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+COMPONENTE Header.js
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import React from 'react';
+
+const Header = () => (
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between d-flex">
+        <div className="container">
+            <a className="navbar-brand text-light font-weight-bold">CRM</a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navegacion" aria-controls="navegacion" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse" id="navegacion">
+                <ul className="navbar-nav ml-auto text-right">
+                    <li className="nav-item active">
+                        <a className="btn btn-success">Nuevo Cliente</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+);
+
+export default Header;
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+App.js
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import React from 'react';
+
+// Apollo
+import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
+
+// Componentes
+import Header from './components/Header';
+
+const client = new ApolloClient({
+  uri: "http://localhost:4000/graphql",
+  onError: ({networkError, graphQLErrors}) => {
+    console.log('graphQLErrors', graphQLErrors);
+    console.log('networkError', networkError);
+  }
+});
+
+function App() {
+  return (
+    <ApolloProvider client={client}>
+      <Header/>
+    </ApolloProvider>
+  );
+}
+
+export default App;
+
+
+
+
+======================================================================================
+Agregando React Router
+(Video 55 - Seccion 11
+======================================================================================
+
+- Instalando y usando React Router
+
+  $ npm install --save react-router-dom
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 12 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Creando Nuevos Clientes - SECCION 12
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 12 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+======================================================================================
+Creando Nuevos Clientes desde Playground
+(Video 57 - Seccion 12
+======================================================================================
+
+- Agregando y consultando un registro desde Playground
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Mutation CREAR - Playground
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+mutation crearCliente($input: ClienteInput){
+  crearCliente(input: $input){
+    id
+    nombre
+    apellido
+  }
+}
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Mutation Variables CREAR - Playground
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+{
+  "input": {
+    "nombre": "Andres",
+    "apellido": "Giraldo",
+    "empresa": "Newsoft Computer",
+    "emails": {
+      "email": "andresncadmin@nc.com"
+    },
+    "edad": 40,
+    "tipo": "PREMIUM"
+  }
+}
+
+
+======================================================================================
+Agregando el Mutation a nuestra Aplicación de React
+(Video 58 - Seccion 12
+======================================================================================
+
+- Creamos el mutation en el cliente
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Mutations Clientes - mutation-clientes.js
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import gql from 'graphql-tag';
+
+export const NUEVO_CLIENTE = gql`
+mutation crearCliente($input: ClienteInput){
+    crearCliente(input: $input){
+      id
+      nombre
+      apellido
+    }
+  }
+`;
+
+======================================================================================
+Leyendo los Datos del Formulario
+(Video 59 - Seccion 12
+======================================================================================
+
+
+======================================================================================
+Redireccionando al Listado del Clientes al Crearlo (onCompleted)
+(Video 62 - Seccion 12
+======================================================================================
+
+- onCompleted : Sirve para redirecionar a una pagina despues de completar una tarea
+
+onCompleted={ () => this.props.history.push('/')}
+
+
+======================================================================================
+Desactivando el Caching para aplicaciones en Tiempo real (pollInterval)
+(Video 63 - Seccion 12
+======================================================================================
+
+- Desactivando el caching para que los datos aparescan en tiempo real
+inter
+
+pollInterval={1000}
+
+- Esta en milisegundos ms 500ms = medio segundo, 1000 = 1s, 2000 = 2s
+
+<Query query={CLIENTES_QUERY} pollInterval={1000}>
+        {({ loading, error, data, startPolling, stopPolling }) => {
+            if (loading) return "Cargando...";
+            if (error) return `Error: ${error.message}`;
+            console.log(data.getClientes);
+
+
+
+
+======================================================================================
+Desactivando el Caching para aplicaciones en Tiempo real (pollInterval)
+(Video 63 - Seccion 12
+======================================================================================
+
+query ConsultarCliente ($id: ID){
+  getCliente(id: $id){
+    id
+    nombre
+    apellido
+    empresa
+  }
+}
+
+{
+  "id": "5d671b8d5eb3c431ac6b939b"
+}
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 13 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Editando Clientes con React y GraphQL - SECCION 13
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 13 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+======================================================================================
+Escribiendo el Mutation para Actualizar a los Clientes
+(Video 73 - Seccion 13
+======================================================================================
+
+- Para hacer la consulta em Playground hay que rellenar todos los datos asi no se vayan a cambiar
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Mutations actualizarCliente
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+mutation actualizarCliente($input : ClienteInput){
+  actualizarCliente(input: $input) {
+    nombre
+    apellido
+    edad
+    empresa
+    tipo
+    emails {
+      email
+    }
+  }
+}
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Mutations actualizarCliente - Variables
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+{
+  "input": {
+    "id": "5d671b8d5eb3c431ac6b939b",
+    "nombre": "Marco",
+    "apellido": "Giraldo Gomez",
+    "edad": 2,
+    "empresa": "Newsoft Computer",
+    "tipo": "PREMIUM",
+    "emails": [
+      {"email": "marcogiraldo@nc.com.co"},
+      {"email": "marcogiraldogomez@nc.com.co"}
+    ]
+  }
+}
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 14 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Eliminar Clientes con React y GraphQL - SECCION 14
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SECCION : 14 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Mutations eliminarCliente
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+mutation eliminarCliente ($id:ID!){
+  eliminarCliente(id: $id)
+}
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Mutations eliminarrCliente - Variables
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+{
+  "id": "5d9a784fd936042760e3d72f"
+}

@@ -1,0 +1,7 @@
+// Codigo para que Express pueda ejecutar las ultimas versiones de ES6 - ECMAScript 6
+{
+    "presets": [
+        "env",
+        "stage-0"        
+    ]
+}
