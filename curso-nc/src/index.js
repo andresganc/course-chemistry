@@ -9,6 +9,7 @@ import ComponenteConProps from './components/curso/Props'
 import EstadoAlarma from './components/curso/State'
 
 
+
 /*
 import HolaMundoCruel from './components/HolaMundo';
 import ChaoMundo from './components/ChaoMundo';
@@ -22,7 +23,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Menu />
     <MenuBuscar />
-    <ComponenteConProps />
+    <ComponenteConProps texto="SUMAR" />
     <EstadoAlarma />
   </React.StrictMode>,
   document.getElementById('root')

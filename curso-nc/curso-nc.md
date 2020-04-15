@@ -44,6 +44,8 @@
     - [COMPONENTE CON FUNCTIONS](#COMPONENTE-CON-FUNCTIONS)
     - [COMPONENTE ARROW FUNCTIONS](#COMPONENTE-ARROW-FUNCTIONS)
     - [COMPONENTE CON CLASES](#COMPONENTE-CON-CLASES)
+    - [PROPS (PROPIEDADES)](#PROPS-(PROPIEDADES))
+    - [STATE (ESTADO)](#STATE-(ESTADO))
 
 
 
@@ -476,6 +478,8 @@
 
 
 
+<br>
+
 ### COMPONENTES
 
     * Los componentes permiten separar la interfaz de usuario en piezas independientes, reutilizables y pensar en cada pieza de forma aislada.
@@ -487,6 +491,8 @@
 
     * Los componentes con funciones tiene una forma adicional de crearlos, ques es el Arrow Functions 
 
+
+<br>
 
 ### COMPONENTE CON FUNCTIONS
 
@@ -515,6 +521,8 @@
         export default HolaMundo;
 
 
+<br>
+
 ### COMPONENTE ARROW FUNCTIONS
 
     * FUNCION FLECHA : Arrow Function = Funcion flecha
@@ -535,6 +543,8 @@
         export default ComponenteArrowFunctions
 
 
+
+<br>
 
 ### COMPONENTE CON CLASES
 
@@ -563,3 +573,76 @@
         }
 
         export default ComponenteConClases;
+
+
+<br>
+
+### PROPS (PROPIEDADES)
+
+    * Los componentes permiten separar la interfaz de usuario en piezas independientes, reutilizables y pensar en cada pieza de forma aislada.
+    Esta página proporciona una introducción a la idea de los componentes.
+
+    * La forma más sencilla de definir un componente es escribir una función de JavaScript:
+
+        function Welcome(props) {
+            return <h1>Hello, {props.name}</h1>;
+        }
+
+        Esta función es un componente de React válido porque acepta un solo argumento de objeto “props” (que proviene de propiedades) con datos y devuelve un 
+        elemento de React. Llamamos a dichos componentes “funcionales” porque literalmente son funciones JavaScript.
+
+
+    * También puedes utilizar una clase de ES6 para definir un componente
+
+        class Welcome extends React.Component {
+        render() {
+            return <h1>Hello, {this.props.name}</h1>;
+        }
+        }
+
+        Los dos componentes anteriores son equivalentes desde el punto de vista de React.
+        Tanto los componentes de función como de clase tienen algunas características adicionales que veremos en las próximas secciones.
+
+
+<br>
+
+### STATE (ESTADO)
+
+    * El objeto state es donde almacena los valores de propiedad que pertenecen al componente.
+        Cuando el objeto state cambia, el componente se vuelve a representar.
+
+    * El objeto state se puede inicializar directamente despues de la clase o en el constructor de la clase.
+
+        - State incializado directamente:
+
+            class NombreClase {
+
+                state = {
+
+                }
+
+                render(){
+                    return();
+                }
+
+            }
+
+
+        - State inicializado en el constructor junto con los props:
+
+            class NombreClase {
+
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                        estado: false,
+                        nombre: "Andres",
+                        numero1: 0
+                        };
+                }
+
+                render(){
+                    return();
+                }
+
+            }

@@ -3,7 +3,7 @@
 import React from "react";
 
 
-// Componente Hola Mundo
+// Componente
 function ComponentesConProps(props) {
     
     return (
@@ -13,4 +13,4 @@ function ComponentesConProps(props) {
     );
 }
 
-export default ComponentesConProps;
+export default ComponentesConProps ;
