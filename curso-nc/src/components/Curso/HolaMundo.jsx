@@ -1,9 +1,6 @@
 
 import React from "react";
 
-// Styles
-import '../assets/css/main.css'
-
 // Componente Hola Mundo
 
 function HolaMundo() {
@@ -13,8 +10,8 @@ function HolaMundo() {
         <div>
             <nav>
                 <ul>
-                    <li className="li-nav"> <a href=""> Inicio </a></li>
-                    <li className="li-nav"> <a href=""> Mundo </a></li>
+                    <li> <a href=""> Inicio </a></li>
+                    <li> <a href=""> Mundo </a></li>
                 </ul>
             </nav>
 

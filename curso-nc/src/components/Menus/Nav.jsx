@@ -5,7 +5,7 @@ import React from 'react';
 
 
 // Styles
-import StylesNav from '../../assets/styles/nav';
+import StylesNav from '../../assets/styles/menus/nav';
 
 // Assets
 import ImagenInicio from '../../assets/img/home.svg';
@@ -19,7 +19,6 @@ class Menu extends React.Component {
             return(
                 <div>
                     
-
                     <nav style={StylesNav.nav} >
                         
                         <div style={StylesNav.div_nav} >
@@ -37,19 +36,14 @@ class Menu extends React.Component {
                             </ul>
                         </div>
 
-                        
                     </nav> 
-
-                    
 
                 </div>
             );
 
         }
 
-
 }
-
 
 
 export default Menu;

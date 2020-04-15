@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Styles
-import StylesBuscar from '../../assets/styles/buscar';
+import StylesBuscar from '../../assets/styles/searchs/buscar';
 
 // Assets
 import ImagenBuscar from '../../assets/img/buscar.svg'; 

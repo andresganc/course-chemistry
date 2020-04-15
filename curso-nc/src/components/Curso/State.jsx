@@ -2,37 +2,59 @@
 import React from 'react';
 
 // Assets
-import Alarma from '../../assets/img/alarm-azul.png';
-import AlarmaNotificacion from '../../assets/img/alarm-notifications.png';
+import ImagenAlarmaFalse from '../../assets/img/alarm-azul.png';
+import ImagenAlarmaTrue from '../../assets/img/alarm-notifications.png';
 
-
-class Estados extends React.Component {
+class EstadoAlarma extends React.Component {
 
     state = {
-        alarmMostrar: true
+        estadoAlarma: false
     }
 
+
+    cambiarEstado = () => {
+        
+        if (this.state.estadoAlarma == false ) {
+
+            this.setState({
+                estadoAlarma: true
+            });
+
+        } else if (this.state.estadoAlarma == true){
+            this.setState({
+                estadoAlarma: false
+            });
+        }
+        
+    }
+    
+    // Metodo Render
     render() {
 
-        if (this.state.alarmMostrar === false) {
-            return (
-                <div>
-                    <h2>Alarma</h2>
-                    <a href="#">
-                    <img src={Alarma} alt="Alarma" width="24px" />
-                    </a>
-                </div>
+        
+
+        if (this.state.estadoAlarma == false ) {
+
+            return(
+            <div>
+                <img src={ImagenAlarmaFalse} alt="" width="20px" />
+                <button onClick={this.cambiarEstado} > Me gusta </button>
+            </div>
             );
-        } else {
-            return (
-                <div>
-                    <h2>Alarma Notificacion</h2>
-                    <img src={AlarmaNotificacion} alt="Alarma notificacion" width="24px" />
-                </div>
+
+        } else if (this.state.estadoAlarma == true) {
+
+            return(
+            <div>
+                <img src={ImagenAlarmaTrue} alt="" width="20px" />
+                <button onClick={this.cambiarEstado} > No me gusta </button>
+            </div>
             );
+            
         }
+
     }
 
 }
 
-export default Estados;
+export default EstadoAlarma;

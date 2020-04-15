@@ -2,10 +2,10 @@
 import React from 'react';
 
 // Components
-import Buscar from '../Searchs/BuscarSimple';
+import Buscar from '../searchs/BuscarSimple';
 
 // Styles
-import StylesNav from '../../assets/styles/nav-buscar';
+import StylesNav from '../../assets/styles/menus/nav-buscar';
 
 // Assets
 import ImagenInicio from '../../assets/img/home.svg';
