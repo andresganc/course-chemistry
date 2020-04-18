@@ -46,6 +46,7 @@
     - [COMPONENTE CON CLASES](#COMPONENTE-CON-CLASES)
     - [PROPS (PROPIEDADES)](#PROPS-(PROPIEDADES))
     - [STATE (ESTADO)](#STATE-(ESTADO))
+    - [COMPONENTES MATERIAL UI](#COMPONENTES-MATERIAL-UI)
 
 
 
@@ -646,3 +647,63 @@
                 }
 
             }
+
+
+### COMPONENTES MATERIAL UI
+
+    * Instalacion
+
+        - 1. // usando npm (En consola y Dentro del proyecto)
+                npm install @material-ui/core
+
+            // usando yarn
+                yarn add @material-ui/core
+
+        - 2. Fuente Roboto
+                Material-UI fue diseñado con la fuente Roboto en mente. Así que asegúrate de seguir estas instrucciones . 
+                Por ejemplo, a través de Google Web Fonts:
+
+                Este link se debe pegar en el index.html (Dentro del head) que esta en la carpeta public del proyecto react.
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+        - 3. Fuente de Iconos
+                Para poder utilizar la fuente del componente Icon, primero debes agregar la fuente Material icons. Aquí hay algunas instrucciones sobre cómo hacerlo. 
+                Por ejemplo, a través de Google Web Fonts:
+
+                Este link se debe pegar en el index.html (Dentro del head) que esta en la carpeta public del proyecto react.
+                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+        - 4. Iconos SVG (En consola y Dentro del proyecto)
+                Para poder utilizar los íconos SVG Material precompilados, como los que se encuentran en los demos de íconos, 
+                primero debes instalar el paquete @material-ui/icons:
+
+                // usando npm
+                npm install @material-ui/icons
+
+                // usando yarn
+                yarn add @material-ui/icons
+
+
+    * Implementacion
+
+        Los componentes de Material-UI funcionan aisladamente. Son autosuficientes, y sólo inyectarán los estilos necesarios para su presentación. 
+        No dependen de ninguna hoja de estilos global como normalize.css.
+
+        Puedes utilizar cualquiera de los componentes como son demostrados en la documentación. Por favor, consulta la página de demostración de cada 
+        componente para ver cómo deben ser importados.
+
+        Codigo de ejemplo:
+
+            import React from 'react';
+            import ReactDOM from 'react-dom';
+            import Button from '@material-ui/core/Button';
+
+            function App() {
+            return (
+                <Button variant="contained" color="primary">
+                Hola Mundo!
+                </Button>
+            );
+            }
+
+            ReactDOM.render(<App />, document.querySelector('#app'));
