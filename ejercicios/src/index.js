@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-import AumentarNumeroConBoton from './views/1.basicos/AumentarNumeroConBoton';
+// Componentes
+import Header from './views/JuegoMemoriaParejas/components/Header';
+
+import JuegoMemoriaParejas from './views/JuegoMemoriaParejas/JuegoMemoriaParejas';
 
 ReactDOM.render(
   <React.StrictMode>
     
-    <AumentarNumeroConBoton />
+    <JuegoMemoriaParejas />
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
