@@ -1,4 +1,39 @@
 
+const stylesMainJMP = {
+    '@global': {
+        body: {
+            float: 'center',
+            display: 'flex',
+            backgroundColor: 'black',
+            width: '95%'
+        },
+        div: {
+            '&:focus':{
+                outline: 'none !important'
+            } 
+        }
+    },
+
+    prueba: {
+        backgroundColor: 'black'
+    }
+
+}
+
+/*
+const body = {
+    backgroundColor: 'black'
+}
+*/
+
+
+
+
+
+
+
+// Ejemplos 
+/*
 
 const body = {
     float: 'center',
@@ -7,11 +42,15 @@ const body = {
     width: '95%'
 }
 
+const divFocus = {
+    '@global':{
+
+        outline: 'none !important'
+    }
+}
 
 
 
-// Ejemplos 
-/*
 import {createUseStyles} from 'react-jss'
 import withStyles from 'react-jss';
 
@@ -27,4 +66,4 @@ export default {useStyles};
 export default withStyles(styles)(Button);
 */
 
-export default {body};
+export default {stylesMainJMP};
