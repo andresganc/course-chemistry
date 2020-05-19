@@ -1,5 +1,5 @@
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components Material UI
@@ -22,54 +22,62 @@ import ImgHeader from '../assets/img/header-01.jpg'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      flexGrow: 1,
+        flexGrow: 1,
+        display: 'flex',
+        margin: '0 auto'
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+        marginRight: theme.spacing(2),
     },
     title: {
-      flexGrow: 1,
+        flexGrow: 1,
     },
-  }));
-  
+    image: {
+        display: 'flex',
+        margin: '0 auto',
+    }
+       
+}));
 
 
-function Header () {
-    
-        const classes = useStyles();
-        return(
+
+function Header() {
+
+    const classes = useStyles();
+    return (
+        <div className={classes.root}>
             <header>
-
                 <div>
-                    <img src={ImgHeader} alt="" width="70%" height="30%" />
+                    <img src={ImgHeader} alt="" width="70%" height="30%" className={classes.image} />
                 </div>
 
                 <div className={classes.root}>
-                <AppBar position="static">
-                    <Toolbar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" className={classes.title}>
-                        NC - Juego Memoria Parejas - React
+                    <AppBar position="static">
+                        <Toolbar>
+                            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                                <MenuIcon />
+                            </IconButton>
+                            <Typography variant="h6" className={classes.title}>
+                                NC - Juego Memoria Parejas - React
                     </Typography>
-                    <Button color="inherit">Intentos : 0</Button>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        size="small"
-                        startIcon={<AutorenewIcon />}
-                        className="boton-reiniciar"
-                    >
-                        Reiniciar
+                            <Button color="inherit">Intentos : 0</Button>
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                size="small"
+                                startIcon={<AutorenewIcon />}
+                                className="boton-reiniciar"
+                            >
+                                Reiniciar
                     </Button>
-                    </Toolbar>
-                </AppBar>
+                        </Toolbar>
+                    </AppBar>
                 </div>
 
             </header>
-        );
-    
+        </div>
+    );
+
 }
 
 export default Header;

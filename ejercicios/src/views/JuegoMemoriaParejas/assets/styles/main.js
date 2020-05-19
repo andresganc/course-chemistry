@@ -1,5 +1,29 @@
 
-const stylesMainJMP = {
+
+
+ const stylesMainJMP = {
+    '@global': {
+        body: {
+            backgroundColor: 'black',
+            
+        },
+        div: {
+            '&:focus':{
+                outline: 'none !important'
+            } 
+        }
+    },
+
+    divMain: {
+        //float: 'center',
+        //display: 'flex',
+        //margin: '0 auto'
+    }
+
+};
+
+/*
+const stylesMainJMP = theme => ({
     '@global': {
         body: {
             float: 'center',
@@ -18,52 +42,9 @@ const stylesMainJMP = {
         backgroundColor: 'black'
     }
 
-}
-
-/*
-const body = {
-    backgroundColor: 'black'
-}
-*/
-
-
-
-
-
-
-
-// Ejemplos 
-/*
-
-const body = {
-    float: 'center',
-    display: 'flex',
-    backgroundColor: 'black',
-    width: '95%'
-}
-
-const divFocus = {
-    '@global':{
-
-        outline: 'none !important'
-    }
-}
-
-
-
-import {createUseStyles} from 'react-jss'
-import withStyles from 'react-jss';
-
-const useStyles = createUseStyles({
-    
-    body: {
-        background: 'black'
-    }
-
 });
-
-export default {useStyles};
-export default withStyles(styles)(Button);
 */
 
-export default {stylesMainJMP};
+
+
+export default stylesMainJMP;
