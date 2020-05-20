@@ -6,7 +6,11 @@ import * as serviceWorker from './serviceWorker';
 // Componentes
 import Header from './views/JuegoMemoriaParejas/components/Header';
 
+// Font-Awesome
+import "font-awesome/css/font-awesome.css";
+
 import JuegoMemoriaParejas from './views/JuegoMemoriaParejas/JuegoMemoriaParejas';
+
 
 ReactDOM.render(
   <React.StrictMode>

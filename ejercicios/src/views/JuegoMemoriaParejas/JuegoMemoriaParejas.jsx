@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 // Componentes
 import Header from './components/Header';
+import Tablero from './components/Tablero';
 
 // Styles JSS & MaterialUI
 import { createUseStyles } from 'react-jss'
@@ -35,6 +36,7 @@ function JuegoMemoriaParejas() {
     return(
         <div>
             <Header />
+            <Tablero />
         </div>
     );
 }

@@ -21,6 +21,14 @@ import ImgHeader from '../assets/img/header-01.jpg'
 
 
 const useStyles = makeStyles((theme) => ({
+    '@global': {
+        header: {
+            border: '1px solid black',
+            marginBottom: '10px',
+            justifyContent: 'spacBetween',
+            alingContent: 'center'
+        }
+    },
     root: {
         flexGrow: 1,
         display: 'flex',
@@ -46,7 +54,7 @@ function Header() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <header>
+            <header className={classes["@global"]}>
                 <div>
                     <img src={ImgHeader} alt="" width="70%" height="30%" className={classes.image} />
                 </div>
