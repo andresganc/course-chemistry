@@ -26,7 +26,7 @@ import EditarCliente from './components/EditarCliente';
 
 // CONFIG APOLLO CLIENT
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql",
+  uri: "http://localhost:9998/graphql",
   cache: new InMemoryCache({
     addTypename: false
   }),

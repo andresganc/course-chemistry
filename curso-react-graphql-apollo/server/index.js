@@ -23,7 +23,7 @@ const server = new ApolloServer({typeDefs, resolvers});
 //Middleware para conectar Apollo Server - Express
 server.applyMiddleware({app});
 
-app.listen({port: 4000}, () => console.log(`El servidor esta corriendo http://localhost:4000${server.graphqlPath}`));
+app.listen({port: 9998}, () => console.log(`El servidor esta corriendo http://localhost:9998${server.graphqlPath}`));
 
 
 

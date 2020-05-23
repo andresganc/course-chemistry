@@ -53,7 +53,7 @@ const Contactos = () => (
                                                 type="button" 
                                                 className="btn btn-danger d-block d-md-inline-block mr-2"
                                                 onClick={() => {
-                                                    if(window.confirm('Realmente deseas eliminar este cliente ?')){
+                                                    if(window.confirm('Realmente deseas eliminar este cliente ?' + " ID Cliente : " + item.id )){
                                                         //console.log(item.id)
                                                         eliminarCliente({
                                                         variables: {id}
