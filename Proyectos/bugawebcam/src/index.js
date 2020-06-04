@@ -5,11 +5,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // Componentes
-//import Index from './index.jsx';
+import Index from './index.jsx';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Index />
   </React.StrictMode>,
   document.getElementById('root')
 );

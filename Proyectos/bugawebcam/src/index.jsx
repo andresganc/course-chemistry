@@ -1,24 +1,27 @@
 
-import React, { Fragment } from 'react';
+import React from 'react';
+
+// CSS
+//import './assets/css/lecker_library.css';
+//import './assets/css/lecker_style.css';
+//import 
+
+// JS
+//import './assets/js/lecker_library.js';
+//import './assets/js/lecker_script.js';
+//import './assets/js/jquery-1.12.4.min.js';
+
+// Fonts
+//import 'https://fonts.googleapis.com/css?family=Bree+Serif|Lato'
+
+// Images
+import Habitacion01 from './assets/images/habitacion-01.jpg';
 
 function Index() {
     return (
+
         <div>
-            <meta charSet="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Buga Web Cam</title>
-            {/* FavIcon */}
-            <link rel="icon" type="image/jpg" href="./images/Logo.jpg" />
-            {/* Library CSS */}
-            <link href="css/lecker_library.css" rel="stylesheet" />
-            {/* Icons CSS */}
-            <link href="fonts/themify-icons.css" rel="stylesheet" />
-            <link href="fonts/selima/stylesheet.css" rel="stylesheet" />
-            <link href="fonts/introrust/stylesheet.css" rel="stylesheet" />
-            {/* Theme CSS */}
-            <link href="css/lecker_style.css" rel="stylesheet" />
-            {/* Google Fonts */}
-            <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lato" rel="stylesheet" />
+            
             {/* Page */}
             <div className="lec_page lec_page_rust" id="lec_page">
                 {/* To Top */}
@@ -83,8 +86,8 @@ function Index() {
                                     <p>BugaWebCam 2020</p>
                                     {/* Social Buttons */}
                                     <div className="lec_footer_social">
-                                        <a target="_blank" href="https://www.facebook.com/bugawebcam"><i className="ti ti-facebook lec_icon_box" /></a>
-                                        <a target="_blanK" href="https://instagram.com/bugawebcam/"><i className="ti ti-instagram lec_icon_box" /></a>
+                                        <a target="_blank" href="https://www.facebook.com/bugawebcam"><i class="ti ti-facebook lec_icon_box" /></a>
+                                        <a target="_blanK" href="https://instagram.com/bugawebcam/"><i class="ti ti-instagram lec_icon_box" /></a>
                                         {/*
                       <a href="#"><i class="ti ti-google lec_icon_box"></i></a>
                       <a href="#"><i class="ti ti-youtube lec_icon_box"></i></a>
@@ -102,7 +105,7 @@ function Index() {
                 </header>
                 {/* Header End */}
                 {/* Slider */}
-                <div className="lec_slider lec_image_bck lec_fixed lec_wht_txt" data-stellar-background-ratio="0.3" data-image="./images/habitacion-01.jpg">
+                <div className="lec_slider lec_image_bck lec_fixed lec_wht_txt" data-stellar-background-ratio="0.3" data-image={Habitacion01}>
                     {/* Over */}
                     <div className="lec_over" data-color="#000" data-opacity="0.7" />
                     <div className="container">
@@ -133,7 +136,7 @@ function Index() {
                     </section>
                     {/* section end */}
                     {/* section */}
-                    <section className="lec_section lec_image_bck lec_fixed lec_section_no_overlay lec_wht_txt" data-stellar-background-ratio="0.2" data-image="./images/modelo-04.jpg">
+                    <section className="lec_section lec_image_bck lec_fixed lec_section_no_overlay lec_wht_txt" data-stellar-background-ratio="0.2" data-image={Habitacion01}>
                         {/* Over */}
                         <div className="lec_over" data-color="#000" data-opacity="0.8" />
                         <div className="container text-center">
@@ -218,6 +221,7 @@ function Index() {
             {/* Library JS */}
             {/* Theme JS */}
         </div>
+
 
     );
 }
