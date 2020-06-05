@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom';
 
 // Componentes
 
-
-
-
 /*
 import HolaMundoCruel from './components/HolaMundo';
 import ChaoMundo from './components/ChaoMundo';
