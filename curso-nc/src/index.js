@@ -3,19 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Componentes
-
-/*
-import HolaMundoCruel from './components/HolaMundo';
-import ChaoMundo from './components/ChaoMundo';
-import ComponentesConFunciones from './components/ComponentesConFunctions'
-import ComponentesConArrowFunction from './components/ComponentesConArrowFunctions';
-import ComponentesConClases from './components/ComponentesConClases';
-*/
+import OperacionesMatematicas from './views/1.basico/pages/OperacionesMatematicas';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    
+    <OperacionesMatematicas />
   </React.StrictMode>,
   document.getElementById('root')
 );

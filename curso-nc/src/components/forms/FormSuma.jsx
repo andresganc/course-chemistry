@@ -17,13 +17,16 @@ import AddIcon from '@material-ui/icons/Add';
 
 const useStyles = makeStyles({
     root: {
-        minWidth: 275,
-        maxWidth: 350
+        minWidth: '23%',
+        maxWidth: '50%',
+        display: 'inline-block',
+        margin: '10px',
+        alignContent: 'center'
     },
     bullet: {
         display: 'inline-block',
         margin: '0 2px',
-        transform: 'scale(0.8)',
+        transform: 'scale(0.8)'
     },
     title: {
         fontSize: 14,
@@ -35,7 +38,16 @@ const useStyles = makeStyles({
         color: 'gray'
     },
     h4: {
-        color: 'gray'
+        color: 'gray',
+        display: 'flex',
+        float: 'center',
+        textAlign: 'center'
+    },
+    textField: {
+        margin: '0 auto',
+        float: 'center',
+        textAlign: 'center',
+        //display: 'flex',
     }
 });
 
@@ -60,6 +72,7 @@ function FormSuma() {
                     shrink: true,
                 }}
                 variant="filled"
+                className={classes.textField}
                 />
 
                 <br/><br/>
