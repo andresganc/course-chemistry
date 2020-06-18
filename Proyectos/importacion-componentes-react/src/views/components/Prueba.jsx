@@ -2,22 +2,22 @@
 import React, { Fragment } from 'react';
 
 // Componentes Material UI
-import Button from '@material-ui/core/Button';
+import ButtonMU from '@material-ui/core/Button';
 
 // Componentes de Material Kit
-//import ButtonMT from '../../components/CustomButtons/Button';
+import ButtonMK from 'components/CustomButtons/Button';
+
 
 function Prueba () {
     return(
             <Fragment>
-                <Button variant="contained" color="secondary">
+                <ButtonMU variant="contained" color="secondary">
                     Secondary
-                </Button>
-                <Button variant="contained" color="secondary">
-                    Secondary
-                </Button>
+                </ButtonMU>
                 
-                {/* <ButtonMT type="button" color="warning">Warning</ButtonMT> */}
+                <ButtonMK type="button" color="warning">
+                    Warning
+                </ButtonMK>
             </Fragment>
         
     );

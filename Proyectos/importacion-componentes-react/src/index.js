@@ -3,19 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-// Componentes Material UI
-
-
-// Componentes MAterial Kit
-
-
 // Componentes NC
 import Prueba from './views/components/Prueba';
-
+import Carousel from 'views/components/Carousel';
 
 ReactDOM.render(
   <React.StrictMode>
     <Prueba />
+    <Carousel />
   </React.StrictMode>,
   document.getElementById('root')
 );
