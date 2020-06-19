@@ -1,16 +1,25 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-// Componentes NC
-import Prueba from './views/components/Prueba';
-import Carousel from 'views/components/Carousel';
+import { Router, Switch, Route } from 'react-router-dom';
+import { createBrowserHistory } from "history";
+
+
+// Rutas
+import PaginaInicio from './views/pages/PageFood-Burguer-01';
+
+var hist = createBrowserHistory();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Prueba />
-    <Carousel />
+    <Router history={hist}>
+      <Switch>
+        <Route path="/" component={PaginaInicio} />
+      </Switch>  
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
