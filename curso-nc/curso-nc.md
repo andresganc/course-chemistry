@@ -47,6 +47,8 @@
     - [PROPS (PROPIEDADES)](#PROPS-(PROPIEDADES))
     - [STATE (ESTADO)](#STATE-(ESTADO))
     - [COMPONENTES MATERIAL UI](#COMPONENTES-MATERIAL-UI)
+    - [COMPONENTES CREATIVE TIM](#COMPONENTES-CREATIVE-TIM)
+    - [COMPONENTES NC](#COMPONENTES-NC)
 
 
 
@@ -707,3 +709,23 @@
             }
 
             ReactDOM.render(<App />, document.querySelector('#app'));
+
+
+### COMPONENTES CREATIVE TIM
+
+### COMPONENTES NC
+
+### REACT-ROUTER-DOM
+
+    * react-router-dom es la libreria que maneja las rutas de un proyecto React
+
+        - Router (Enrutador): Router es el enrutador (Es el que conecta internament).
+
+        - Switch (Interruptor): Switch es metodo que sirve para cambiar de una ruta a otra.
+
+        - Route (Ruta): Route es la ruta que se crea para cada pagina.
+
+        - Redirect (Redireccionar): Redirect redirecciona a una ruta cuando el usuario ingresa una ruta erronea.
+
+        - BrowserRouter (Enrutador de navegador): Almacena todas las rutas.
+
