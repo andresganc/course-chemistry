@@ -49,6 +49,8 @@
     - [COMPONENTES MATERIAL UI](#COMPONENTES-MATERIAL-UI)
     - [COMPONENTES CREATIVE TIM](#COMPONENTES-CREATIVE-TIM)
     - [COMPONENTES NC](#COMPONENTES-NC)
+    - [REACT-ROUTER-DOM](#REACT-ROUTER-DOM)
+    - [HISTORY](#HISTORY)
 
 
 
@@ -728,4 +730,52 @@
         - Redirect (Redireccionar): Redirect redirecciona a una ruta cuando el usuario ingresa una ruta erronea.
 
         - BrowserRouter (Enrutador de navegador): Almacena todas las rutas.
+
+        - Link (Enlace): Link sirve para generar enlaces
+
+
+    * Instalacion
+
+        - npm i react-router-dom
+
+
+    * Ejemplo:
+
+        import { Router, Switch, Route, Redirect } from 'react-router-dom';
+        import { createBrowserHistory } from "history";
+
+        var hist = createBrowserHistory();
+
+        <Router history={hist}>
+            <Switch>
+                <Route path="/pagina2" component={Pagina2} />
+                <Route path="/" component={PaginaInicio} />
+            </Switch>  
+        </Router>
+
+
+### HISTORY
+
+    *   history: Libreria o dependencia que se usa para almacenar un historial de rutas o sessiones de un proyecto
+
+        - Se suele usar como propiedad del Router
+
+    *   Instalacion (Consola)
+
+        npm i history
+
+
+    *   Ejemplo:
+
+            import { Router, Switch, Route, Redirect } from 'react-router-dom';
+            import { createBrowserHistory } from "history";
+
+            var hist = createBrowserHistory();
+
+            <Router history={hist}>
+                <Switch>
+                    <Route path="/pagina2" component={Pagina2} />
+                    <Route path="/" component={PaginaInicio} />
+                </Switch>  
+            </Router>
 
