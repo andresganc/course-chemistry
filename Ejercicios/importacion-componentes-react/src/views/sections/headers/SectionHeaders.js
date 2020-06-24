@@ -1,15 +1,9 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
-// react component for creating beautiful carousel
-import Carousel from "react-slick";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import Share from "@material-ui/icons/Share";
-import ShoppingCart from "@material-ui/icons/ShoppingCart";
+
 // core components
 import Header from "components/Header/Header.js";
 import Button from "components/CustomButtons/Button.js";
@@ -21,11 +15,12 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 
 import headersStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.js";
 
-import bg12 from "assets/img/bg12.jpg";
+// Imagenes Assets MK
 import office2 from "assets/img/examples/office2.jpg";
-import dg1 from "assets/img/dg1.jpg";
-import dg2 from "assets/img/dg2.jpg";
-import dg3 from "assets/img/dg3.jpg";
+
+// Componentes MK
+import Menu from 'components/Header/HeaderLinks'; 
+
 
 const useStyles = makeStyles(headersStyle);
 
@@ -50,86 +45,20 @@ export default function SectionHeaders({ ...rest }) {
 
       {/* HEADER 2 START */}
       <div>
+
+        
+
         <Header
           absolute
           brand="Creative Tim"
           color="transparent"
+          
           links={
+            
             <div className={classes.collapse}>
-              <List className={classes.list + " " + classes.mlAuto}>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Home
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    About us
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Products
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    href="#pablo"
-                    className={classes.navLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    Contact us
-                  </Button>
-                </ListItem>
-              </List>
-              <List className={classes.list + " " + classes.mlAuto}>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    color="transparent"
-                    href="https://twitter.com/CreativeTim?ref=creativetim"
-                    target="_blank"
-                    className={classes.navLink + " " + classes.navLinkJustIcon}
-                  >
-                    <i className={"fab fa-twitter"} />
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    color="transparent"
-                    href="https://www.facebook.com/CreativeTim?ref=creativetim"
-                    target="_blank"
-                    className={classes.navLink + " " + classes.navLinkJustIcon}
-                  >
-                    <i className={"fab fa-facebook"} />
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                  <Button
-                    color="transparent"
-                    href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-                    target="_blank"
-                    className={classes.navLink + " " + classes.navLinkJustIcon}
-                  >
-                    <i className={"fab fa-instagram"} />
-                  </Button>
-                </ListItem>
-              </List>
+
+              <Menu />
+
             </div>
           }
         />
