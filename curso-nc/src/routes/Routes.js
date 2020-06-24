@@ -5,10 +5,10 @@ import { BrowserRouter as Router, Switch, Route,  } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 
 // Rutas
-import Pagina3 from '../views/1.basico/pages/Pagina3';
-import Pagina2 from '../views/1.basico/pages/Pagina2';
-import PaginaInicio from '../views/1.basico/pages/PaginaInicio';
-import NoFound from '../views/1.basico/pages/PaginaNoFound';
+import Pagina3 from 'views/1-basico/routes/Pagina3';
+import Pagina2 from 'views/1-basico/routes/Pagina2';
+import PaginaInicio from 'views/1-basico/routes/PaginaInicio';
+import NoFound from 'views/1-basico/routes/PaginaNoFound';
 
 var hist = createBrowserHistory();
 
