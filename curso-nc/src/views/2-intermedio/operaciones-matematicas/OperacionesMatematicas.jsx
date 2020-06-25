@@ -1,14 +1,14 @@
 
 import React from 'react';
 
-// Componentes NC
-import Header from 'views/2-intermedio/operaciones-matematicas/sections/Header';
+// Sections NC
+import SectionHeader from 'views/2-intermedio/operaciones-matematicas/sections/SectionHeader';
 import SectionForm from 'views/2-intermedio/operaciones-matematicas/sections/SectionForm';
 
 function OperacionesMatematicas () {
     return (
         <div>
-            <Header />
+            <SectionHeader />
             <SectionForm />
         </div>
     );

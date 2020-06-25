@@ -6,14 +6,12 @@ import ReactDOM from 'react-dom';
 import OperacionesMatematicas from 'views/2-intermedio/operaciones-matematicas/OperacionesMatematicas';
 
 // Routes
-import Rutas from './routes/routes.js';
-
-
+import Rutas from './routes/routes';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <OperacionesMatematicas />
+    <Rutas />
   </React.StrictMode>,
   document.getElementById('root')
 );

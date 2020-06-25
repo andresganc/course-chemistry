@@ -1,7 +1,8 @@
 
 import React, { Fragment } from 'react';
 
-import { Link, history } from 'react-router-dom';
+// Routes
+import { Link } from 'react-router-dom';
 
 /*
 function PaginaInicio () {
@@ -25,6 +26,8 @@ class PaginaInicio extends React.Component {
                 <Link to="/"> <button> Pagina Inicio</button> </Link>
                 <Link to="/pagina2"> <button> Pagina 2 </button> </Link>
                 <Link to="/pagina3"> <button> Pagina 3 </button> </Link>
+                <button onClick={ () => history.back }> Atras </button>
+                <button > Adelante </button>
             </Fragment>
         );
     }

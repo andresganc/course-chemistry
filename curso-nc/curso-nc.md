@@ -51,6 +51,7 @@
     - [COMPONENTES NC](#COMPONENTES-NC)
     - [REACT-ROUTER-DOM](#REACT-ROUTER-DOM)
     - [HISTORY](#HISTORY)
+    - [PATH](#PATH)
 
 
 
@@ -778,4 +779,26 @@
                     <Route path="/" component={PaginaInicio} />
                 </Switch>  
             </Router>
+
+
+### PATH
+
+    * path (Camino): El path es la libreria con la que configuramos el arranque del proyecto
+
+        - Por defecto esta configurado con la raiz del proyecto.
+
+        - Se puede cambiar con un archivo de configuracion para que inicie desde el src (Este archivo se debe de poner en la carpeta raiz)
+
+        - Nombre del archivo: Por convencion se pone el nombre jsconfig.json
+
+        Codigo del archivo
+
+            {
+            "compilerOptions": {
+                "baseUrl": "src",
+                "paths": {
+                "*": ["src/*"]
+                }
+            }
+            }
 
