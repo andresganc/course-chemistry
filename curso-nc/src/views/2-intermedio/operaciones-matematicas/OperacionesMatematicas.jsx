@@ -2,8 +2,8 @@
 import React from 'react';
 
 // Componentes NC
-import Header from '../../../components/headers/Header';
-import SectionForm from '../../../components/sections/SectionForm';
+import Header from 'views/2-intermedio/operaciones-matematicas/sections/Header';
+import SectionForm from 'views/2-intermedio/operaciones-matematicas/sections/SectionForm';
 
 function OperacionesMatematicas () {
     return (
