@@ -4,22 +4,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-import { Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 
 
 // Rutas
-import PaginaInicio from './views/pages/PageFood-Burguer-01';
+import PaginaInicio from 'views/pages/PageFood-Burguer-01';
+import ErrorPage from 'views/pages-system/ErrorPage';
 
 var hist = createBrowserHistory();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={hist}>
-      <Switch>
-        <Route path="/" component={PaginaInicio} />
-      </Switch>  
-    </Router>
+    <ErrorPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
