@@ -1,6 +1,6 @@
 
 import shuffle from 'lodash.shuffle';
-import FontAwesomeClasses from './fontAwesomeClasses';
+import FontAwesomeClasses from './font-awesome-classes';
 
 // Constante que almacena el numero de cartas maximo 
 const NUMERO_DE_CARTAS = 20;

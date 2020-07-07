@@ -17,7 +17,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 
 // Assets Juego Memoria Parejas 
-import ImgHeader from '../assets/img/header-01.jpg'
+import ImgHeader from 'assets/img/header-01.jpg'
 
 
 const useStyles = makeStyles((theme) => ({

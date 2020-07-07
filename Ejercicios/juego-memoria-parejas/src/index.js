@@ -1,22 +1,12 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
-
-// Componentes
-import Header from './views/JuegoMemoriaParejas/components/Header';
-
-// Font-Awesome
-import "font-awesome/css/font-awesome.css";
-
-import JuegoMemoriaParejas from './views/JuegoMemoriaParejas/JuegoMemoriaParejas';
-
 
 ReactDOM.render(
   <React.StrictMode>
-    
-    <JuegoMemoriaParejas />
-    
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
