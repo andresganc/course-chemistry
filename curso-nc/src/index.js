@@ -3,12 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Pages
-import ContadorClases from 'views/2-intermedio/hooks/ContadorConClases';
-import ContadorHooks from 'views/2-intermedio/hooks/ContadorConHooks';
-import ContadorHooksArrowFuera from 'views/2-intermedio/hooks/ContadorConHooksArrowFuera';
+import ContadorClases from 'views/3-hooks/hooks/ContadorConClases';
+import ContadorHooks from 'views/3-hooks/hooks/ContadorConHooks';
+import ContadorHooksArrowFuera from 'views/3-hooks/hooks/ContadorConHooksArrowFuera';
 import StateConConstructorYProps from 'views/1-basico/states/StateConConstructorYProps';
-
-import ContadorClaseUseEffect from 'views/2-intermedio/hook-use-effect/ContadorClaseUseEffect';
+import ContadorClaseUseEffect from 'views/3-hooks/hook-use-effect/ContadorClaseUseEffect';
+import FuentesGoogle from 'views/1-basico/fuentes-tipograficas/FuentesGoogle';
 
 // Routes
 import Rutas from './routes/routes';
@@ -35,6 +35,8 @@ ReactDOM.render(
     <ContadorHooksArrowFuera />
 
     <ContadorClaseUseEffect />
+
+    <FuentesGoogle />
           
     
   </React.StrictMode>,

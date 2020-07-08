@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { Fragment } from 'react';
 
 // Componentes
 import Carta from "./Carta";
@@ -19,17 +19,22 @@ const useStyles = makeStyles({
 })
 
 
-function Tablero() {
-    const classes = useStyles();
-    const cartas = [1, 2, 3, 4, 5];
-    return (
-        <div className={classes.tablero}>
-            {
-                cartas.map((carta) => <Carta />)
-            }
-        </div>
-    );
+function Tablero(props) {
 
+    const classes = useStyles();
+    const { history } = props;
+    const cartas = [1, 2, 3, 4, 5];
+
+    return (
+        <Fragment>
+            <div className={classes.tablero}>
+                {
+                    cartas.map((carta) => <Carta />)
+                }
+            </div>
+            
+        </Fragment>
+    );
 }
 
 export default Tablero;

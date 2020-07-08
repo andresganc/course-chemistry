@@ -18,16 +18,19 @@ const useStyles = makeStyles(stylesMainjmp);
 //const useStyles = withStyles(stylesMainJMP);
 
 
-function PageMain() {
+function PageJuego(props) {
+
+  const { history } = props;
+  
   return (
     <div className="App">
       <Fragment>
         <Header />
         <Tablero />
-        <Container />
+        <button onClick={ () => history.push('/') } > Atras </button>
       </Fragment>
     </div>
   );
 }
 
-export default PageMain;
+export default PageJuego;

@@ -1,91 +1,82 @@
 
-import React, { Component } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { Fragment } from 'react';
 
 // Components Material UI
-import Button from '@material-ui/core/Button';
-// App Bar
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
+import { red } from '@material-ui/core/colors';
 
-// Assets Material UI
-import AutorenewIcon from '@material-ui/icons/Autorenew';
+// Components Material UI
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
 
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-
-
-// Assets Juego Memoria Parejas 
-import ImgHeader from 'assets/img/header-01.jpg'
-
+// Imagenes
+import ImgPortada from 'assets/img/game-card-memory-01.png';
 
 const useStyles = makeStyles((theme) => ({
-    '@global': {
-        header: {
-            border: '1px solid black',
-            marginBottom: '10px',
-            justifyContent: 'spacBetween',
-            alingContent: 'center'
-        }
+
+    root_grid: {
+        margin: "auto",
+        alignContent: "center",
+        textAlign: "center"
     },
-    root: {
-        flexGrow: 1,
-        display: 'flex',
-        margin: '0 auto'
+    root_card_main: {
+        backgroundColor: "#eaeaea",
+        maxWidth: "100%",
     },
-    menuButton: {
-        marginRight: theme.spacing(2),
+
+
+
+    root_card: {
+        maxWidth: 500,
     },
-    title: {
-        flexGrow: 1,
+    media_card: {
+        height: 0,
+        paddingTop: '56.25%', // 16:9
     },
-    image: {
-        display: 'flex',
-        margin: '0 auto',
-    }
-       
+    expand_card: {
+        transform: 'rotate(0deg)',
+        marginLeft: 'auto',
+        transition: theme.transitions.create('transform', {
+            duration: theme.transitions.duration.shortest,
+        }),
+    },
+    expandOpen_card: {
+        transform: 'rotate(180deg)',
+    },
+    avatar_card: {
+        backgroundColor: red[500],
+    },
 }));
 
-
-
-function Header() {
+function HeaderMain() {
 
     const classes = useStyles();
+
     return (
-        <div className={classes.root}>
-            <header className={classes["@global"]}>
-                <div>
-                    <img src={ImgHeader} alt="" width="70%" height="30%" className={classes.image} />
-                </div>
+        <Fragment>
+            <Grid container spacing={1}>
+                <Grid item xs={12} sm={12} md={12}>
+                    
+                    <Card className={classes.root_card_main}>    
 
-                <div className={classes.root}>
-                    <AppBar position="static">
-                        <Toolbar>
-                            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                                <MenuIcon />
-                            </IconButton>
-                            <Typography variant="h6" className={classes.title}>
-                                NC - Juego Memoria Parejas - React
-                    </Typography>
-                            <Button color="inherit">Intentos : 0</Button>
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                size="small"
-                                startIcon={<AutorenewIcon />}
-                                className="boton-reiniciar"
-                            >
-                                Reiniciar
-                    </Button>
-                        </Toolbar>
-                    </AppBar>
-                </div>
+                        <Grid className={classes.root_grid} item xs={6} sm={6} md={6}>
+                            <img src={ImgPortada} alt="" width="60%" className={classes.root_card_main} />
+                        </Grid>
 
-            </header>
-        </div>
+                        <Grid className={classes.root_grid} item xs={6} sm={6} md={6}>
+                            <h2> MEMORY DUO </h2>
+                            <h3> Juego de memoria - Encuentra la pareja en menos turnos </h3>
+                        </Grid>
+
+                    </Card>
+                    
+                </Grid>
+            </Grid>
+        </Fragment>
     );
-
 }
 
-export default Header;
+export default HeaderMain;
