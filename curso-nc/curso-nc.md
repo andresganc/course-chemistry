@@ -38,20 +38,27 @@
     - [WebPack](#WebPack)
     - [Carpetas y archivos creados por create-react-app](#Carpetas-y-archivos-creados-por-create-react-app)
 
-- [DESARROLLO](#DESARROLLO)
+- [REACT BASICO](#REACT-BASICO)
     - [REACT Y REACT DOM](#REACT-Y-REACT-DOM)
     - [COMPONENTES](#COMPONENTES)
     - [COMPONENTE CON FUNCTIONS](#COMPONENTE-CON-FUNCTIONS)
     - [COMPONENTE ARROW FUNCTIONS](#COMPONENTE-ARROW-FUNCTIONS)
     - [COMPONENTE CON CLASES](#COMPONENTE-CON-CLASES)
-    - [PROPS (PROPIEDADES)](#PROPS-(PROPIEDADES))
-    - [STATE (ESTADO)](#STATE-(ESTADO))
     - [COMPONENTES MATERIAL UI](#COMPONENTES-MATERIAL-UI)
     - [COMPONENTES CREATIVE TIM](#COMPONENTES-CREATIVE-TIM)
     - [COMPONENTES NC](#COMPONENTES-NC)
     - [REACT-ROUTER-DOM](#REACT-ROUTER-DOM)
     - [HISTORY](#HISTORY)
     - [PATH](#PATH)
+    - [FUENTES TIPOGRAFICAS](#FUENTES-TIPOGRAFICAS)
+
+    - [PROPS (PROPIEDADES)](#PROPS-(PROPIEDADES))
+    - [STATE (ESTADO)](#STATE-(ESTADO))
+
+
+- [STYLES](#STYLES)
+    - [STYLES IN LINE](#STYLES-IN-LINE)
+    
 
 
 
@@ -465,7 +472,7 @@
 
 
 
-## DESARROLLO
+## REACT BASICO
 <br>
 
 
@@ -583,75 +590,7 @@
 
 <br>
 
-### PROPS (PROPIEDADES)
 
-    * Los componentes permiten separar la interfaz de usuario en piezas independientes, reutilizables y pensar en cada pieza de forma aislada.
-    Esta página proporciona una introducción a la idea de los componentes.
-
-    * La forma más sencilla de definir un componente es escribir una función de JavaScript:
-
-        function Welcome(props) {
-            return <h1>Hello, {props.name}</h1>;
-        }
-
-        Esta función es un componente de React válido porque acepta un solo argumento de objeto “props” (que proviene de propiedades) con datos y devuelve un 
-        elemento de React. Llamamos a dichos componentes “funcionales” porque literalmente son funciones JavaScript.
-
-
-    * También puedes utilizar una clase de ES6 para definir un componente
-
-        class Welcome extends React.Component {
-        render() {
-            return <h1>Hello, {this.props.name}</h1>;
-        }
-        }
-
-        Los dos componentes anteriores son equivalentes desde el punto de vista de React.
-        Tanto los componentes de función como de clase tienen algunas características adicionales que veremos en las próximas secciones.
-
-
-<br>
-
-### STATE (ESTADO)
-
-    * El objeto state es donde almacena los valores de propiedad que pertenecen al componente.
-        Cuando el objeto state cambia, el componente se vuelve a representar.
-
-    * El objeto state se puede inicializar directamente despues de la clase o en el constructor de la clase.
-
-        - State incializado directamente:
-
-            class NombreClase {
-
-                state = {
-
-                }
-
-                render(){
-                    return();
-                }
-
-            }
-
-
-        - State inicializado en el constructor junto con los props:
-
-            class NombreClase {
-
-                constructor(props) {
-                    super(props);
-                    this.state = {
-                        estado: false,
-                        nombre: "Andres",
-                        numero1: 0
-                        };
-                }
-
-                render(){
-                    return();
-                }
-
-            }
 
 
 ### COMPONENTES MATERIAL UI
@@ -802,3 +741,183 @@
             }
             }
 
+
+### FUENTES TIPOGRAFICAS
+
+    * Las fuentes tipograficas usadas en NC son Fuentes en linea de Google Fonts
+
+        - Se elije la fuente
+
+        - Se copia el link de la fuente en el archivo index.html de Public (Dentro del Head)
+
+        - Se crea una estructura de estilo makeStyles (Si agrega el estilo de tipografia dentro de este)
+
+        - Se aplica a los componentes que se desee
+
+        ejemplo: 
+
+            import React, { Fragment } from 'react';
+
+            // Componentes MAterial UI
+            import { makeStyles } from '@material-ui/core/styles';
+
+            const useStyles = makeStyles({
+                h2: {
+                    fontFamily: "'Press Start 2P', cursive",
+                    fontSize: 50,
+                    color: "blue"
+                },
+                h3: {
+                    fontFamily: "'Galada', cursive",
+                    fontSize: 50,
+                    color: "red"
+                } 
+            });
+
+            function FuentesGoogle() {
+
+                const classes = useStyles();
+
+                return (
+                    <Fragment>
+
+                        <h2 className={classes.h2} > Fuentes Tipografica Google </h2>
+                        <h3 className={classes.h3} > Fuentes Tipografica Google </h3>
+
+
+                    </Fragment>
+                );
+            }
+
+            export default FuentesGoogle;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### PROPS (PROPIEDADES)
+
+    * Los componentes permiten separar la interfaz de usuario en piezas independientes, reutilizables y pensar en cada pieza de forma aislada.
+    Esta página proporciona una introducción a la idea de los componentes.
+
+    * La forma más sencilla de definir un componente es escribir una función de JavaScript:
+
+        function Welcome(props) {
+            return <h1>Hello, {props.name}</h1>;
+        }
+
+        Esta función es un componente de React válido porque acepta un solo argumento de objeto “props” (que proviene de propiedades) con datos y devuelve un 
+        elemento de React. Llamamos a dichos componentes “funcionales” porque literalmente son funciones JavaScript.
+
+
+    * También puedes utilizar una clase de ES6 para definir un componente
+
+        class Welcome extends React.Component {
+        render() {
+            return <h1>Hello, {this.props.name}</h1>;
+        }
+        }
+
+        Los dos componentes anteriores son equivalentes desde el punto de vista de React.
+        Tanto los componentes de función como de clase tienen algunas características adicionales que veremos en las próximas secciones.
+
+
+<br>
+
+### STATE (ESTADO)
+
+    * El objeto state es donde almacena los valores de propiedad que pertenecen al componente.
+        Cuando el objeto state cambia, el componente se vuelve a representar.
+
+    * El objeto state se puede inicializar directamente despues de la clase o en el constructor de la clase.
+
+        - State incializado directamente:
+
+            class NombreClase {
+
+                state = {
+
+                }
+
+                render(){
+                    return();
+                }
+
+            }
+
+
+        - State inicializado en el constructor junto con los props:
+
+            class NombreClase {
+
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                        estado: false,
+                        nombre: "Andres",
+                        numero1: 0
+                        };
+                }
+
+                render(){
+                    return();
+                }
+
+            }
+
+
+
+
+## STYLES
+
+
+### STYLES IN LINE
+
+    * Los estilos usados en NC son los estilos de Material UI que estan dentro del Core. (Usamos los estilos en JavaScript)
+
+        - No es necesario instalar si tenemos ya instalado el Core Material UI
+
+        Ejemplo:
+
+            import React, { Fragment } from 'react';
+
+            import { makeStyles } from '@material-ui/core/styles';
+
+            const useStyles = makeStyles({
+            h2: {
+                fontSize: 50,
+                color: "gray"
+            },
+            button: {
+                backgroundColor: "red"
+            } 
+            });
+
+            function StyleInLine() {
+
+                const classes = useStyles();
+
+                return(
+                    <Fragment>
+                        <h2 className={classes.h2} > Estilos en linea </h2>
+                        <button className={classes.button}> Estilos </button>
+                    </Fragment>
+                );
+            }
+
+            export default StyleInLine;
