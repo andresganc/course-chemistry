@@ -1,29 +1,12 @@
 
+import React, { Fragment } from 'react';
 
-import React, { Fragment, Component } from 'react';
+function ButtonProps(props) {
+    return(
+        <Fragment>
+            <button> { props.texto } </button>
+        </Fragment>
+    );
+} 
 
-// Styles Material UI
-import { makeStyles } from '@material-ui/core/styles';
-
-
-
-class PropsButton extends Component {
-
-    
-    //const {texto, colordefondo} = this.props
-      
-    render() {
-        return (
-            <Fragment>
-                <button
-                    
-                    style={{
-                        backgroundColor: `${this.props.colordefondo}`
-                    }}
-                > Boton NC </button>
-            </Fragment>
-        );
-    }
-}
-
-export default PropsButton;
+export default ButtonProps;

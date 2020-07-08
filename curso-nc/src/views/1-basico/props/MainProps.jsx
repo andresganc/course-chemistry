@@ -2,26 +2,27 @@
 import React, { Fragment } from 'react';
 
 // Componentes con props
-import ProductosPreciosProps  from 'views/1-basico/props/ProductosPreciosProps';
+import ProductoPreciosProps from 'views/1-basico/props/ProductosPreciosProps';
 import ButtonProps from 'views/1-basico/props/ButtonProps';
 
 function PropsMain () {
     return (
         <Fragment>
 
-            <ProductosPreciosProps
-            producto1="Memoria USB 32 Gb : "
-            precio1="15000"
-            producto2="Memoria USB 64 Gb : "
-            precio2={30000}
-            >
-            </ProductosPreciosProps>
+            <ProductoPreciosProps 
+                producto1="CamiBuso"
+                precio1="50.000"
 
-            <ButtonProps
-            colordefondo="gray"
+                producto2="Pantalon"
+                precio2="80.000"
             >
-              Boton
+
+            </ProductoPreciosProps>
+    
+            <ButtonProps texto="Botocito" >
+                
             </ButtonProps>
+
         </Fragment>
     );
 }

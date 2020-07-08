@@ -3,8 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Pages
-
-import GridAll from 'views//componentes-material-ui/grid/GridAll';
+import MainProps from 'views/1-basico/props/MainProps';
 
 // Routes
 import Rutas from './routes/routes';
@@ -13,7 +12,9 @@ import Rutas from './routes/routes';
 ReactDOM.render(
   <React.StrictMode>
 
-    <GridAll />
+    < MainProps>
+    
+    </MainProps>
           
   </React.StrictMode>,
   document.getElementById('root')
