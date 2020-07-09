@@ -541,6 +541,7 @@
 ### COMPONENTE ARROW FUNCTIONS
 
     * FUNCION FLECHA : Arrow Function = Funcion flecha
+    
 
     * Es una forma rapida y nueva de hacer compoonentes y salio en la version ES6 - Ecma Script 2015
 
