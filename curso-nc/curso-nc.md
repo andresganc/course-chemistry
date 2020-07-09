@@ -514,6 +514,8 @@
     * Esta función es un componente de React válido porque acepta un solo argumento de objeto “props” (que proviene de propiedades) 
         con datos y devuelve un elemento de React. Llamamos a dichos componentes “funcionales” porque literalmente son funciones JavaScript.
 
+    * Las funciones solo aceptan propiedades (props) - (Las clases si aceptan Props y State)
+
 
     * Codigo ejemplo de componente creado con una funcion
 
@@ -793,23 +795,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### PROPS (PROPIEDADES)
 
     * Los componentes permiten separar la interfaz de usuario en piezas independientes, reutilizables y pensar en cada pieza de forma aislada.
@@ -835,6 +820,9 @@
 
         Los dos componentes anteriores son equivalentes desde el punto de vista de React.
         Tanto los componentes de función como de clase tienen algunas características adicionales que veremos en las próximas secciones.
+
+
+    *
 
 
 <br>

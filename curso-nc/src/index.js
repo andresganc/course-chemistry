@@ -3,7 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Pages
-import MainProps from 'views/1-basico/props/MainProps';
+import StateSinstaxisBasica from 'views/1-basico/states/StateSintaxisBasica';
+import StateSinstaxisConstructor from 'views/1-basico/states/StateSintaxisContructor';
 
 // Routes
 import Rutas from './routes/routes';
@@ -12,10 +13,8 @@ import Rutas from './routes/routes';
 ReactDOM.render(
   <React.StrictMode>
 
-    < MainProps>
-    
-    </MainProps>
-          
+      <StateSinstaxisConstructor />
+              
   </React.StrictMode>,
   document.getElementById('root')
 );
