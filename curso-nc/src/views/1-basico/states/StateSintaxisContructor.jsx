@@ -1,6 +1,7 @@
 
 import React, { Component, Fragment } from 'react';
 
+
 class StateSintaxisConstructor extends Component {
 
     constructor(props) {

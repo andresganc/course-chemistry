@@ -14,14 +14,29 @@ const ComponenteArrowFunctions01 = () => <h2> Este es un componente Arrow Functi
 const ComponenteArrowFunctions02 = () =>
     <Fragment>
         <h2> Este es un componente Arrow Functions </h2>
+        <h2> Etiqueta 2 </h2>
     </Fragment>
 
 
 const ComponenteArrowFunctions03 = () => {
+    
+    var numero1 = 5;
+    var numero2 = 10;
+    var suma
+
+    suma = numero1 + numero2;
+
+    console.log (suma);
+
+}
+
+
+// Arrow Function declarada para almacenar un componente de react
+const ComponenteArrowFunctions03 = () => {
     return (
         <Fragment>
             <h2> Este es un componente Arrow Functions </h2>
-            <button> </button>
+            <button> Mi Boton </button>
         </Fragment>
     );
 }
