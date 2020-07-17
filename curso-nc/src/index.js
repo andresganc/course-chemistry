@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import Prueba from 'views/2-intermedio/forms-state/Prueba';
 
 // Routes
-import Rutas from './routes/routes';
+import Rutas from 'routes/Routes';
 
 
 ReactDOM.render(
