@@ -9,18 +9,18 @@ class Prueba extends Component {
         numero2: 0,
         resultado: 0
     }
-           
+
     handleOnChange = (event) => {
         //this.setState({ [event.target.numero1]: event.target.value })
         this.setState({ [event.target.name]: event.target.value });
-        console.log( {[event.target.name]: event.target.value} )
+        console.log({ [event.target.name]: event.target.value })
     }
 
     handleOnClick = (event) => {
 
-         this.setState ({ resultado: ( parseInt(this.state.numero1) + parseInt(this.state.numero2) ) })
-         //this.setState.resultado =  ( parseInt(this.state.numero1) + parseInt(this.state.numero2) ); 
-         //window.alert( this.state.resultado );
+        this.setState({ resultado: (parseInt(this.state.numero1) + parseInt(this.state.numero2)) })
+        //this.setState.resultado =  ( parseInt(this.state.numero1) + parseInt(this.state.numero2) ); 
+        //window.alert( this.state.resultado );
 
         /*
         var num1 = this.state.numero1;
@@ -36,12 +36,12 @@ class Prueba extends Component {
     }
 
     render() {
-        return(
+        return (
             <Fragment>
-                <input name="numero1" value={ this.state.numero1 } onChange={ this.handleOnChange } type="text" />
-                <input name="numero2" value={ this.state.numero2 } onChange={ this.handleOnChange } type="text"/>
-                <h2> { this.state.resultado } </h2>
-                <button onClick={ this.handleOnClick} > Sumar </button>
+                <input name="numero1" value={this.state.numero1} onChange={this.handleOnChange} type="text" />
+                <input name="numero2" value={this.state.numero2} onChange={this.handleOnChange} type="text" />
+                <h2> {this.state.resultado} </h2>
+                <button onClick={this.handleOnClick} > Sumar </button>
             </Fragment>
         );
     }

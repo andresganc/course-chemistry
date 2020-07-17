@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Pages
-import Prueba from 'views/2-intermedio/forms-state/Prueba';
+import FormHooks from 'views/2-intermedio/forms-hooks/FormHooks';
 
 // Routes
 import Rutas from 'routes/Routes';
@@ -12,7 +12,7 @@ import Rutas from 'routes/Routes';
 ReactDOM.render(
   <React.StrictMode>
 
-      <Prueba />
+      <FormHooks />
               
   </React.StrictMode>,
   document.getElementById('root')
