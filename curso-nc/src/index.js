@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Pages
-import FormHooks from 'views/2-intermedio/forms-hooks/FormHooks';
+import FormHooks from 'views/2-intermedio/forms-hooks/FormHookStringEnvio';
 
 // Routes
 import Rutas from 'routes/Routes';

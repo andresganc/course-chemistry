@@ -7,16 +7,18 @@ import Button from '@material-ui/core/Button';
 
 
 
-function FormHooks() {
+function FormHookSuma() {
 
     const [ numero1, setNumero1, numero2, setNumero2, resultado, setResultado ] =  useState(0);
 
     
-    const [inputValues, setInputValues] = useState({
-        numero1: 0, 
+    
+
+    const [datos, setDatos] = useState({
+        numero1: 0,
         numero2: 0,
         resultado: 0
-    });
+    })
     
 
     /*
@@ -28,7 +30,14 @@ function FormHooks() {
     */
 
     const handleOnChange = event => {
-        setInputValues(event.target.value);
+
+        // console.log(event.target.name)
+        // console.log(event.target.value)
+        setDatos({
+            ...datos,
+            [event.target.name] : event.target.value
+        })
+
       };
     
 
@@ -48,8 +57,8 @@ function FormHooks() {
         <Fragment>
             <form action="">
                 <h2> Formulario de Suma</h2>
-                <TextField name="numero1" id="numero1" label="Numero 1" variant="filled" value={ numero1 } onChange={ handleOnChange } />
-                <TextField name="numero2" id="numero2" label="Numero 2" variant="filled" value={ numero2 } onChange={ handleOnChange } />
+                <TextField name="numero1" id="numero1" label="Numero 1" variant="filled"  onChange={ handleOnChange } />
+                <TextField name="numero2" id="numero2" label="Numero 2" variant="filled"  onChange={ handleOnChange } />
                 <h3> Resultado </h3>
                 <h3> { resultado } </h3>
                 <Button onClick={ handleOnClick } variant="contained" color="primary">
@@ -60,4 +69,4 @@ function FormHooks() {
     );
 }
 
-export default FormHooks;
+export default FormHookSuma;
