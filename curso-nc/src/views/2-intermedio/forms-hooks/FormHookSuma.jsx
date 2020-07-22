@@ -9,10 +9,7 @@ import Button from '@material-ui/core/Button';
 
 function FormHookSuma() {
 
-    const [ numero1, setNumero1, numero2, setNumero2, resultado, setResultado ] =  useState(0);
-
-    
-    
+    //const [ numero1, setNumero1, numero2, setNumero2, resultado, setResultado ] =  useState(0);
 
     const [datos, setDatos] = useState({
         numero1: 0,
@@ -20,36 +17,21 @@ function FormHookSuma() {
         resultado: 0
     })
     
-
-    /*
-    const handleOnChange = (event) => {
-        //event => ({ [event.target.name]: event.target.value });
-        const { name, value } = event.target;
-        setInputValues({ ...inputValues, [name]: value });
-    }
-    */
-
-    const handleOnChange = event => {
+    const handleOnChange = (e) => {
 
         // console.log(event.target.name)
         // console.log(event.target.value)
         setDatos({
             ...datos,
-            [event.target.name] : event.target.value
+            [e.target.name] : e.target.value
         })
 
       };
+
     
-
-    /*
-    const handleOnChange = useCallback(event => {
-        const { name, value } = event.target;
-        setInputValues({ ...inputValues, [name]: value });
-      });
-    */  
-
     const handleOnClick = () => {
-        setResultado ( resultado = numero1 + numero2);
+        //setDatos ( resultado = numero1 + numero2);
+        setDatos({ resultado: (parseInt(datos.numero1) + parseInt(datos.numero2)) })
     }
     
 
@@ -57,10 +39,10 @@ function FormHookSuma() {
         <Fragment>
             <form action="">
                 <h2> Formulario de Suma</h2>
-                <TextField name="numero1" id="numero1" label="Numero 1" variant="filled"  onChange={ handleOnChange } />
-                <TextField name="numero2" id="numero2" label="Numero 2" variant="filled"  onChange={ handleOnChange } />
+                <TextField name="numero1" id="numero1" label="Numero 1" variant="filled" value={ datos.numero1 } onChange={ handleOnChange } />
+                <TextField name="numero2" id="numero2" label="Numero 2" variant="filled" value={ datos.numero2 } onChange={ handleOnChange } />
                 <h3> Resultado </h3>
-                <h3> { resultado } </h3>
+                <h3> { datos.resultado } </h3>
                 <Button onClick={ handleOnClick } variant="contained" color="primary">
                     Sumar
                 </Button>
