@@ -2,13 +2,13 @@
 import React, { Fragment } from 'react';
 
 // Styles CSS externo
-import './jss/styles.js';
+import './styles/styles.js';
 
 // Images
 import Thor from './img/thor.png';
 
 
-function StylesJSSExterno() {
+function StylesJSExterno() {
     return(
         <Fragment>
             <div className="card" >
@@ -27,4 +27,4 @@ function StylesJSSExterno() {
     );
 }
 
-export default StylesJSSExterno;
+export default StylesJSExterno;

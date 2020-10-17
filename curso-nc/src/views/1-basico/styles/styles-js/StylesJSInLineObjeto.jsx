@@ -1,11 +1,13 @@
 
-/* =========== STYLES CSS IN LINE 01 - EN REACT ============ */
-// Este estilo se agrega en la misma propiedad o atributo style del componente y se usa JavaScript
-
 import React, { Fragment } from 'react';
 
+// Styles In-Line
+const style = {
+    backgroundColor: 'blue'
 
-function StylesJSSInLine01() {
+}
+
+function StylesJSInLineObjeto() {
     return (
         <Fragment>
             <div style={{
@@ -22,10 +24,10 @@ function StylesJSSInLine01() {
             >
                 <div style={{
                     position: 'relative',
-                    width: '90%',
-                    left: '10%',
+                    width: '80%',
+                    left: '20%',
                     padding: '20px, 20px, 20px, 40px',
-                    margin: '10px',
+                    margin: '20px',
                     transition: '0.5s'
                 }}>
 
@@ -36,11 +38,11 @@ function StylesJSSInLine01() {
                         lineHeight: '1em'
                     }}
                     >
-                        STYLES JSS IN LINE 01 - EN REACT
+                        STYLES CSS IN LINE - EN REACT
                     </h2>
 
                     <p style={{color: '#fff'}} > 
-                    Este estilo se agrega en la misma propiedad o atributo style del componente y se usa JavaScript
+                    Este estilo se agrega en la misma propiedad o atributo style del componente
                     </p>
 
                 </div>
@@ -49,4 +51,4 @@ function StylesJSSInLine01() {
     );
 }
 
-export default StylesJSSInLine01;
+export default StylesJSInLineObjeto;
