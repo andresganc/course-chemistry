@@ -35,5 +35,20 @@ export default function MyComponent(props) {
   return <div className={classes.root} />;
 }
 
+*/
+
+
+
+/*
+
+Instalación
+@material-ui/styles es reexportado como @material-ui/core/styles 
+- sólo necesitas instalarlo si deseas usarlo independientemente de Material-UI.
+
+// with npm
+npm install @material-ui/styles
+
+// with yarn
+yarn add @material-ui/styles
 
 */
