@@ -33,11 +33,11 @@ const useStyles = makeStyles({
             bottom: '0',
             left: '50%',
             transform: 'translateX(-50%)',
-            height: '400px',
+            height: '300px',
             transition: '0.5s',
             '&:hover' : {
                 left: '80%',
-                height: '500px'
+                height: '400px'
             }
         },
     },
@@ -51,13 +51,13 @@ const useStyles = makeStyles({
         opacity: '0',
         visibility: 'hidden',
         transition: '0.5s',        
-        '&:hover' : {
+        '&: hover' : {
             opacity: '1',
             visibility: 'visible',
-            left: '0%'
+            left: '5%'
         },        
         '@global h2': {
-            color: '#fff',
+            color: '#9ACDFA',
             textTransform: 'uppercase',
             fontSize: '1.5em',
             lineHeight: '1em'

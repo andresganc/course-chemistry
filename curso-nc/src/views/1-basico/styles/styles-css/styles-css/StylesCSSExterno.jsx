@@ -5,7 +5,7 @@ import React, { Fragment } from 'react';
 import './css/styles.css';
 
 // Images
-import CapitanAmerica from './img/captain-america-01.png';
+import CSS from './img/css3.png';
 
 
 function StylesCSSExterno() {
@@ -21,7 +21,7 @@ function StylesCSSExterno() {
                     <br></br>
                     <a href="#"> Leer mas ...</a>
                 </div>
-                <img src={CapitanAmerica} alt=""></img>
+                <img src={CSS} alt=""></img>
             </div>
         </Fragment>
     );
