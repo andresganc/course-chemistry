@@ -1,10 +1,13 @@
 
 
 
-const header = {
-    backgroundColor: '#202124'
+const headerStyles = {
+    header: {
+        backgroundColor: '#202124'  
+    }
+    
 }
 
 
 
-export default header;
+export default headerStyles;

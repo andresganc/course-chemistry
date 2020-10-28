@@ -12,6 +12,8 @@ import ReactDOM from 'react-dom';
 import StylesCSSExterno from 'views/1-basico/styles/styles-css/styles-css/StylesCSSExterno';
 import StylesJSInLineObjeto from 'views/1-basico/styles/styles-js/StylesJSInLineObjeto';
 import StylesMakeStylesInLine from 'views/1-basico/styles/styles-css-in-js-material-ui/makestyles/StylesMakeStylesInLine';
+import StylesMakeStylesExterno from 'views/1-basico/styles/styles-css-in-js-material-ui/makestyles/StylesMakeStylesExterno';
+import StylesJSExterno from 'views/1-basico/styles/styles-js/StylesJSExterno';
 
 // Routes
 import Rutas from 'routes/Routes';
@@ -25,8 +27,12 @@ ReactDOM.render(
       <br></br>      
       <StylesJSInLineObjeto />
       <br></br>
+      <StylesJSExterno />
+      <br></br>
       <StylesMakeStylesInLine />
       <br></br>
+      <StylesMakeStylesExterno />
+      
               
   </React.StrictMode>,
   document.getElementById('root')

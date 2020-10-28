@@ -40,7 +40,6 @@ export default function MyComponent(props) {
 
 
 /*
-
 Instalación
 @material-ui/styles es reexportado como @material-ui/core/styles 
 - sólo necesitas instalarlo si deseas usarlo independientemente de Material-UI.
@@ -52,3 +51,26 @@ npm install @material-ui/styles
 yarn add @material-ui/styles
 
 */
+
+import React, { Fragment } from 'react';
+
+// Components
+import { makeStyles } from '@material-ui/core/styles';
+
+// Styles
+import styles from './styles/styles-only';
+
+const useStyles = makeStyles(styles);
+
+function StylesMakeStylesExternoOnly() {
+  const classes = useStyles();
+  return(
+    <Fragment>
+      <header className={classes.header}>
+        <h2 className={classes.h2}>Este es un style de un header en js manejado con material-ui styles</h2> 
+      </header>
+    </Fragment>
+  );
+}
+
+export default StylesMakeStylesExternoOnly;

@@ -11,24 +11,16 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
 // Styles
-import header from './assets/styles/landing-page';
+import headerStyles from './assets/styles/landing-page';
+
+const useStyles = makeStyles(headerStyles);
 
 // Styles in line 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
+
 
 
 function LandingPage() {
-  const classes = useStyles(header);
+  const classes = useStyles(useStyles);
   return (
 
     <Fragment>
