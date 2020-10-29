@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import LandingPage from './landing-page';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// Components
+import MenuDark from './components/menus/menu-dark/MenuDark';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <LandingPage />
+    <App />
+    <br></br>
+    <MenuDark />
+    <br></br>
   </React.StrictMode>,
   document.getElementById('root')
 );
