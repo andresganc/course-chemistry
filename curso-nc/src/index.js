@@ -21,7 +21,6 @@ import Rutas from 'routes/Routes';
 
 ReactDOM.render(
   <React.StrictMode>
-
       <br></br><br></br>
       <StylesCSSExterno />
       <br></br>      

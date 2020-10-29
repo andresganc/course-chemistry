@@ -7,7 +7,13 @@ const MenuDarkStyle = {
         }
         
     },
-    // MENU
+
+    // ================ GRID ITEM ================
+    gridItemNav: {
+        backgroundColor: '#101012',        
+    },
+
+    // =================== MENU ====================
     appBar: {
         backgroundColor: '#101012',
     },

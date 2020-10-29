@@ -3,8 +3,8 @@
 // Control de colores
 
 import React, { Fragment } from 'react';
-
 import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 //App Bar
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -33,46 +33,48 @@ function MenuDark() {
     };
 
     //const classes = ((useStyles()), (styles()));      // Llamar estilo in line & Externo
-    const classes = styles();   
+    const classes = styles();
 
     return (
         <Fragment>
-            <AppBar position="static" color='transparent' className={classes.appBar}>
-                <Toolbar variant="dense">
-                    <IconButton edge="start" color="inherit" aria-label="menu" className={classes.iconButton}>
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" className={classes.typographyH6}>
-                        Andres Giraldo
-                    </Typography>
-                    <Button className={classes.buttonMenu} color="inherit">Inicio</Button>
-                    <Button className={classes.buttonMenu} color="inherit">Aserca de</Button>
-                    <Button className={classes.buttonMenu} color="inherit">Tecnologias</Button>
-                    <Button className={classes.buttonMenu} color="inherit">Servicios</Button>
-                    <Button className={classes.buttonMenu} color="inherit">Portafolio</Button>
-                    <Button className={classes.buttonMenu} color="inherit">Contactenos</Button>
-                    <IconButton
-                        aria-label="account of current user"
-                        aria-controls="menu-appbar"
-                        aria-haspopup="true"
-                        onClick={handleMenu}
-                        color="inherit"
-                        className={classes.iconButton}
-                    >
-                        <InvertColorsIcon />
-                    </IconButton>
-                    <IconButton
-                        aria-label="account of current user"
-                        aria-controls="menu-appbar"
-                        aria-haspopup="true"
-                        onClick={handleMenu}
-                        color="inherit"
-                        className={classes.iconButton}
-                    >
-                        <PaletteIcon />
-                    </IconButton>
-                </Toolbar>
-            </AppBar>
+            <Grid item xs={12} spacing={2} className={classes.gridItemNav}>
+                <AppBar position="static" color='transparent' className={classes.appBar}>
+                    <Toolbar variant="dense">
+                        <IconButton edge="start" color="inherit" aria-label="menu" className={classes.iconButton}>
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography variant="h6" className={classes.typographyH6}>
+                            Andres Giraldo
+                        </Typography>
+                        <Button className={classes.buttonMenu} color="inherit">Inicio</Button>
+                        <Button className={classes.buttonMenu} color="inherit">Aserca de</Button>
+                        <Button className={classes.buttonMenu} color="inherit">Tecnologias</Button>
+                        <Button className={classes.buttonMenu} color="inherit">Servicios</Button>
+                        <Button className={classes.buttonMenu} color="inherit">Portafolio</Button>
+                        <Button className={classes.buttonMenu} color="inherit">Contactenos</Button>
+                        <IconButton
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleMenu}
+                            color="inherit"
+                            className={classes.iconButton}
+                        >
+                            <InvertColorsIcon />
+                        </IconButton>
+                        <IconButton
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleMenu}
+                            color="inherit"
+                            className={classes.iconButton}
+                        >
+                            <PaletteIcon />
+                        </IconButton>
+                    </Toolbar>
+                </AppBar>
+            </Grid>
         </Fragment>
     );
 }
