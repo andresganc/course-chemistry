@@ -9,6 +9,7 @@ import ReactDOM from 'react-dom';
 //import ImagenesMicrosoft from 'views/1-basico/metodos-de-siclo-de-vida/ImagenesMicrosoft';
 
 // Componentes
+import FuentesInLine from 'views/1-basico/fonts/FuentesInLine'
 import StylesCSSExterno from 'views/1-basico/styles/styles-css/styles-css/StylesCSSExterno';
 import StylesJSInLineObjeto from 'views/1-basico/styles/styles-js/StylesJSInLineObjeto';
 import StylesMakeStylesInLine from 'views/1-basico/styles/styles-css-in-js-material-ui/makestyles/StylesMakeStylesInLine';
@@ -17,10 +18,12 @@ import StylesJSExterno from 'views/1-basico/styles/styles-js/StylesJSExterno';
 
 // Routes
 import Rutas from 'routes/Routes';
+import FuentesDesdeArchivoStyle from 'views/1-basico/fonts/FuentesDesdeArchivo';
 
 
 ReactDOM.render(
   <React.StrictMode>
+    <FuentesInLine />
       <br></br><br></br>
       <StylesCSSExterno />
       <br></br>      

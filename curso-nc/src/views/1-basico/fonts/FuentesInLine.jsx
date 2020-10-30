@@ -19,6 +19,7 @@ const useStyles = makeStyles({
     },
     h2: {
         fontFamily: "'Galada', cursive",
+        fontFamily: "'Ethnocentric', arial",
         fontSize: '2em',
         color: "red"
     },    

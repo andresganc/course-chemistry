@@ -1,4 +1,7 @@
-import HeaderDarkPersonal from "../../HeaderDarkPersonal"
+
+// ========================== FONTS ==============================
+
+
 
 const HeaderDarkPersonalStyles = {
 
@@ -17,9 +20,9 @@ const HeaderDarkPersonalStyles = {
         '@global h2' : {
             color: '#fff',
             margin: '5px',
-            fontSize: '4em',
+            fontSize: '5em',
             paddingTop: '60px',
-            fontFamily: "'Permanent Marker', cursive",
+            fontFamily: "'Ethnocentric', arial",
         },
         '@global h3': {
             color: '#fff',
