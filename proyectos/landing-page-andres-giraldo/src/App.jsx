@@ -1,13 +1,14 @@
 
 import React, { Fragment } from 'react';
 
-// Componentes NC
-import MenuDark from './components/menus/menu-dark/MenuDark';
-import HeaderDarkPersonal from './components/headers/header-dark-personal/HeaderDarkPersonal';
-
 // Components Material UI
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+
+// Componentes NC
+import MenuDark from './components/menus/menu-dark/MenuDark';
+import HeaderDarkPersonal from './components/headers/header-dark-personal/HeaderDarkPersonal';
+import SectionIcons from './components/sections/section-icons/SectionIcons';
 
 
 // Styles
@@ -33,17 +34,15 @@ function App() {
     <Fragment>
 
       {/* GRID CONTAINER ROOT */}
-      <Grid container spacing={2} className={classes.gridContainerRoot}>
+      <Grid container spacing={2} className={classes.gridContainerRoot} justify="center">
 
-        <MenuDark />
-        <HeaderDarkPersonal />
-
-        <Grid container item xs={12} spacing={3}>
-          <h2>Grid Container 2</h2>
+        <Grid container item xs={12} spacing={1}>
+          <MenuDark />
+          <HeaderDarkPersonal />
         </Grid>
-
-        <Grid container item xs={12} spacing={3}>
-          <h2>Grid Container 3</h2>
+          <br/>
+        <Grid container item xs={12} spacing={1} justify="center">
+          <SectionIcons />
         </Grid>
 
       </Grid>

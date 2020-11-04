@@ -5,6 +5,7 @@ import React, { Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 
 // Iconos
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -76,6 +77,10 @@ function HeaderDarkPersonal() {
                     >
                         <GitHubIcon />
                     </IconButton>
+                    <Grid item spacing={3}>
+                        <Button className={classes.buttonDegradado} variant="contained">Ver perfil</Button>
+                    </Grid>
+                    
                 </Grid>
 
                 {/* GRID ITEM FOTO PERFIL*/}

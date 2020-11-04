@@ -4,7 +4,6 @@ const AppStyles = {
     '@global': {
         body: {
             margin: '0',
-            fontFamily: "'Exo 2, sans-serif'",
         }
         
     },

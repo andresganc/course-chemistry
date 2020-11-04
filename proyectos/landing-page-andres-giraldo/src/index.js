@@ -6,15 +6,12 @@ import reportWebVitals from './reportWebVitals';
 // Components
 import MenuDark from './components/menus/menu-dark/MenuDark';
 import HeaderDarkPersonal from './components/headers/header-dark-personal/HeaderDarkPersonal';
+import SectionIcons from './components/sections/section-icons/SectionIcons';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <br></br>
-    <MenuDark />
-    <br></br>
-    <HeaderDarkPersonal />
-    <br></br>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
