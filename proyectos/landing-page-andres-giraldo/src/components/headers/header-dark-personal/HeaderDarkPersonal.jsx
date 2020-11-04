@@ -15,8 +15,11 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import AndresGiraldo from './assets/img/people-man-dark.jpg';
 import JavaScript from './assets/img/javascript.svg';
 
-// Styles
-import HeaderDarkPersonalStyles from './assets/styles/HeaderDarkPersonalStyles';
+// STYLES
+// css
+import './assets/styles/HeaderDarkPersonalStyles.css';
+// js
+import HeaderDarkPersonalStyles from './assets/styles/HeaderDarkPersonalStyles.js';
 
 const styles = makeStyles(HeaderDarkPersonalStyles);
 

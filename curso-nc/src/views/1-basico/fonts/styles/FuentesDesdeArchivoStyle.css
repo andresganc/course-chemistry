@@ -1,0 +1,19 @@
+
+@font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    src: local('Exo 2'), local('Exo2-Regular'),
+      url('../fonts/Exo_2/Exo2-VariableFont_wght.ttf') format('truetype');
+    color: brown;  
+  }
+
+.H2 {    
+    src: local('Exo 2'), local('Exo2-Regular'),
+      url('../fonts/Exo_2/Exo2-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Exo 2';
+    font-size: 3em;
+    color: brown;    
+    font-style: normal;
+    font-weight: normal;
+    font-weight: 900;  
+  }

@@ -3,7 +3,6 @@ const MenuDarkStyle = {
     '@global': {
         body: {
             margin: '0',
-            fontFamily: "'Exo 2, sans-serif'",
         }
         
     },
@@ -20,12 +19,10 @@ const MenuDarkStyle = {
     typographyH6: {
         flexGrow: 1,
         color: '#fff',
-        fontFamily: "'Exo 2, sans-serif'",
-        fontFamily: "'Permanent Marker', cursive",
+        fontFamily: "'Cinzel Decorative', cursive",
     },
     buttonMenu: {
         color: '#fff',
-        fontFamily: "'Exo 2, sans-serif'",
     },
     iconButton: {
         color: '#DB6E25'

@@ -1,7 +1,5 @@
 
-// ========================== FONTS ==============================
-
-
+//import 'https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap';
 
 const HeaderDarkPersonalStyles = {
 
@@ -20,29 +18,25 @@ const HeaderDarkPersonalStyles = {
         '@global h2' : {
             color: '#fff',
             margin: '5px',
-            fontSize: '5em',
+            fontSize: '3rem',
             paddingTop: '60px',
-            fontFamily: "'Ethnocentric', arial",
+            fontFamily: "'Cinzel Decorative', cursive",
         },
         '@global h3': {
             color: '#fff',
-            fontSize: '3em',
-            fontFamily: "'Exo 2, sans-serif'",
+            fontSize: '3rem',
         },
         '@global h4' : {
             color: '#fff',
-            fontSize: '2em',
-            fontFamily: "'Exo 2, sans-serif'",
+            fontSize: '2rem',
         },
         '@global h5' : {
             color: '#fff',
-            fontSize: '1em',
-            fontFamily: "'Exo 2, sans-serif'",
+            fontSize: '1rem',
         }
     },
 
     gridItemFotoPerfil: {
-        fontFamily: "'Exo 2, sans-serif'",
         '@global img': {
             width: '100%'
         }
