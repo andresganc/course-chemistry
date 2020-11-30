@@ -1,24 +1,28 @@
 
 import React, { Fragment, useState } from 'react'
 
-// Components Material UI 
-import Button from '@material-ui/core/Button';
+// Components
+import FormAdd from '../forms-tasks/FormAdd'
+import TaskPrueba from '../task/TaskPrueba';
 
-// Icons
-import SaveIcon from '@material-ui/icons/Save';
+
 
 function HeaderAllTasksPublishes() {
+
+    const [todos, setTodos] = useState([]);
+
+    const addTask = todo => {
+        const newTodos = [todo, ...todos];
+        setTodos(newTodos);
+        console.log(...todos);
+    }
+
+
     return (
         <Fragment>
-            <Button
-                variant="contained"
-                color="primary"
-                size="small"
-                className={Button}
-                startIcon={<SaveIcon />}
-            >
-                Agregar tarea
-            </Button>
+            <h2> Header tareas publicas </h2>
+            <FormAdd onSubmit={addTask} />
+            <TaskPrueba todos={todos} />
         </Fragment>
     )
 }
