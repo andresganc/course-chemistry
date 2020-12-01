@@ -9,19 +9,22 @@ import ReactDOM from 'react-dom';
 //import ImagenesMicrosoft from 'views/1-basico/metodos-de-siclo-de-vida/ImagenesMicrosoft';
 
 // Componentes
-import FontsLocales from 'views/1-basico/fonts/FuentesDesdeArchivo';
-import StylesCSSExterno from 'views/1-basico/styles/styles-css/styles-css/StylesCSSExterno';
-import StylesJSInLineObjeto from 'views/1-basico/styles/styles-js/StylesJSInLineObjeto';
-import StylesMakeStylesInLine from 'views/1-basico/styles/styles-css-in-js-material-ui/makestyles/StylesMakeStylesInLine';
-import StylesMakeStylesExterno from 'views/1-basico/styles/styles-css-in-js-material-ui/makestyles/StylesMakeStylesExterno';
-import StylesJSExterno from 'views/1-basico/styles/styles-js/StylesJSExterno';
+import StylesCSSExterno from 'views/1-basic/styles/styles-css/styles-css/StylesCSSExterno';
+import StylesJSInLineObjeto from 'views/1-basic/styles/styles-js/StylesJSInLineObjeto';
+import StylesMakeStylesInLine from 'views/1-basic/styles/styles-css-in-js-material-ui/makestyles/StylesMakeStylesInLine';
+import StylesMakeStylesExterno from 'views/1-basic/styles/styles-css-in-js-material-ui/makestyles/StylesMakeStylesExterno';
+import StylesJSExterno from 'views/1-basic/styles/styles-js/StylesJSExterno';
+
+import AddDeleteEditCompOneFile from 'views/2-medium/add-delete-edit-dinamic/add-delete-comp-one-file/AddDeleteEditCompOneFile';
+
 
 // Routes
-import Rutas from 'routes/Routes';
+import Rutas from 'routes/routes';
 
 
 ReactDOM.render(
   <React.StrictMode>
+      <AddDeleteEditCompOneFile />
       <br></br><br></br>
       <StylesCSSExterno />
       <br></br>      
@@ -32,8 +35,7 @@ ReactDOM.render(
       <StylesMakeStylesInLine />
       <br></br>
       <StylesMakeStylesExterno />
-      <br></br>
-      <FontsLocales />      
+      <br></br>    
               
   </React.StrictMode>,
   document.getElementById('root')
