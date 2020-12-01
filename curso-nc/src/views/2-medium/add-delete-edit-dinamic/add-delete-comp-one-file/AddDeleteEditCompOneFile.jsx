@@ -61,7 +61,7 @@ const ButtonAdd = (props) => {
         //props.onSubmit();
         props.onSubmit({
             id: Math.floor(Math.random() * 10000),
-            //text: input
+            text: input
         });
         setInput('');
         console.log("Componente agregado: Ok");
@@ -148,7 +148,7 @@ function AddDeleteEditCompOneFile() {
         <div>
             <h3> EJERCICIO ADD - DELETE - EDIT COMPONENTES DINAMICAMENTE </h3>
             <ButtonAdd onSubmit={addComponents} />
-            <Componente componentes={componentes} eliminarComponentes={eliminarComponentes} editarComponentes={ editarComponentes } completeComponentes={completeComponentes}/>
+            <Componente componentes={componentes} completeComponentes={completeComponentes} eliminarComponentes={eliminarComponentes} editarComponentes={ editarComponentes } />
         </div>
     )
 }
