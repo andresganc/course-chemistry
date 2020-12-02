@@ -1,9 +1,7 @@
 
 //Ahora importamos también useEffect
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 
-import "./styles.css";
 
 const ImagenesMicrosoftHook = () => {
   const [attitude, setAttitude] = useState("feliz");
@@ -25,8 +23,7 @@ const ImagenesMicrosoftHook = () => {
   //vamos a hacer un efecto para que se ejecute cada vez que cambie el objeto de attitude
   //pensar que esto se puede "suscribir" como ahora a un objeto del estado, pero también
   //a una prop, por ejemplo.
-  useEffect(
-    () => {
+  useEffect(() => {
       fetch(`https://source.unsplash.com/featured/?microsoft`)
         .then(response => {
           setPhoto(response.url);
@@ -37,6 +34,7 @@ const ImagenesMicrosoftHook = () => {
   );
 
   const changeStatus = () => {
+    // Condicionador declarativo (No uso de if imperativo)
     attitude === "feliz" ? setAttitude("contento") : setAttitude("feliz");
   };
 
@@ -44,8 +42,8 @@ const ImagenesMicrosoftHook = () => {
     <div>
       <div className="App">
         <h1>Piensa en colores</h1>
-        <h2>Nuestro Rodolfo hoy está {attitude}.</h2>
-        <button onClick={changeStatus}>Cambiar estado</button>
+        <h2>Estoy {attitude}.</h2>
+        <button onClick={changeStatus}> Cambiar estado </button>
         <hr />
       </div>
       <h2> Listado de repositorios de ENCAMINA: </h2>
