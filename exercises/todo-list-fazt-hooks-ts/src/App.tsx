@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { type } from 'os';
+import React, { Fragment, useState } from 'react';
+
+// Styles
+//import './App.css';
+
+// Generamos un type para React.FormEvent<HTMLFormElement> asi no ponemos un texto tan largo
+type FormElement = React.FormEvent<HTMLFormElement>
+
+function App(): JSX.Element {
+  
+  const [task, setTask] = useState('')
+
+  const handleSubmit = (e: FormElement) => {
+    e.preventDefault();
+    console.log('Enviando')
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Fragment>
+        <h2> Todo list fazt </h2>
+        <form action="" onSubmit={handleSubmit} >
+          {/* <input type="text" onChange={e => console.log(e.target.value)} /> */}
+          <input type="text" onChange={e => setTask(e.target.value) } />
+          <button>
+            Guardar
+          </button>
+        </form>
+      </Fragment>
+      
+
     </div>
   );
 }
