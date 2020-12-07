@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 // Styles
 // import './App.css';
@@ -15,6 +15,7 @@ interface ITask {
 function App(): JSX.Element {
   const [newTask, setNewTask] = useState<string>("");
   const [tasks, setTasks] = useState<ITask[]>([]);
+  const taskInput = useRef<HTMLInputElement>(null);     // Referencia para el input
 
   const handleSubmit = (e: FormElement) => {
     e.preventDefault();
@@ -22,19 +23,34 @@ function App(): JSX.Element {
     addTask(newTask);
     setNewTask("");
 
+    // Hacer que vuelva a cojer el foco despues de agregar una tarea
+    taskInput.current?.focus();
+
     //console.log(`Tareas anteriores: ${tasks}`)
     console.log("Tareas anteriores: ", tasks);
     console.log(`Nueva tarea: ${newTask}`);
   };
 
-  const addTask = (name: string) => {
+  // Agregar tarea
+  const addTask = (name: string): void => {
     //const newTasks: ITask[] = [...tasks, {name: name, done: false} ]        // Se puede usar name: name o mejor name solo
     const newTasks: ITask[] = [...tasks, { name, done: false }];
     setTasks(newTasks);
   };
 
-  const toggleDoneTask = () => {
-    
+  // Cambiar estado de tarea ( Hecha / No hecha ) ( False / True )
+  const toggleDoneTask = (i: number): void => {
+    const newTasks: ITask[] = [...tasks];
+    newTasks[i].done = !newTasks[i].done;
+    setTasks(newTasks);
+  }
+
+  // Eliminar tarea
+  const removeTask = (i: number) => {
+    const newTasks: ITask[] = [...tasks];
+    newTasks.splice(i, 1);
+    setTasks(newTasks);
+    console.log('Tarea eliminada: ', i)
   }
 
   return (
@@ -51,6 +67,7 @@ function App(): JSX.Element {
                   type="text"
                   onChange={(e) => setNewTask(e.target.value)}
                   value={newTask}
+                  ref={taskInput}
                   autoFocus
                 />
                 <button className='btn btn-succes btn-block mt-2'> Agregar </button>
@@ -61,7 +78,8 @@ function App(): JSX.Element {
             <div className="card card-body mt-2" key={i}>
               <h5 style={{ textDecoration: t.done ? 'line-through' : '' }} > {t.name} </h5>
               <div>
-                <button className="btn btn-secondary"> { t.done ? '✔' : '⮾' } </button>
+                <button className="btn btn-secondary" onClick={() => toggleDoneTask(i)}> { t.done ? '✔' : '⮾' } </button>
+                <button className='btn btn-danger' onClick={() => removeTask(i)} > 🗑 </button>
               </div>
             </div>
           ))}
