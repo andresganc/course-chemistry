@@ -11,12 +11,9 @@ import ReactDOM from 'react-dom';
 //import CambiarEstado from 'views/2-intermedio/hooks/CambiarEstadoFelizContentoClasses';
 //import ImagenesMicrosoft from 'views/1-basico/metodos-de-siclo-de-vida/ImagenesMicrosoft';
 
-
 // Componentes
 import ImportarImagenesMicrosoftUseEffect from 'views/2-medium/hook-use-effect/ImportarImagenesMicrosoftUseEffect'
-
 import PosicionMouseUseEffet from 'views/2-medium/hook-use-effect/PosicionMouseUseEffet';
-
 
 ReactDOM.render(
   <React.StrictMode>
