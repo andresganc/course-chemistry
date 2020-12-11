@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Routes
-import Rutas from 'routes/routes';
+//import Rutas from 'routes/routes';
 
 // Pages
 //import FormHooks from 'views/2-intermedio/forms-hooks/FormHookStringEnvio';
@@ -20,8 +20,7 @@ import PosicionMouseUseEffet from 'views/2-medium/hook-use-effect/PosicionMouseU
 
 ReactDOM.render(
   <React.StrictMode>
-    <PosicionMouseUseEffet />       
-              
+    <PosicionMouseUseEffet />               
   </React.StrictMode>,
   document.getElementById('root')
 );
