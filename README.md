@@ -73,9 +73,20 @@ npm start
 
 NOTA IMPORTANTE: Es recomendable usar NPX ( No necesita instalacion previa y siempre busca y descarga la ultima version )
 
-npx create-react-app my-app
-cd my-app
-npm start
+    - JavaScript
+        npx create-react-app my-app
+
+        or
+
+        yarn create-react-app my-app
+    
+
+    - TypeScript
+        npx create-react-app my-app --template typescript
+
+        or
+
+        yarn create react-app my-app --template typescript
 
 
 
@@ -83,6 +94,15 @@ npm start
 
 * ======================================================================
 
+### 4. Convertir proyecto React JavaScript a React TypeScript
+
+    - Instalar Types
+
+        npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+        # or
+
+        yarn add typescript @types/node @types/react @types/react-dom @types/jest
 
 ## REACT
 <br><br>
