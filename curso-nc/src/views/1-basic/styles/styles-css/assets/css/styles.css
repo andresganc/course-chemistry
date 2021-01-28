@@ -1,0 +1,25 @@
+
+
+
+.div {
+    background-color: snow;
+    height: 100px;
+}
+
+.btn-cancelar {
+    padding: 5px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: lightsalmon;
+    color: #fff;
+}
+
+.btn-guardar {
+    padding: 5px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: teal;
+    color: #fff;
+}
