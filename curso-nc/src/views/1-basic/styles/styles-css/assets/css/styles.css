@@ -13,6 +13,8 @@
     border-radius: 5px;
     background-color: lightsalmon;
     color: #fff;
+    outline: none;
+    cursor: pointer;
 }
 
 .btn-guardar {
@@ -22,4 +24,6 @@
     border-radius: 5px;
     background-color: teal;
     color: #fff;
+    outline: none;
+    cursor: pointer;
 }

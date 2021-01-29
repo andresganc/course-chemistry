@@ -2,8 +2,9 @@
 import React from 'react'
 
 // Components NC
-import StylesCSSExterno from './views/1-basic/styles/styles-css/StylesCSSExterno'
 import StylesCSSInLine from './views/1-basic/styles/styles-css/StylesCSSInLine'
+import StylesCSSInterno from './views/1-basic/styles/styles-css/StylesCSSInterno'
+import StylesCSSExterno from './views/1-basic/styles/styles-css/StylesCSSExterno'
 
 // Routes
 //import Rutas from 'routes/routes';
@@ -17,8 +18,9 @@ import StylesCSSInLine from './views/1-basic/styles/styles-css/StylesCSSInLine'
 const App = () => {
     return (
         <div>
-            <StylesCSSExterno />
             <StylesCSSInLine />
+            <StylesCSSInterno />
+            <StylesCSSExterno />
         </div>
     )
 }
