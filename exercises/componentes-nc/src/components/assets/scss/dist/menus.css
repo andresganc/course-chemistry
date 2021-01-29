@@ -1,0 +1,22 @@
+.nav {
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 1.2rem 1.8rem;
+}
+
+.ul-logo {
+  display: flex;
+  margin-left: 1rem;
+}
+
+.ul-menu {
+  display: flex;
+  margin-right: 1rem;
+}
+.ul-menu .ul-menu__li {
+  list-style: none;
+  margin: 0 0.5rem;
+}
+.ul-menu .ul-menu__a {
+  text-decoration: none;
+}
