@@ -8,6 +8,7 @@ const StylesCSSExterno = () => {
     return (
         <Fragment>
             <div className="div">
+                <h3> STYLES OUT </h3>
                 <button className="btn-cancelar"> Cancelar </button>
                 <button className="btn-guardar"> Guardar </button>
             </div>

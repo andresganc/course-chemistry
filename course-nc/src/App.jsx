@@ -5,6 +5,7 @@ import React from 'react'
 import StylesCSSInLine from './views/1-basic/styles/styles-css/StylesCSSInLine'
 import StylesCSSInterno from './views/1-basic/styles/styles-css/StylesCSSInterno'
 import StylesCSSExterno from './views/1-basic/styles/styles-css/StylesCSSExterno'
+import StylesSASS from './views/1-basic/styles/styles-sass/StylesSCSS'
 
 // Routes
 //import Rutas from 'routes/routes';
@@ -21,6 +22,7 @@ const App = () => {
             <StylesCSSInLine />
             <StylesCSSInterno />
             <StylesCSSExterno />
+            <StylesSASS />
         </div>
     )
 }
