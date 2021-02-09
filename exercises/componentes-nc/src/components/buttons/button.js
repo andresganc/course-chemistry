@@ -1,6 +1,10 @@
 
 import styled, { css } from 'styled-components'
 
+// Icons 
+import { AiFillSecurityScan } from "react-icons/ai";
+import Home from '../../assets/img/home-solid.svg';
+
 // Fonts
 import roboto from '../assets/fonts/fonts'
 

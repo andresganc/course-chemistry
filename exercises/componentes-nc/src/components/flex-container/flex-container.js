@@ -32,7 +32,7 @@ const flexContainer = styled.div `
     ${ props => props.acSpaceEvely && css ` align-content: space-evenly `}
     ${ props => props.acStretch && css ` align-content: stretch `}
 
-    /* Align Items */
+    /* Align Content */
     ${ props => props.aiFlexStart && css ` align-items: flex-start `}
     ${ props => props.aiCenter && css ` align-items: center `}
     ${ props => props.aiFlexEnd && css ` align-items: flex-end `}
