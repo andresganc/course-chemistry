@@ -6,7 +6,7 @@ import StylesCSSInLine from './views/1-basic/styles/styles-css/StylesCSSInLine'
 import StylesCSSInterno from './views/1-basic/styles/styles-css/StylesCSSInterno'
 import StylesCSSExterno from './views/1-basic/styles/styles-css/StylesCSSExterno'
 import StylesSASS from './views/1-basic/styles/styles-sass/StylesSCSS'
-import StylesCSSModules from './views/1-basic/styles/css-modules/StylesCSSModules'
+import StylesCSSModules from './views/1-basic/styles/styles-css-modules/StylesCSSModules'
 
 // Routes
 //import Rutas from 'routes/routes';
