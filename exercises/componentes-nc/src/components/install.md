@@ -10,4 +10,13 @@
 ### Instalacion de dependencias
 
     - npm i styled-components
+    - npm i @svgr/webpack
+
+        Crear un archivo webpack.config.js y agregar el siguiente codigo.
+
+            {
+            test: /\.svg$/,
+            use: ['@svgr/webpack'],
+            }
+            
     - npm i react-router-dom

@@ -1,0 +1,23 @@
+
+.gc_contenedor {
+    width: 300px;
+    height: 350px;
+}
+
+.gc_contenedor_img {
+    width: 300px;
+    height: 200px;
+    
+}
+
+.gc_contenedor_tg {
+    margin-top: 10px;
+}
+
+.gc_contenedor_st {
+    margin: 5px 0 10px 0;  
+}
+
+.gridc_bloque_cbu {
+    margin: 20px 5px ;
+}
