@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <br/><br/>
       <Characters />
       <h1>Hola Mundo</h1>
     </div>
