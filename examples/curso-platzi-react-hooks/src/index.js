@@ -4,9 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+// useContext
+import ThemeContext from './context/theme-context'
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeContext.Provider value='red'>
+      <App />
+    </ThemeContext.Provider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
