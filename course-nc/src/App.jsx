@@ -20,10 +20,6 @@ import StylesCSSModules from './views/1-basic/styles/styles-css-modules/StylesCS
 const App = () => {
     return (
         <div>
-            <StylesCSSInLine />
-            <StylesCSSInterno />
-            <StylesCSSExterno />
-            <StylesSASS />
             <StylesCSSModules />
         </div>
     )
