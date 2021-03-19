@@ -7,6 +7,7 @@ import StylesCSSInterno from './views/1-basic/styles/styles-css/StylesCSSInterno
 import StylesCSSExterno from './views/1-basic/styles/styles-css/StylesCSSExterno'
 import StylesSASS from './views/1-basic/styles/styles-sass/StylesSCSS'
 import StylesCSSModules from './views/1-basic/styles/styles-css-modules/StylesCSSModules'
+import FontAwesome from './views/1-basic/icons/font-awesome/FontAwesome'
 
 // Routes
 //import Rutas from 'routes/routes';
@@ -20,11 +21,7 @@ import StylesCSSModules from './views/1-basic/styles/styles-css-modules/StylesCS
 const App = () => {
     return (
         <div>
-            <StylesCSSInLine />
-            <StylesCSSInterno />
-            <StylesCSSExterno />
-            <StylesSASS />
-            <StylesCSSModules />
+            <FontAwesome />
         </div>
     )
 }
