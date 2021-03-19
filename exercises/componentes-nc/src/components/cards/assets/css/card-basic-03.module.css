@@ -1,0 +1,28 @@
+
+.gridcontainer_contenedor {
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 320px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.gridc_bloque {
+    width: 300px;
+    height: 150px;
+    background: linear-gradient( 90deg,#FF80AB, #B388FF );
+   
+}
+
+.gridc_bloque_text {
+    margin-top: 10px;
+}
+
+.gridc_bloque_Bu {
+    margin: 30px 5px ;
+   
+}
+
+.gridc_bloque_text {
+    padding: 10px;
+}

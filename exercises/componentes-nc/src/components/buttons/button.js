@@ -1,10 +1,6 @@
 
 import styled, { css } from 'styled-components'
 
-// Icons 
-import { AiFillSecurityScan } from "react-icons/ai";
-import Home from '../../assets/img/home-solid.svg';
-
 // Fonts
 import roboto from '../assets/fonts/fonts'
 
@@ -43,7 +39,7 @@ import {
 
 
 // ========================= TYPES ============================
-    const buttonBase = css `
+    const buttonDefault = css `
         font-size: .9rem;
         padding: .5rem 1.5rem;
         border: none;
@@ -93,37 +89,23 @@ import {
 // ========================= TYPES ============================
 
 
-
 const Button = styled.button `
 
     /* Font */
     ${ roboto }
 
     /* Button base*/
-    ${ buttonBase } 
+    ${ buttonDefault } 
     
     /* Colors */
     ${ colorsBG }
     ${ colorsText }
 
-    
-    
     // TYPE
-    ${ props => props.default && css `    
-        ${ buttonBase }
-    `}
-
-    ${ props => props.round && css `    
-        ${ buttonRound }
-    `}
-
-
-    ${ props => props.circle && css `    
-        ${ buttonCircle }
-    `}
+    ${ props => props.default && css ` ${ buttonDefault } `}
+    ${ props => props.round && css ` ${ buttonRound } `}
+    ${ props => props.circle && css ` ${ buttonCircle } `}
     
-
- 
 `
 
 export default Button;

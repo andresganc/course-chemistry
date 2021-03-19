@@ -22,6 +22,7 @@ const App = () => {
     return (
         <div>
             <FontAwesome />
+            <StylesCSSModules />
         </div>
     )
 }

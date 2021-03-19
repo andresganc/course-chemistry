@@ -18,9 +18,9 @@
                 </FlexContainer>
 
         - Flex Center: Alinea los elementos que estan dentro del contenedor al Centro
-            Propiedad: jcFlexCenter
+            Propiedad: jcCenter
             Ejemplo:
-                <FlexContainer jcFlexCenter>
+                <FlexContainer jcCenter>
                 
                 </FlexContainer>
 
