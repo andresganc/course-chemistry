@@ -1,23 +1,23 @@
-
-import React, { useState, useContext } from 'react';
-
-// Context
-import ThemeContext from '../context/theme-context'
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import AppContext from '../context/AppContext';
+import '../styles/components/Header.css'
 
 const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const color = useContext(ThemeContext)
-
-  const handleClick = () => {
-    setDarkMode(!darkMode);
-  }
+  const { state } = useContext(AppContext);
+  const { cart } = state;
 
   return (
     <div className="Header">
-      <h1 style={{ color }}>ReactHooks</h1>
-      <button type="button" onClick={handleClick}>{darkMode ? 'Dark Mode' : 'Light Mode'}</button>
-      <button type="button" onClick={() => setDarkMode
-        (!darkMode)}>{darkMode ? 'Dark Mode 2' : 'Light Mode 2'}</button>
+      <h1 className="Header-title">
+        <Link to="/">PlatziConf Merch</Link>
+      </h1>
+      <div className="Header-checkout">
+        <Link to="/checkout">
+          <i className="fas fa-shopping-basket" />
+        </Link>
+        {cart.length > 0 && <div className="Header-alert">{cart.length}</div>}
+      </div>
     </div>
   );
 }
