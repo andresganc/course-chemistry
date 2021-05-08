@@ -3,11 +3,11 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
-import Separator from '../separator/separator'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
+import Separator from 'components/separator/'
 
 const ContenedorPrincipal = styled(GridContainer)`
     border-radius:5px;
@@ -17,7 +17,6 @@ const ContenedorPrincipal = styled(GridContainer)`
     &::before {
         width: 300px;
         height: 400px;
-        
         position: absolute;
         top: 0;
         left: 0;
@@ -64,7 +63,6 @@ const cardPricing03 = () => {
                 <FlexContainer jcCenter relative>
                     <BloqueButton bgDeepOrangeA400 marginB3 marginT4>  ipsum dolor </BloqueButton>
                 </FlexContainer>
-
 
             </ContenedorPrincipal>
 

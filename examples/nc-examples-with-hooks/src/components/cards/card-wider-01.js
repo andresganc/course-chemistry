@@ -3,18 +3,17 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Container from '../container/container'
-import Typography from '../typography/typography'
-import Image from '../image/image'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Container from 'components/container/'
+import Typography from 'components/typography/'
+import Image from 'components/image/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Font Aweson Icon
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faInvision } from '@fortawesome/free-brands-svg-icons'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
-
 
 const ContenedorPrincipal = styled(GridContainer)`
     background-color: #FFFFFF;
@@ -29,6 +28,7 @@ const ContenedorImage = styled(FlexContainer)`
     left: -1px;
     width: 450px;
 `
+
 const BloqueImage = styled(Image)`
     width: 100%;
     border-radius: 5px;
@@ -45,7 +45,6 @@ const cardWider01 = () => {
             <GridContainer>
 
                 <ContenedorPrincipal center>
-
                     <ContenedorImage>
                         <BloqueImage src='https://bucket-nc-images.s3.amazonaws.com/cards/card-250px-05.jpg' alt="" />
                     </ContenedorImage>
@@ -66,8 +65,6 @@ const cardWider01 = () => {
                 </ContenedorPrincipal>
 
             </GridContainer>
-
-
 
         </Fragment>
     )

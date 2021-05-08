@@ -3,10 +3,10 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 //Font Awesome Icon
@@ -67,8 +67,7 @@ const cardImage01 = () => {
                         <Typography p3 textWhite center> accusamus mollitia voluptatem odit, in corporis illum dicta ex accusamus </Typography>
                         <Typography p3 textWhite center> atque expedita dicta ex accusamus mollitia voluptatem odit </Typography>
                     </GridContainer>
-
-
+                    
                     <FlexContainer jcCenter>
                         <ContenedorButton bgPink400 textWhite marginY4 shadow>
                             <BloqueButton icon={faCropAlt} />

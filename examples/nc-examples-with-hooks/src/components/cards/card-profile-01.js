@@ -3,18 +3,18 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
-import Image from '../image/image'
-
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
+import Image from 'components/image/'
 
 const ContenedorPrincipal = styled(GridContainer)`
     border-radius: 5px;
     width: 350px;
     height: 400px;
 `
+
 const ContenedorImage = styled(Image)`
     width: 150px;
     height: 150px;
@@ -45,7 +45,6 @@ const cardProfile01 = () => {
                     <Typography textGray400 marginT4 p3> Lorem ipsum </Typography>
                 </GridContainer>
 
-
                 <ContenedorTexto>
                     <Typography bold center h5 textGray800 marginB2>Lorem ipsum </Typography>
                     <Typography textGray400 marginY2 p3 center> Lorem, ipsum dolor sit amet ipsum dolor consectetur adipisicing elit consectetur adipisicing elit Lorem</Typography>
@@ -54,7 +53,6 @@ const cardProfile01 = () => {
                 <FlexContainer jcCenter>
                     <BloqueButton marginB10 bgCyan500 textWhite>  ipsum </BloqueButton>
                 </FlexContainer>
-
 
             </ContenedorPrincipal>
 

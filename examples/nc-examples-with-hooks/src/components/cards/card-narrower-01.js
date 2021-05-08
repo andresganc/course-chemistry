@@ -3,11 +3,11 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
-import Image from '../image/image'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
+import Image from 'components/image/'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 // Font Awesome Icon
@@ -30,6 +30,7 @@ const BloqueImage = styled(Image)`
     width: 100%;
     border-radius: 5px;
 `
+
 const ContenedorTexto = styled(GridContainer)`
     padding: 15px;
 `
@@ -46,7 +47,6 @@ const BloqueButton = styled(Button)`
     width: 110px;
     height: 45px;
 `
-
 
 const CardNarrower01 = () => {
     return (
@@ -72,9 +72,7 @@ const CardNarrower01 = () => {
                         <BloqueButton bgPink900 textWhite> Lorem </BloqueButton>
                     </ContenedorButton>
 
-
                 </ContenedorPrincipal>
-
 
             </GridContainer>
 

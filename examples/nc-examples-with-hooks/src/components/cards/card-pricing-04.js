@@ -3,17 +3,16 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
-import Separator from '../separator/separator'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
+import Separator from 'components/separator/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Font Awesome Icon
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-
 
 const ContenedorPrincipal = styled(GridContainer)`
     background: #FFFFFF;
@@ -61,11 +60,9 @@ const cardPricing04 = () => {
                     <BloqueButton bgPurple500 textWhite marginB3 marginT4>  ipsum dolor </BloqueButton>
                 </FlexContainer>
 
-
             </ContenedorPrincipal>
 
         </Fragment>
-
     )
 }
 

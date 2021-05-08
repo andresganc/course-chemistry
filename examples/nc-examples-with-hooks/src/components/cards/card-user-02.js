@@ -1,16 +1,17 @@
+
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Components
-import GridContainer from '../grid-container/grid-container'
-import Container from '../container/container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Image from '../image/image'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import GridContainer from 'components/grid-container/'
+import Container from 'components/container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Image from 'components/image/'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 //Font Awesome Icon
-import {faEllipsisH} from '@fortawesome/free-solid-svg-icons'
+import { faEllipsisH } from '@fortawesome/free-solid-svg-icons'
 
 const ContenedorPrincipal = styled(GridContainer)`
     padding: 15px;
@@ -33,23 +34,20 @@ const cardUser02 = () => {
                 <ContenedorPrincipal marginT4 radius2>
 
                     <FlexContainer jcSpaceBetween aiCenter>
-
                         <GridContainer>
                             <Typography h5 textGray500>Lorem, ipsum dolor</Typography>
                         </GridContainer>
 
                         <FlexContainer marginR5 aiCenter>
-                            <FontAwesomeIcon icon={faEllipsisH} size='2x' color='#9E9E9E'/>
+                            <FontAwesomeIcon icon={faEllipsisH} size='2x' color='#9E9E9E' />
                         </FlexContainer>
-
                     </FlexContainer>
-
 
                     <GridContainer>
 
                         <GridContainer marginT5 gridCols2 center>
                             <GridContainer>
-                                <ContenedorImage src='https://bucket-nc-images.s3.amazonaws.com/cards/profile-400px-10.jpg' sizeXL/>
+                                <ContenedorImage src='https://bucket-nc-images.s3.amazonaws.com/cards/profile-400px-10.jpg' sizeXL />
                             </GridContainer>
 
                             <FlexContainer aiCenter>
@@ -59,12 +57,10 @@ const cardUser02 = () => {
                                 </Container>
                             </FlexContainer>
                         </GridContainer>
-
-
 
                         <GridContainer marginT5 gridCols2 center>
                             <GridContainer>
-                                <ContenedorImage src='https://bucket-nc-images.s3.amazonaws.com/cards/profile-400px-10.jpg' sizeXL/>
+                                <ContenedorImage src='https://bucket-nc-images.s3.amazonaws.com/cards/profile-400px-10.jpg' sizeXL />
                             </GridContainer>
 
                             <FlexContainer aiCenter>
@@ -74,11 +70,10 @@ const cardUser02 = () => {
                                 </Container>
                             </FlexContainer>
                         </GridContainer>
-
 
                         <GridContainer marginT5 gridCols2 center>
                             <GridContainer>
-                                <ContenedorImage src='https://bucket-nc-images.s3.amazonaws.com/cards/profile-400px-10.jpg' sizeXL/>
+                                <ContenedorImage src='https://bucket-nc-images.s3.amazonaws.com/cards/profile-400px-10.jpg' sizeXL />
                             </GridContainer>
 
                             <FlexContainer aiCenter>
@@ -88,11 +83,10 @@ const cardUser02 = () => {
                                 </Container>
                             </FlexContainer>
                         </GridContainer>
-
 
                         <GridContainer marginT5 gridCols2 center>
                             <GridContainer>
-                                <ContenedorImage src='https://bucket-nc-images.s3.amazonaws.com/cards/profile-400px-10.jpg' sizeXL/>
+                                <ContenedorImage src='https://bucket-nc-images.s3.amazonaws.com/cards/profile-400px-10.jpg' sizeXL />
                             </GridContainer>
 
                             <FlexContainer aiCenter>
@@ -102,7 +96,6 @@ const cardUser02 = () => {
                                 </Container>
                             </FlexContainer>
                         </GridContainer>
-
 
                     </GridContainer>
 

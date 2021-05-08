@@ -3,11 +3,11 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 // NC Components
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
-import Image from '../image/image'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
+import Image from 'components/image/'
 
 const Card = styled(GridContainer)`
     background-color: #ffff;

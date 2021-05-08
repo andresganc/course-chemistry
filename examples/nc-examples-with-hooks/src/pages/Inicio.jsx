@@ -1,11 +1,12 @@
 
-import React, { Fragment } from 'react'
+import React from 'react'
+import Styled from 'styled-components'
 
 // Components NC
-import Menu from '../components/menus/menu-basic-01'
-import Container from '../components/container/container'
-import SectionPricing from '../components/sections-pricing/section-pricing-01'
-
+import Menu from 'components/menus/menu-basic-01'
+import Container from 'components/container'
+import GridContainer from 'components/grid-container'
+import Card from 'view/Card'
 
 // Styles
 import '../assets/css/inicio.css'
@@ -16,8 +17,16 @@ const Inicio = () => {
             <Menu />
             
             <Container className='inicio__container'>
-                <h2>  Page inicio </h2>
-                <SectionPricing />
+                <GridContainer center marginY5>
+                    <h2> HOOKS EXAMPLES </h2>
+                </GridContainer>
+                
+                <GridContainer gridCols4 gap10>
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                </GridContainer>
             </Container>
             
         </div>

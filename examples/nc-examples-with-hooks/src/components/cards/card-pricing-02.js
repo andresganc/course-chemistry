@@ -3,19 +3,15 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import Container from '../container/container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
+import GridContainer from 'components/grid-container/'
+import Container from 'components/container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 //Font Awesome Icon 
 import { faBuilding } from '@fortawesome/free-solid-svg-icons'
-
-// Icons
-import { faHome } from '@fortawesome/free-solid-svg-icons'
-import { faShippingFast} from '@fortawesome/free-solid-svg-icons'
 
 const ContenedorPrincipal = styled(GridContainer)`
     border-radius:5px;
@@ -55,15 +51,6 @@ const cardPricing02 = () => {
                     </ContenedorImage>
                 </FlexContainer>
 
-                <FlexContainer jcCenter>
-                    <ContenedorImage marginT5 center>
-                        <GridContainer marginT5 center>
-                            <FontAwesomeIcon icon={faShippingFast} size='4x' color='#C6FF00'/>
-                        </GridContainer>
-                    </ContenedorImage>
-                </FlexContainer>
-
-                
                 <ContenedorTexto>
                     <Typography bold center h2 textWhite>$69</Typography>
                     <Typography textGray300 marginX2 p3>Lorem, ipsum dolor sit amet ipsum dolor consectetur adipisicing elit</Typography>
@@ -72,7 +59,6 @@ const cardPricing02 = () => {
                 <FlexContainer jcCenter>
                     <BloqueButton textGray600>  ipsum dolor </BloqueButton>
                 </FlexContainer>
-
 
             </ContenedorPrincipal>
 

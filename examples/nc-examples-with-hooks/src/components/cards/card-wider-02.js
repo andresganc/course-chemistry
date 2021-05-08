@@ -3,12 +3,12 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Container from '../container/container'
-import Typography from '../typography/typography'
-import Separator from '../separator/separator'
-import Image from '../image/image'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Container from 'components/container/'
+import Typography from 'components/typography/'
+import Separator from 'components/separator/'
+import Image from 'components/image/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Font Aweson Icon
@@ -22,6 +22,7 @@ const ContenedorPrincipal = styled(GridContainer)`
     height: 620px;
     border-radius: 5px;
 `
+
 const ContenedorImage = styled(FlexContainer)`
     position: relative;
     top: -20px;
@@ -47,6 +48,7 @@ const ContenedorFooter = styled(GridContainer)`
     left: -1px;
     width: 450px;
 `
+
 const BloqueFooter = styled(Typography)`
     padding: 15px;
 `
@@ -62,7 +64,6 @@ const cardWider02 = () => {
                 </GridContainer>
 
                 <ContenedorPrincipal center>
-
                     <ContenedorImage>
                         <BloqueImage src='https://bucket-nc-images.s3.amazonaws.com/cards/card-250px-05.jpg' alt="" />
                     </ContenedorImage>
@@ -81,17 +82,14 @@ const cardWider02 = () => {
                         <ContenedorIconos icon={faFacebookF} color='#1565C0' />
                     </Container>
 
-                    <Separator bgGray500 /> 
+                    <Separator bgGray500 />
 
                     <ContenedorFooter bgGray100 textGray500 center>
                         <BloqueFooter marginT3> 2 days ago </BloqueFooter>
                     </ContenedorFooter>
-
                 </ContenedorPrincipal>
 
             </GridContainer>
-
-
 
         </Fragment>
     )

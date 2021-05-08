@@ -3,17 +3,16 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
-import Container from '../container/container'
+import GridContainer from 'components/grid-container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
+import Container from 'components/container/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Font awesome Icon 
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
-import { faTwitter} from '@fortawesome/free-brands-svg-icons'
-import {faGooglePlusG} from '@fortawesome/free-brands-svg-icons'
-
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGooglePlusG } from '@fortawesome/free-brands-svg-icons'
 
 const Card = styled(GridContainer)`
     background-color: #fff;
@@ -21,6 +20,7 @@ const Card = styled(GridContainer)`
     height: 480px;
     border-radius: 5px;
 `
+
 const ContenedorTexto = styled(GridContainer)`
     background: linear-gradient( 35deg,#FF80AB, #7C4DFF );
     border-radius: 5px;
@@ -30,7 +30,6 @@ const ContenedorTexto = styled(GridContainer)`
     width: 368px;
 `
 
-
 const cardNarrower03 = () => {
     return (
         <Fragment>
@@ -38,7 +37,6 @@ const cardNarrower03 = () => {
             <Card>
 
                 <ContenedorTexto shadow>
-
                     <GridContainer>
                         <Typography h2 textWhite marginT5 marginB4 center> Dolor sit </Typography>
                         <Typography p2 textWhite center> Lorem ipsum dolor </Typography>
@@ -64,7 +62,6 @@ const cardNarrower03 = () => {
                         Lorem ipsum dolor sit amet consectetur  adipisicing elit. Suscipit repellat similique quia
                         voluptatem beatae, totam aut necessitatibus, fuga, odio vel ex corrupti provident commodi ratione consectetur distinctio? Qui, numquam  voluptatem beatae, totam aut necessitatibus tota aut
                     </Typography>
-
                 </GridContainer>
 
             </Card>

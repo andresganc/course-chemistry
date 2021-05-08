@@ -3,18 +3,16 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Image from '../image/image'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Image from 'components/image/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 
 //Font Awesome Icon
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons'
-
 
 const Card = styled(GridContainer)`
     background-color:#00BCD4;
@@ -33,7 +31,6 @@ const ContenedorImage = styled(Image)`
     height: 40px;
 `
 
-
 const cardSolid02 = () => {
     return (
         <Fragment>
@@ -50,7 +47,6 @@ const cardSolid02 = () => {
                     <GridContainer>
                         <Typography h5 textWhite marginB3 marginT2> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non facere ducimus mollitia sed" </Typography>
                     </GridContainer>
-
 
                     <GridContainer gridCols2>
                         <FlexContainer jcFlexStart aiCenter>

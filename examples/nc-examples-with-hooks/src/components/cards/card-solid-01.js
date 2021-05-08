@@ -3,15 +3,14 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 //Font Awesome Icon
 import {faNewspaper} from '@fortawesome/free-solid-svg-icons'
-
 
 const Card = styled(GridContainer)`
     background-color:#EF5350;
@@ -19,7 +18,6 @@ const Card = styled(GridContainer)`
     width: 450px;
     height: 350px;
 `
-
 
 const ContenedorTexto = styled(Typography)`
     opacity: 0.8;
@@ -51,7 +49,6 @@ const cardSolid01 = () => {
                         <ContenedorTexto p2 textGray50> accusamus mollitia voluptatem odit, in corporis illum  </ContenedorTexto>
                         <ContenedorTexto p2 textGray50> atque expedita dicta ex accusamus mollitia </ContenedorTexto>
                     </GridContainer>
-
 
                     <FlexContainer jcCenter>
                         <ContenedorButton bgWhite marginY4>

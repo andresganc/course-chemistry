@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 
 // NC Components
-import FlexContainer from '../flex-container/flex-container'
+import FlexContainer from '../flex-container'
 
 // Fonts
 import roboto from '../assets/fonts/fonts'
@@ -46,17 +46,15 @@ const Menu = styled(FlexContainer) `
 
     /* =============== DESKTOP =============== */
     @media ${device.desktop} {
-       
         align-items: center;
         flex-flow: row wrap;
         padding: 1rem 1rem;
 
-        // Posicion Fija
-        width: 100%;
+        // Posicion fija
         position: fixed;
-        top:0;
+        top: 0;
         left: 0;
-        z-index: 100;
+        width: 100%;
 
         .nav__logo {
         display: flex;
@@ -200,11 +198,11 @@ const MenuBasic01 = () => {
                 </ul>
 
                 <ul className={isMobile? "nav__menu_mobile" : "nav__menu"} onClick={() => setIsMobile(false)}>
-                    <Link to="/" className="nav__menu_link"><li className="nav__menu_li"><a> Inicio </a></li></Link>
-                    <Link to="/contador-horas" className="nav__menu_link"><li className="nav__menu_li"><a> Contador horas </a></li></Link>
-                    <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> Servicios </a></li></Link>
-                    <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> Section </a></li></Link>
-                    <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> Contactenos </a></li></Link>  
+                    <Link href="#" className="nav__menu_link"><li className="nav__menu_li"><a> Inicio </a></li></Link>
+                    <Link href="#" className="nav__menu_link"><li className="nav__menu_li"><a> Acerca de </a></li></Link>
+                    <Link href="#" className="nav__menu_link"><li className="nav__menu_li"><a> Servicios </a></li></Link>
+                    <Link href="#" className="nav__menu_link"><li className="nav__menu_li"><a> Section </a></li></Link>
+                    <Link href="#" className="nav__menu_link"><li className="nav__menu_li"><a> Contactenos </a></li></Link>  
                 </ul>
 
                 <button className="nav__btn" onClick={() => setIsMobile(!isMobile)}>

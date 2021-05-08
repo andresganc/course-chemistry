@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 
 // Components NC
-import Button from '../components/buttons/button'
+import Button from '../components/buttons'
 
 const ErrorPage = () => {
     return (

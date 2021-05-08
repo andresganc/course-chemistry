@@ -3,14 +3,13 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 //Font Aweson Icon
 import { faCalendar } from '@fortawesome/free-solid-svg-icons'
-
 
 const Card = styled(GridContainer)`
     background-color: #FFFFFF;
@@ -39,14 +38,11 @@ const cardWider03 = () => {
             <GridContainer>
 
                 <Card center>
-
                     <ContenedorTexto shadow>
-
                         <GridContainer marginB4>
                             <Typography h2 textWhite marginT6 center> Dolor sit </Typography>
                             <Typography p2 textWhite marginB3 center> <FontAwesomeIcon icon={faCalendar} /> Lorem ipsum dolor </Typography>
                         </GridContainer>
-
                     </ContenedorTexto>
 
                     <GridContainer>
@@ -55,13 +51,11 @@ const cardWider03 = () => {
                             voluptatem beatae, totam aut necessitatibus, fuga, odio vel ex corrupti provident commodi ratione consectetur distinctio? Qui, numquam  voluptatem beatae, totam aut necessitatibus tota aut
                             sit amet consectetur  adipisicing elit. Suscipit repellat similique quiavoluptatem beatae, totam aut necessitatibus, fuga, odio vel ex corrupti provident commodi ratione consectetur distinctio Qui, numquam  voluptatem beatae aut necessitatibus tota aut
                         </Typography>
-
                     </GridContainer>
 
                     <FlexContainer marginR8 marginB2 jcFlexEnd>
                         <BloqueTexto h5 textOrange500> Lorem ipsum - - </BloqueTexto>
                     </FlexContainer>
-
                 </Card>
 
             </GridContainer>

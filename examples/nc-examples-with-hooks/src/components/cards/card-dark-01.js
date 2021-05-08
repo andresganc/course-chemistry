@@ -2,18 +2,15 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 // Componentes
-
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Separator from '../separator/separator'
-import Image from '../image/image'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Separator from 'components/separator/'
+import Image from 'components/image/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 
 // Icono Font Awesome
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons'
-
 
 const Card = styled(GridContainer)`
     width: 350px;
@@ -31,11 +28,9 @@ const ContenedorTitulo = styled(Typography)`
     padding: 20px; 
 `
 
-
 const ContenedorTexto = styled(Typography)`
     padding: 20px;
 `
-
 
 const cardDark01 = () => {
     return (
@@ -47,9 +42,7 @@ const cardDark01 = () => {
                     <ContenedorImage src="https://bucket-nc-images.s3.amazonaws.com/cards/card-626px-02.jpg" alt="" />
                 </FlexContainer>
 
-
                 <FlexContainer jcSpaceBetween aiCenter bgGray800>
-
                     <GridContainer>
                         <ContenedorTitulo h3 textWhite normal> amet consec </ContenedorTitulo>
                     </GridContainer>
@@ -57,10 +50,7 @@ const cardDark01 = () => {
                     <FlexContainer marginR5>
                         <FontAwesomeIcon icon={faShareAlt} color='#FFFFFF' />
                     </FlexContainer>
-
                 </FlexContainer>
-
-
 
                 <GridContainer bgGray800>
 

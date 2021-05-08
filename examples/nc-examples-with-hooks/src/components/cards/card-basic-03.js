@@ -3,16 +3,16 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 // Componentes
-import GridContainer from '../grid-container/grid-container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
-import Container from '../container/container'
+import GridContainer from 'components/grid-container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
+import Container from 'components/container/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Font awesome Icon 
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
-import { faTwitter} from '@fortawesome/free-brands-svg-icons'
-import {faGooglePlusG} from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGooglePlusG } from '@fortawesome/free-brands-svg-icons'
 
 
 const Card = styled(GridContainer)`
@@ -58,12 +58,11 @@ const cardBasic03 = () => {
                             <FontAwesomeIcon icon={faGooglePlusG} color='#FFFFFF' />
                         </Button>
                     </Container>
-                    
                 </ContenedorPrincipal>
 
                 <ContenedorTipo>
                     <Typography p3 textGray500 mrginB5 center>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellat similique quia voluptatem beatae, totam aut necessitatibus, fuga, odio vel ex corrupti provident commodi ratione consectetur distinctio? Qui, numquam illum.
-                    Illo corporis, odit fugit, blanditiis vero quidem eius velit
+                        Illo corporis, odit fugit, blanditiis vero quidem eius velit
                     </Typography>
                 </ContenedorTipo>
 

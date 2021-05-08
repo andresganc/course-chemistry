@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 
 // Components NC
-import Menu from '../components/menus/menu-basic-01'
+import Menu from 'components/menus/menu-basic-01'
 
 const ContadorHorasJonMircha = () => {
     return (

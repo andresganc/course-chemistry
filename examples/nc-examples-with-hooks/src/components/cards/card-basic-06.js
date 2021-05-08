@@ -1,22 +1,21 @@
+
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 // Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Container from '../container/container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
-import Image from '../image/image'
-import Separator from '../separator/separator'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Container from 'components/container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
+import Image from 'components/image/'
+import Separator from 'components/separator/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Font AwesomeIcon
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faDribbble } from '@fortawesome/free-brands-svg-icons'
-
-
 
 const Card = styled(GridContainer)`
     width: 300px;
@@ -28,6 +27,7 @@ const BloqueImage = styled(Image)`
     height: 200px;
     border-radius: 5px;
 `
+
 const ContenedorTexto = styled(GridContainer)`
     padding: 15px;
 `
@@ -51,9 +51,9 @@ const cardBasic06 = () => {
 
                 <Card radius2>
 
-                <FlexContainer shadowBR2>
-                    < BloqueImage src="https://bucket-nc-images.s3.amazonaws.com/cards/card-469px.jpg" alt="" />
-                </FlexContainer>
+                    <FlexContainer shadowBR2>
+                        < BloqueImage src="https://bucket-nc-images.s3.amazonaws.com/cards/card-469px.jpg" alt="" />
+                    </FlexContainer>
 
                     <ContenedorTexto>
                         <Typography h4 marginT2 textGray700 bold center> ipsum dolor</Typography>
@@ -73,7 +73,7 @@ const cardBasic06 = () => {
                         </Button>
                     </Container>
 
-                    <Separator bgGray500/>
+                    <Separator bgGray500 />
 
                     <ContenedorTipo bgGray100 textGray500 center>
                         <ContenedorFooter>2 days ago</ContenedorFooter>

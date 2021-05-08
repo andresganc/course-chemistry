@@ -36,6 +36,14 @@ const Hover = css `
     }
 `
 
+// ========================= RADIUS =============================
+const buttonRadius1 = css` border-radius: .3rem; `
+const buttonRadius2 = css` border-radius: .6rem; `
+const buttonRadius3 = css` border-radius: .9rem; `
+const buttonRadius4 = css` border-radius: 1.2rem; `
+const buttonRadius5 = css` border-radius: 1.5rem; `
+const buttonRadius6 = css` border-radius: 1.8rem; `
+
 // ========================= SHADOW =============================
 const ShadowBR1 = css` box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.1); `
 const ShadowBR2 = css` box-shadow: 2px 3px 1px 1px rgba(0, 0, 0, 0.1); `
@@ -146,6 +154,14 @@ const Input = styled.input `
 
     /* HOVER */
     ${ props => props.hover && css ` ${ Hover } `}
+
+    /* RADIUS */
+    ${props => props.radius1 && css` ${buttonRadius1} `}
+    ${props => props.radius2 && css` ${buttonRadius2} `}
+    ${props => props.radius3 && css` ${buttonRadius3} `}
+    ${props => props.radius4 && css` ${buttonRadius4} `}
+    ${props => props.radius5 && css` ${buttonRadius5} `}
+    ${props => props.radius6 && css` ${buttonRadius6} `}
 
     /* SHADOW */    
     ${props => props.shadowBR1 && css` ${ShadowBR1} `}

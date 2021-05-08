@@ -3,12 +3,12 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 // Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
-import Image from '../image/image'
-import Separator from '../separator/separator'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
+import Image from 'components/image/'
+import Separator from 'components/separator/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 //Font Awesome Icon
@@ -17,8 +17,6 @@ import { faClock } from '@fortawesome/free-solid-svg-icons'
 import { faComments } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-
-
 
 const ContenedorPrincipal = styled(GridContainer)`
     background-color: #fff;
@@ -62,7 +60,6 @@ const cardFooter01 = () => {
             <GridContainer>
 
                 <ContenedorPrincipal center>
-
                     <ContenedorImage>
                         <FlexContainer>
                             <BloqueImage src='https://bucket-nc-images.s3.amazonaws.com/cards/card-500px-06.png' alt="" />
@@ -81,7 +78,6 @@ const cardFooter01 = () => {
                         <Separator bgGray200 />
 
                         <Typography p3 textGray500 marginT4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellat similique quia</Typography>
-
                     </ContenedorTexto>
 
                     <ContenedorFooter jcCenter aiCenter bgIndigo300>
@@ -94,7 +90,6 @@ const cardFooter01 = () => {
                         <FontAwesomeIcon icon={faTwitter} color='#FFFFFF'/>
                         <Typography p3 textWhite marginR5 marginL1>sit</Typography>
                     </ContenedorFooter>
-
                 </ContenedorPrincipal>
 
             </GridContainer>

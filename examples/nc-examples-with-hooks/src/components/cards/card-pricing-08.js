@@ -3,11 +3,11 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import Container from '../container/container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Button from '../buttons/button'
+import GridContainer from 'components/grid-container/'
+import Container from 'components/container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Button from 'components/buttons/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Icons Font Awesome
@@ -18,6 +18,7 @@ const ContenedorPrincipal = styled(GridContainer)`
     width: 300px;
     height: 400px;
 `
+
 const ContenedorImage = styled(Container)`
     width: 130px;
     height: 130px;
@@ -61,7 +62,6 @@ const cardPricing08 = () => {
                 <FlexContainer jcCenter>
                     <BloqueButton marginB10 bgWhite textGray400>  ipsum dolor </BloqueButton>
                 </FlexContainer>
-
 
             </ContenedorPrincipal>
 

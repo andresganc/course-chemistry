@@ -1,25 +1,26 @@
+
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 //Componentes
-import GridContainer from '../grid-container/grid-container'
-import FlexContainer from '../flex-container/flex-container'
-import Typography from '../typography/typography'
-import Container from '../container/container'
-import Button from '../buttons/button'
-import Image from '../image/image'
+import GridContainer from 'components/grid-container/'
+import FlexContainer from 'components/flex-container/'
+import Typography from 'components/typography/'
+import Container from 'components/container/'
+import Button from 'components/buttons/'
+import Image from 'components/image/'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 //Font Awesome Icon
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
-
 const ContenedorPrincipal = styled(GridContainer)`
     background-color: #FFFFFF;
     width: 350px;
     height: 600px;
 `
+
 const ContenedorImage = styled(Image)`
     width: 150px;
     height: 150px;
@@ -57,7 +58,6 @@ const cardProfile03 = () => {
             <GridContainer>
 
                 <ContenedorPrincipal radius5>
-
                     <FlexContainer jcCenter>
                         <ContenedorImage src='https://bucket-nc-images.s3.amazonaws.com/cards/profile-259px-11.jpg' sizeXL />
                     </FlexContainer>
@@ -106,8 +106,6 @@ const cardProfile03 = () => {
                         </GridContainer>
 
                     </ContenedorTex>
-
-
                 </ContenedorPrincipal>
 
             </GridContainer>
