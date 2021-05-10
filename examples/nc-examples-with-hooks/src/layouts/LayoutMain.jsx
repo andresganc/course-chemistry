@@ -1,11 +1,12 @@
 
 import React, { Fragment } from 'react'
 
-const LayoutMain = () => {
+const LayoutMain = ({ children }) => {
     return (
-        <div>
+        <main>
             <h2> Main </h2>
-        </div>
+            { children }
+        </main>
     )
 }
 

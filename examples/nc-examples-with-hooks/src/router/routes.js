@@ -4,8 +4,9 @@ import { Fragment } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // Routes
-import PagInicio from 'layouts/Layout'
-import PagContadorHoras from '../pages/ContadorHorasJonMircha'
+import PageInicio from 'layouts/Layout'
+import PageContador from '../pages/Contador'
+import PageContadorHoras from '../pages/ContadorHorasJonMircha'
 import PageError from '../pages/ErrorPage'
 
 const routes = () => {
@@ -13,9 +14,9 @@ const routes = () => {
         <Fragment>
             <Router>
                 <Switch>
-                    <Route exact path='/' component={ PagInicio } />
-                    <Route exact path='/contador-horas' component={ PagContadorHoras }  />
-                    <Route exact path='/contador' component={ PagContadorHoras }  />
+                    <Route exact path='/' component={ PageInicio } />
+                    <Route exact path='/contador' component={ PageContador }  />
+                    <Route exact path='/contador-horas' component={ PageContadorHoras }  />
                     <Route component={ PageError } exact />
                 </Switch>
             </Router>

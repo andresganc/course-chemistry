@@ -1,14 +1,16 @@
 
 import React, { Fragment } from 'react'
 
-// Components NC
-import Menu from 'components/menus/menu-basic-01'
+import Layout from 'layouts/Layout'
+
 
 const ContadorHorasJonMircha = () => {
     return (
         <Fragment>
-            <Menu />
-            <h2> Contador Horas </h2>
+            <Layout>
+                <h2> Contador Horas </h2>
+            </Layout>
+            
         </Fragment>
     )
 }

@@ -4,7 +4,7 @@ import React, { Fragment } from 'react'
 // Layouts
 import LayoutAside from 'layouts/LayoutAside'
 import LayoutMenu from 'layouts/LayoutMenu'
-import LayoutMain from 'layouts/LayoutMain'
+//import LayoutMain from 'layouts/LayoutMain'
 
 // Components NC
 import GridContainer from 'components/grid-container'
@@ -20,8 +20,11 @@ const Layout = ({ children }) => {
 
                 <GridContainer>
                     <LayoutMenu />
-                    <LayoutMain />
                 </GridContainer>
+
+                <main>
+                    { children }
+                </main>
             </GridContainer>
         </Fragment>
     )
