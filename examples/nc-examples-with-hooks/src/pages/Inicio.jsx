@@ -14,15 +14,21 @@ import Card4 from 'view/Card4'
 // Styles
 import '../assets/css/inicio.css'
 
-const Inicio = () => {
+const Inicio = ({ children }) => {
     return (
         <div className='inicio'>
             <Menu />
             
             <Container className='inicio__container'>
-                <GridContainer center marginY5>
+                <GridContainer center marginY3>
                     <h2> HOOKS EXAMPLES </h2>
                 </GridContainer>
+
+                <main bgGray300 >
+                    <h4> Example </h4>
+                    { children }
+                </main>
+                
                 
                 <GridContainer gridCols4 gap10>
                     <Card1 />

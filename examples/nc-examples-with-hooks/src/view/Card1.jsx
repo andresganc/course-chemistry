@@ -25,12 +25,12 @@ const Card = () => {
     return (
         <CardContainer marginX3>
 
-            <GridContainer center marginY3>
-                <FontAwesomeIcon icon={ faHourglassHalf } size='2x' color='#2196F3'> TITLE </FontAwesomeIcon>
+            <GridContainer center marginY4>
+                <FontAwesomeIcon icon={ faHourglassHalf } size='2x' color='#2196F3' />
             </GridContainer>
 
             <GridContainer marginY3>
-                <Typography h6 textGray800 center> CONTADOR HORAS </Typography>
+                <Typography h6 textGray800 center> CONTADOR </Typography>
             </GridContainer>
 
             <GridContainer center>

@@ -26,8 +26,8 @@ const Card = () => {
     return (
         <CardContainer marginX3>
 
-            <GridContainer center marginY3>
-                <FontAwesomeIcon icon={ faListAlt } size='2x' color='#2196F3'> TITLE </FontAwesomeIcon>
+            <GridContainer center marginY4>
+                <FontAwesomeIcon icon={ faListAlt } size='2x' color='#2196F3' /> 
             </GridContainer>
 
             <GridContainer marginY3>
