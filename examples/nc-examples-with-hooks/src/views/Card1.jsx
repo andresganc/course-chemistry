@@ -11,8 +11,7 @@ import Image from 'components/image'
 import Button from 'components/buttons'
 
 // Icons Font Awesome
-import { faGlobeEurope } from '@fortawesome/free-solid-svg-icons'
-import { faListAlt } from '@fortawesome/free-solid-svg-icons'
+import { faHourglassHalf } from '@fortawesome/free-solid-svg-icons'
 
 // Images
 import ImageTodoList from 'assets/img/todo-list-01.jpg' 
@@ -27,11 +26,11 @@ const Card = () => {
         <CardContainer marginX3>
 
             <GridContainer center marginY4>
-                <FontAwesomeIcon icon={ faListAlt } size='2x' color='#2196F3' /> 
+                <FontAwesomeIcon icon={ faHourglassHalf } size='2x' color='#2196F3' />
             </GridContainer>
 
             <GridContainer marginY3>
-                <Typography h6 textGray800 center> TITLE </Typography>
+                <Typography h6 textGray800 center> Contador </Typography>
             </GridContainer>
 
             <GridContainer center>
@@ -39,7 +38,9 @@ const Card = () => {
             </GridContainer>
 
             <GridContainer borderR5 center marginY5 >
-                <Button bgBlue500 textWhite radius1> Ver </Button>
+                <a href='/contador' >
+                    <Button bgBlue500 textWhite radius1> Ver </Button>
+                </a>
             </GridContainer>
             
         </CardContainer>

@@ -14,8 +14,8 @@ const Contador = () => {
         <Fragment>
             <Layout>
                 <h2> { contador } </h2>
-                <Button> - </Button>
-                <Button> + </Button>
+                <Button onClick={ () => setContador( contador - 1 ) }> - </Button>
+                <Button onClick={ () => setContador( contador + 1 ) }> + </Button>
             </Layout>
         </Fragment>
     )
