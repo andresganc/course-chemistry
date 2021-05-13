@@ -9,17 +9,14 @@ import { Link } from 'react-router-dom'
 
 
 // NC Components
-import FlexContainer from '../flex-container'
-
-// Fonts
-import roboto from '../assets/fonts/fonts'
+import FlexContainer from 'components/flex-container'
 
 // Icons
-import Bar from './assets/img/bars-solid.svg'
-import Close from './assets/img/times-solid.svg'
+import Bar from 'components/assets/img/bars-solid.svg'
+import Close from 'components/assets/img/times-circle-solid.svg'
 
 // Utils
-import { device } from '../assets/utils/divice'
+import { device } from 'components/assets/utils/divice'
 
 
 

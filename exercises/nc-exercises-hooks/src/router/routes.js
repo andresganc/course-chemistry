@@ -1,7 +1,7 @@
 
 import { Fragment } from 'react'
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 // Routes
 import PageInicio from 'layouts/Layout'
@@ -15,7 +15,7 @@ const routes = () => {
         <Fragment>
             <Router>
                 <Switch>
-                    <Route exact path='/' component={ PageInicio } />
+                    <Redirect exact from='/' to='/dashboard' component={ PageDashboard } />
                     <Route exact path='/dashboard' component={ PageDashboard }  />
                     <Route exact path='/contador' component={ PageContador }  />
                     <Route exact path='/contador-horas' component={ PageContadorHoras }  />

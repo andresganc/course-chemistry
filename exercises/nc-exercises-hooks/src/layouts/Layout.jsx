@@ -4,33 +4,56 @@ import Styled from 'styled-components'
 
 // Layouts
 import LayoutAside from 'layouts/LayoutAside'
-import LayoutMenu from 'layouts/LayoutMenu'
-//import LayoutMain from 'layouts/LayoutMain'
 
 // Components NC
+import MenuHorizontal from 'views/nav/MenuHorizontal'
+import MenuVertical from 'views/nav/MenuVertical'
+import Container from 'components/container'
 import GridContainer from 'components/grid-container'
 
 
-const LayoutContainer = Styled(GridContainer)`
-    grid-template-columns: 20% 80%;
+const ContainerMain = Styled(GridContainer)`
+`
+
+const ContainerBody = Styled(GridContainer)`
+    grid-template-columns: 15% 75% 10%;
+`
+
+const ContainerMenuVertical = Styled(GridContainer)`
+    height: 700px;
 `
 
 
 const Layout = ({ children }) => {
     return (
         <Fragment>
-            <LayoutContainer>
-                <GridContainer>
-                    <LayoutAside />
-                </GridContainer>
+
+            <ContainerMain>
 
                 <GridContainer>
-                    <LayoutMenu />
-                    <main>
-                    { children }
-                    </main>
+                    <MenuHorizontal />
                 </GridContainer>
-            </LayoutContainer>
+
+                <ContainerBody>
+
+                    <ContainerMenuVertical bgGray800>
+                        <MenuVertical />
+                    </ContainerMenuVertical>
+
+                    <GridContainer>
+                        <Container>
+                        { children }
+                        </Container>
+                    </GridContainer>
+
+                    <GridContainer bgGray600>
+                        <h2> Aside Right </h2>
+                    </GridContainer>
+
+                </ContainerBody>
+
+            </ContainerMain>
+
         </Fragment>
     )
 }
