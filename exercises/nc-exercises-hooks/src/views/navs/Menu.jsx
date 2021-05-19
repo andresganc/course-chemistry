@@ -1,6 +1,7 @@
 
 import React, { Fragment, useState } from 'react'
 import styled, { css } from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Link React
 import { Link } from 'react-router-dom'
@@ -10,10 +11,11 @@ import { Link } from 'react-router-dom'
 
 // NC Components
 import FlexContainer from 'components/flex-container'
+import Image from 'components/image'
+import Input from 'components/inputs'
 
-// Icons
-import Bar from 'components/assets/img/bars-solid.svg'
-import Close from 'components/assets/img/times-circle-solid.svg'
+// Font Awesome Icon
+import { faBars, faTimes, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 // Utils
 import { device } from 'components/assets/utils/divice'
@@ -22,14 +24,14 @@ import { device } from 'components/assets/utils/divice'
 
 // ======================= STYLES =======================
 
-const ButtonDefaultStyles = css `
-font-size: .9rem;
-padding: .5rem 1.5rem;
-border: none;
-border-radius: .2rem;
-cursor: pointer;
-outline: none;
-transition: .2s;
+const ButtonDefaultStyles = css`
+    font-size: .9rem;
+    padding: .5rem 1.5rem;
+    border: none;
+    border-radius: .2rem;
+    cursor: pointer;
+    outline: none;
+    transition: .2s;
 
 
     &:hover {
@@ -39,28 +41,30 @@ transition: .2s;
 `
 
 
-const Menu = styled(FlexContainer) `
+
+const Menu = styled(FlexContainer)`
 
     /* =============== DESKTOP =============== */
     @media ${device.desktop} {
+
         align-items: center;
         flex-flow: row wrap;
-        padding: 1rem 1rem;
+        padding: .7rem 1rem;
+        font-size: .9rem;
+        background-color: #42A5F5;
+        background-color: #1E88E5;
 
         // Posicion fija
-        //position: fixed;
-        //top: 0;
-        //left: 0;
-        //width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
 
         .nav__logo {
         display: flex;
-        margin-left: 1rem;
-
-            & label {
-                font-size: 1.2rem;
-                color: #fff;
-                font-weight: bold;
+        
+            & img {
+                width: 40px;           
             }
         }
 
@@ -76,11 +80,11 @@ const Menu = styled(FlexContainer) `
             .nav__menu_li {
                 list-style: none;
                 margin: 0 .5rem;
-                padding: .5rem .5rem;
+                padding: .3rem .5rem;
                 border-radius: .3rem;
                 cursor: pointer;
                 &:hover {
-                    background-color: #1E88E5;
+                    background-color: #5E5E5E;
                     transition: .3s;
                 }
                 & a {
@@ -114,14 +118,14 @@ const Menu = styled(FlexContainer) `
     /* =============== TABLET =============== */
     @media ${device.tablet} {
 
-    padding: .8rem .8rem;
+    padding: .5rem .8rem;
 
         .nav__menu {
             margin-right: .5rem;
 
             .nav__menu_li {
                 margin: 0 .3rem;
-                padding: .5rem .3rem;
+                padding: .1rem .3rem;
             }
 
             & a {
@@ -145,7 +149,7 @@ const Menu = styled(FlexContainer) `
             display: block;
             list-style: none;
             left: 0;
-            top: 59px;
+            top: 69px;
             width: 100vw;
             background-color: #9E9E9E;
             padding: 1rem;
@@ -182,38 +186,42 @@ const Menu = styled(FlexContainer) `
 
 
 
-const MenuBasic01 = () => {
+const MenuSearch01 = () => {
 
-    const [ isMobile, setIsMobile ] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
-    return(
+    return (
         <Fragment>
-            <Menu  jcSpaceBetween bgBlue700>
+            <Menu jcSpaceBetween bgGray800>
 
                 <ul className="nav__logo">
-                    <label h4 textWhite bold> LOGO </label>
+                    <img src='https://bucket-nc-images.s3.amazonaws.com/nc/logos/nc/imagotipo/imagotipo-nc.png'/>
                 </ul>
 
-                <ul className={isMobile? "nav__menu_mobile" : "nav__menu"} onClick={() => setIsMobile(false)}>
-                    <Link to="/" className="nav__menu_link"><li className="nav__menu_li"><a> Escritorio </a></li></Link>
-                    <Link to="/contador" className="nav__menu_link"><li className="nav__menu_li"><a> Contador </a></li></Link>
-                    <Link to="/contador-horas" className="nav__menu_link"><li className="nav__menu_li"><a> Contador horas </a></li></Link>
-                    <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> Section </a></li></Link>
-                    <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> Contactenos </a></li></Link>  
+                <ul className={isMobile ? "nav__menu_mobile" : "nav__menu"} onClick={() => setIsMobile(false)}>
+                    <Link to="/" className="nav__menu_link"><li className="nav__menu_li"><a> INICIO </a></li></Link>
+                    <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> DOCUMENTACION </a></li></Link>
+                    <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> COMPONENTES </a></li></Link>
                 </ul>
+
+                <ul>
+                    <Input placeholder="Buscar" marginR2 radius3 /> 
+                    <FontAwesomeIcon icon={faSearch} color='#FFFFFF'/>
+
+                </ul> 
 
                 <button className="nav__btn" onClick={() => setIsMobile(!isMobile)}>
-                    { isMobile ? (
-                        <img className="nav__btn_img_close" src={Close} alt=""/>
+                    {isMobile ? (
+                        <FontAwesomeIcon icon={faBars} size='2x' color='#FFFFFF'/>
                     ) : (
-                        <img className="nav__btn_img_bar" src={Bar} alt=""/>
+                        <FontAwesomeIcon icon={faTimes} size='2x' color='#F44336'/>
                     )}
-                </button> 
-               
-                 
+                </button>
+
+
             </Menu>
         </Fragment>
     );
 }
 
-export default MenuBasic01
+export default MenuSearch01

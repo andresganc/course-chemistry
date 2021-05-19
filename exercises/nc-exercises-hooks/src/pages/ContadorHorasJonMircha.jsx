@@ -1,15 +1,16 @@
 
 import React, { Fragment } from 'react'
 
-import Layout from 'layouts/Layout'
+// Layouts
+import LayoutDashboard from 'layouts/LayoutDashboard'
 
 
 const ContadorHorasJonMircha = () => {
     return (
         <Fragment>
-            <Layout>
+            <LayoutDashboard>
                 <h2> Contador Horas </h2>
-            </Layout>
+            </LayoutDashboard>
             
         </Fragment>
     )
