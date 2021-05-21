@@ -12,6 +12,7 @@ import LayoutDashboard from 'layouts/LayoutDashboard'
 import CardHeader from 'views/cards/CardHeader'
 import CardContador from 'views/cards/CardContador'
 import CardContadorHoras from 'views/cards/CardContadorHoras'
+import CardTodoListBasic from 'views/cards/CardTodoListBasic'
 
 
 const MenuInicio = () => {
@@ -28,7 +29,7 @@ const MenuInicio = () => {
                         <GridContainer gridCols4 gap20 center marginY7>
                             <CardContador />
                             <CardContadorHoras />
-                            <CardContador />
+                            <CardTodoListBasic />
                             <CardContador />
                         </GridContainer>
                     </GridContainer>

@@ -21,7 +21,7 @@ import { faReact } from '@fortawesome/free-brands-svg-icons'
 import { faTh } from '@fortawesome/free-solid-svg-icons'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faHourglassEnd } from '@fortawesome/free-solid-svg-icons'
-import { faCodeBranch } from '@fortawesome/free-solid-svg-icons'
+import { faListUl } from '@fortawesome/free-solid-svg-icons'
 import { faBroom } from '@fortawesome/free-solid-svg-icons'
 import { faCubes} from '@fortawesome/free-solid-svg-icons'
 import { faNpm } from '@fortawesome/free-brands-svg-icons'
@@ -234,8 +234,8 @@ const MenuVertical = () => {
                     </FlexContainer>
 
                     <FlexContainer aiCenter marginY1>
-                        <FontAwesomeIcon icon={faCodeBranch} color='#A2BD00' />
-                        <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> Crear rama </a></li></Link>
+                        <FontAwesomeIcon icon={faListUl} color='#A2BD00' />
+                        <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> Todo list basic </a></li></Link>
                     </FlexContainer>
 
                     <FlexContainer aiCenter marginY1>
