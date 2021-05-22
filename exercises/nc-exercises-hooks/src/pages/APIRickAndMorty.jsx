@@ -1,6 +1,12 @@
 
 
-import React, { useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
+
+// Layouts
+import LayoutDashboard from 'layouts/LayoutDashboard'
+
+// Components
+import GridContainer from 'components/grid-container'
 
 const Characters = () => {
   const [characters, setCharacters] = useState([]);
@@ -12,17 +18,22 @@ const Characters = () => {
   }, []);
 
   return (
-    <div className="Characters">
-      {characters.map(character => (
-        <div>
-            <div>
-                <img src={character.image} alt="" style={{width:'150px'}}/>
-                <p>{character.name}</p>
-            </div>
-        </div>
-        
-      ))}
-    </div>
+    <Fragment>
+      <LayoutDashboard>
+        <GridContainer center>
+          <div className="Characters">
+            {characters.map(character => (
+              <div>
+                <div>
+                  <img src={character.image} alt="" style={{ width: '150px' }} />
+                  <p>{character.name}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </GridContainer>
+      </LayoutDashboard>
+    </Fragment>
   );
 }
 

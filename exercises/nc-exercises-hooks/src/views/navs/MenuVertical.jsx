@@ -237,7 +237,7 @@ const MenuVertical = () => {
 
                     <FlexContainer aiCenter marginY1>
                         <FontAwesomeIcon icon={faRProject} color='#A2BD00' />
-                        <Link href="/api-rick-morty" className="nav__menu_link"><li className="nav__menu_li"><a> API rick and morty </a></li></Link>
+                        <Link to="/api-rick-morty" className="nav__menu_link"><li className="nav__menu_li"><a> API rick and morty </a></li></Link>
                     </FlexContainer>
 
                     <FlexContainer aiCenter marginY1>
@@ -252,12 +252,12 @@ const MenuVertical = () => {
 
                     <FlexContainer aiCenter marginY1>
                         <FontAwesomeIcon icon={faNpm} color='#A2BD00' />
-                        <Link href="#" className="nav__menu_link"><li className="nav__menu_li"><a> Instalar dependencias </a></li></Link>
+                        <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> Instalar dependencias </a></li></Link>
                     </FlexContainer>
 
                     <FlexContainer aiCenter marginY1>
                         <FontAwesomeIcon icon={faFolderPlus} color='#A2BD00' />
-                        <Link href="#" className="nav__menu_link"><li className="nav__menu_li"><a> Crear carpetas </a></li></Link>
+                        <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> Crear carpetas </a></li></Link>
                     </FlexContainer>
 
                     <FlexContainer aiCenter marginY1>

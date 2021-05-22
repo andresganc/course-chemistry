@@ -16,6 +16,7 @@ import FlexContainer from 'components/flex-container'
 // Icons Font Awesome
 import { faRProject } from '@fortawesome/free-brands-svg-icons'
 
+
 const Card = styled(GridContainer)`
     background-color: #5E5E5E;
     padding: 10px;
@@ -34,11 +35,11 @@ const ContenedorImage = styled(FlexContainer)`
     margin: auto;
 `
 
+
 const CardContadorHoras = () => {
     return (
         <Fragment>
-            <Link to="/contador-horas">
-                <a>
+            <Link to="/api-rick-morty">
                     <Card>
                         <ContenedorImage jcCenter>
                             <FontAwesomeIcon icon={faRProject} color='#A2BD00' size='2x' />
@@ -49,7 +50,6 @@ const CardContadorHoras = () => {
                             <Typography p3 textGray200 center lighter> useState - useEffect </Typography>
                         </GridContainer>
                     </Card>
-                </a>
             </Link>
         </Fragment>
     )

@@ -38,7 +38,6 @@ const CardContadorHoras = () => {
     return (
         <Fragment>
             <Link to="/contador-horas">
-                <a>
                     <Card>
                         <ContenedorImage jcCenter>
                             <FontAwesomeIcon icon={faClock} color='#A2BD00' size='2x' />
@@ -49,7 +48,6 @@ const CardContadorHoras = () => {
                             <Typography p3 textGray200 center lighter> useState - useEffect </Typography>
                         </GridContainer>
                     </Card>
-                </a>
             </Link>
         </Fragment>
     )

@@ -38,7 +38,6 @@ const CardContador = () => {
     return (
         <Fragment>
             <Link to="/contador">
-                <a>
                     <Card>
                         <ContenedorImage jcCenter>
                             <FontAwesomeIcon icon={faPlus} color='#A2BD00' size='2x' />
@@ -49,7 +48,6 @@ const CardContador = () => {
                             <Typography p3 textGray200 center lighter> useState </Typography>
                         </GridContainer>
                     </Card>
-                </a>
             </Link>
         </Fragment>
     )

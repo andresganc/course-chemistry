@@ -37,8 +37,7 @@ const ContenedorImage = styled(FlexContainer)`
 const CardContadorHoras = () => {
     return (
         <Fragment>
-            <Link to="/contador-horas">
-                <a>
+            <Link to="/scroll-hooks">
                     <Card>
                         <ContenedorImage jcCenter>
                             <FontAwesomeIcon icon={faMouse} color='#A2BD00' size='2x' />
@@ -49,7 +48,6 @@ const CardContadorHoras = () => {
                             <Typography p3 textGray200 center lighter> useState - useEffect </Typography>
                         </GridContainer>
                     </Card>
-                </a>
             </Link>
         </Fragment>
     )
