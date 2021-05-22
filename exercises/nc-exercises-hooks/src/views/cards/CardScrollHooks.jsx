@@ -14,7 +14,7 @@ import Typography from 'components/typography'
 import FlexContainer from 'components/flex-container'
 
 // Icons Font Awesome
-import { faClock } from '@fortawesome/free-solid-svg-icons'
+import { faMouse } from '@fortawesome/free-solid-svg-icons'
 
 const Card = styled(GridContainer)`
     background-color: #5E5E5E;
@@ -41,11 +41,11 @@ const CardContadorHoras = () => {
                 <a>
                     <Card>
                         <ContenedorImage jcCenter>
-                            <FontAwesomeIcon icon={faClock} color='#A2BD00' size='2x' />
+                            <FontAwesomeIcon icon={faMouse} color='#A2BD00' size='2x' />
                         </ContenedorImage>
 
                         <GridContainer>
-                            <Typography p2 textGray200 center> CONTADOR HORAS </Typography>
+                            <Typography p2 textGray200 center> SCROLL HOOKS </Typography>
                             <Typography p3 textGray200 center lighter> useState - useEffect </Typography>
                         </GridContainer>
                     </Card>

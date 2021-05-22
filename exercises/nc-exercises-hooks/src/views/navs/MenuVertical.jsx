@@ -20,7 +20,9 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { faReact } from '@fortawesome/free-brands-svg-icons'
 import { faTh } from '@fortawesome/free-solid-svg-icons'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { faHourglassEnd } from '@fortawesome/free-solid-svg-icons'
+import { faMouse } from '@fortawesome/free-solid-svg-icons'
+import { faRProject } from '@fortawesome/free-brands-svg-icons'
+import { faClock} from '@fortawesome/free-solid-svg-icons'
 import { faListUl } from '@fortawesome/free-solid-svg-icons'
 import { faBroom } from '@fortawesome/free-solid-svg-icons'
 import { faCubes} from '@fortawesome/free-solid-svg-icons'
@@ -229,23 +231,23 @@ const MenuVertical = () => {
                     </FlexContainer>
 
                     <FlexContainer aiCenter marginY1>
-                        <FontAwesomeIcon icon={faHourglassEnd} color='#A2BD00' />
+                        <FontAwesomeIcon icon={faMouse} color='#A2BD00' />
+                        <Link to="/scroll-hooks" className="nav__menu_link"><li className="nav__menu_li"><a> Scroll hooks </a></li></Link>
+                    </FlexContainer>
+
+                    <FlexContainer aiCenter marginY1>
+                        <FontAwesomeIcon icon={faRProject} color='#A2BD00' />
+                        <Link href="/api-rick-morty" className="nav__menu_link"><li className="nav__menu_li"><a> API rick and morty </a></li></Link>
+                    </FlexContainer>
+
+                    <FlexContainer aiCenter marginY1>
+                        <FontAwesomeIcon icon={faClock} color='#A2BD00' />
                         <Link to="/contador-horas" className="nav__menu_link"><li className="nav__menu_li"><a> Contador horas </a></li></Link>
                     </FlexContainer>
 
                     <FlexContainer aiCenter marginY1>
                         <FontAwesomeIcon icon={faListUl} color='#A2BD00' />
                         <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> Todo list basic </a></li></Link>
-                    </FlexContainer>
-
-                    <FlexContainer aiCenter marginY1>
-                        <FontAwesomeIcon icon={faBroom} color='#A2BD00' />
-                        <Link to="#" className="nav__menu_link"><li className="nav__menu_li"><a> Limpiar proyecto </a></li></Link>
-                    </FlexContainer>
-
-                    <FlexContainer aiCenter marginY1>
-                        <FontAwesomeIcon icon={faCubes} color='#A2BD00' />
-                        <Link href="#" className="nav__menu_link"><li className="nav__menu_li"><a> Agregar componentes </a></li></Link>
                     </FlexContainer>
 
                     <FlexContainer aiCenter marginY1>
