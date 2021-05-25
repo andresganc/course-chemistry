@@ -30,20 +30,49 @@ const ScrollHooks = () => {
 
     const [scrollY, setScrollY] = useState(0)
 
+    // Ejemplo de useEffect completo ( Fase de montaje, Actualizacion y Desmontaje)
     useEffect(() => {
         
         const detectarScroll = () => {
             setScrollY(window.pageYOffset)
         }
 
-        console.log('Fase de montaje')
+        console.log('Fase de montaje useEffect Completo')
         window.addEventListener('scroll', detectarScroll)
 
 
         return () => {
-            console.log('Limpiando')
+            window.removeEventListener('scroll', detectarScroll)
+            console.log('Limpiando - Fase de desmontaje - useEffect Completo')
         }
-    }, [])
+    }, [scrollY])
+
+
+    // UseEffect con 2do parametro 
+    // Fase de montaje con 2do parametro (Solo se ejecuta una vez por el segundo parametro)
+    useEffect(() => {
+
+        console.log('Fase de montaje')
+  
+    },[])
+
+
+    // UseEffect sin fase de desmontaje ni 2do parametro 
+    // Fase de montaje que es actualizacion por no tener fase de desmontaje ni 2do parametro (Hace un look infinito cada vez que se mueve el scroll)
+    // No greagar el segundo parametro puede bajar el performance de la APP
+    useEffect(() => {
+
+        console.log('Fase de actualizacion')
+  
+    })
+
+    // useEffect - Fase de desmontaje
+    useEffect(() => {
+
+        return () => {
+            console.log('Fase de desmontaje')
+        }
+    })
 
     return (
         <Fragment>
