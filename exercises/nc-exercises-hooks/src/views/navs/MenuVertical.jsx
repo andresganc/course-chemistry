@@ -21,6 +21,7 @@ import { faReact } from '@fortawesome/free-brands-svg-icons'
 import { faTh } from '@fortawesome/free-solid-svg-icons'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faMouse } from '@fortawesome/free-solid-svg-icons'
+import { faPaw } from '@fortawesome/free-solid-svg-icons'
 import { faRProject } from '@fortawesome/free-brands-svg-icons'
 import { faClock} from '@fortawesome/free-solid-svg-icons'
 import { faListUl } from '@fortawesome/free-solid-svg-icons'
@@ -233,6 +234,11 @@ const MenuVertical = () => {
                     <FlexContainer aiCenter marginY1>
                         <FontAwesomeIcon icon={faMouse} color='#A2BD00' />
                         <Link to="/scroll-hooks" className="nav__menu_link"><li className="nav__menu_li"><a> Scroll hooks </a></li></Link>
+                    </FlexContainer>
+
+                    <FlexContainer aiCenter marginY1>
+                        <FontAwesomeIcon icon={faPaw} color='#A2BD00' />
+                        <Link to="/api-pokemons" className="nav__menu_link"><li className="nav__menu_li"><a> API Pokemons </a></li></Link>
                     </FlexContainer>
 
                     <FlexContainer aiCenter marginY1>
