@@ -225,16 +225,6 @@ const MenuVertical = () => {
                         <FontAwesomeIcon icon={faTh} color='#A2BD00' />
                         <Link to="/menu-inicio" className="nav__menu_link"><li className="nav__menu_li"><a> Menu inicio </a></li></Link>
                     </FlexContainer>
-                    
-                    <FlexContainer aiCenter marginY1>
-                        <FontAwesomeIcon icon={faPlus} color='#A2BD00' />
-                        <Link to="/contador" className="nav__menu_link"><li className="nav__menu_li"><a> Contador </a></li></Link>
-                    </FlexContainer>
-
-                    <FlexContainer aiCenter marginY1>
-                        <FontAwesomeIcon icon={faMouse} color='#A2BD00' />
-                        <Link to="/scroll-hooks" className="nav__menu_link"><li className="nav__menu_li"><a> Scroll hooks </a></li></Link>
-                    </FlexContainer>
 
                     <FlexContainer aiCenter marginY1>
                         <FontAwesomeIcon icon={faPaw} color='#A2BD00' />
