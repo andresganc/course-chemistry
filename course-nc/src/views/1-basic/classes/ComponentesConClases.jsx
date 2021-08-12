@@ -1,9 +1,9 @@
 
 // Los componentes con clases nacieron con el ES6 - ECMAScript 2015
 
-import React from 'react';
+import React, {Component} from 'react';
 
-class ComponenteConClases extends React.Component {
+class ComponenteConClases extends Component {
 
     render(){
 
