@@ -1,15 +1,9 @@
 
 import React from 'react'
 
-// Components NC
-import StylesCSSInLine from './views/1-basic/styles/styles-css/StylesCSSInLine'
-import StylesCSSInterno from './views/1-basic/styles/styles-css/StylesCSSInterno'
-import StylesCSSExterno from './views/1-basic/styles/styles-css/StylesCSSExterno'
-import StylesSASS from './views/1-basic/styles/styles-sass/StylesSCSS'
-import StylesCSSModules from './views/1-basic/styles/styles-css-modules/StylesCSSModules'
-import FontAwesome from './views/1-basic/icons/font-awesome/FontAwesome'
-
+// Components 
 import ConditionalRender from 'views/1-basic/conditional-render/ConditionalRender'
+import ArrayRender from 'views/1-basic/array-render/ArrayRender'
 
 // Routes
 //import Rutas from 'routes/routes';
@@ -23,10 +17,11 @@ import ConditionalRender from 'views/1-basic/conditional-render/ConditionalRende
 const App = () => {
     return (
         <div>
-            <FontAwesome />
-            <StylesCSSModules />
 
             <ConditionalRender />
+            <hr/>
+            <ArrayRender />
+
         </div>
     )
 }
