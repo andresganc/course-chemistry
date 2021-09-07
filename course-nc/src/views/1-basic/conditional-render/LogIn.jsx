@@ -1,12 +1,12 @@
 
 import React, { Fragment } from 'react'
 
-const Component2 = () => {
+const LogIn = () => {
     return (
         <Fragment>
-            <h4> COMPONENT 2 </h4>
+            <h4> LogIn </h4>
         </Fragment>
     )
 }
 
-export default Component2
+export default LogIn
