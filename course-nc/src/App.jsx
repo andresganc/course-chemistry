@@ -2,8 +2,8 @@
 import React from 'react'
 
 // Components 
-import ConditionalRender from 'views/1-basic/conditional-render/ConditionalRender'
-import ArrayRender from 'views/1-basic/array-render/ArrayRender'
+import ConditionalRender from 'views/1-basic/render-conditional/ConditionalRender'
+import ArrayRender from 'views/1-basic/render-array/ArrayRender'
 
 // Routes
 //import Rutas from 'routes/routes';
