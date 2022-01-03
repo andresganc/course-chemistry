@@ -5,6 +5,9 @@ import React from 'react'
 import ConditionalRender from 'views/1-basic/render-conditional/ConditionalRender'
 import ArrayRender from 'views/1-basic/render-array/ArrayRender'
 
+// Fetch
+import FetchAsync01 from 'views/2-medium/fetch-async/fetch-async-01'
+
 // Routes
 //import Rutas from 'routes/routes';
 
@@ -18,9 +21,9 @@ const App = () => {
     return (
         <div>
 
-            <ConditionalRender />
+            <FetchAsync01 />
             <hr/>
-            <ArrayRender />
+            
 
         </div>
     )
