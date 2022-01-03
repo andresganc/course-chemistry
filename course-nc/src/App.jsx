@@ -22,9 +22,9 @@ const App = () => {
     return (
         <div>
 
-            <FetchAsyncReactThenResponse />
-            <hr/>
             <FetchAsyncReactNormal />
+            <hr/>
+            <FetchAsyncReactThenResponse />
             
 
         </div>

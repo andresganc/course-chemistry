@@ -29,8 +29,8 @@ const FetchAsyncReactNormal = () => {
             <h3> FETCH ASYNC AWAIT REACT - MODE NORMAL </h3>
             { data.map(record => (
                 <Fragment>
-                    <p key={record.id}> { record.id }, { record.name  } </p>
-                    <p > { record.username  } </p>
+                    <p key={record.id}> Id: { record.id }, Name: { record.name }, Username: { record.username  } </p>
+                    <p > Email: { record.email  } </p>
                 </Fragment>
                 
             )) }
