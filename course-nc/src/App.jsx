@@ -6,8 +6,8 @@ import ConditionalRender from 'views/1-basic/render-conditional/ConditionalRende
 import ArrayRender from 'views/1-basic/render-array/ArrayRender'
 
 // Fetch
-import FetchAsyncReactThenResponse from 'views/2-medium/fetch-async/fetch-async-react-then-response'
-import FetchAsyncReactNormal from 'views/2-medium/fetch-async/fetch-async-react-normal'
+import FetchReactThen from 'views/2-medium/fetch/fetch-react-then'
+import FetchReactAsyncAwait from 'views/2-medium/fetch/fetch-react-async-await'
 
 // Routes
 //import Rutas from 'routes/routes';
@@ -22,9 +22,9 @@ const App = () => {
     return (
         <div>
 
-            <FetchAsyncReactNormal />
+            <FetchReactAsyncAwait />
             <hr/>
-            <FetchAsyncReactThenResponse />
+            <FetchReactThen />
             
 
         </div>
