@@ -6,8 +6,13 @@ import ConditionalRender from 'views/1-basic/render-conditional/ConditionalRende
 import ArrayRender from 'views/1-basic/render-array/ArrayRender'
 
 // Fetch
-import FetchReactThen from 'views/2-medium/fetch/fetch-react-then'
-import FetchReactAsyncAwait from 'views/2-medium/fetch/fetch-react-async-await'
+import FetchReactPromisesJPH from 'views/2-medium/fetch/fetch-with-promises/fetch-promises-api-jsonplaceholder'
+import FetchReactPromisesTable from 'views/2-medium/fetch/fetch-with-promises/fetch-promises-with-table'
+import FetchReactPromisesImages from 'views/2-medium/fetch/fetch-with-promises/fetch-promises-with-images'
+import FetchReactAsyncAwaitJPH from 'views/2-medium/fetch/fetch-with-async-await/fetch-async-await-api-jsonplaceholder'
+import FetchReactAsyncAwaitImages from 'views/2-medium/fetch/fetch-with-async-await/fetch-async-await-with-images'
+import FetchReactAsyncAwaitTable from 'views/2-medium/fetch/fetch-with-async-await/fetch-async-await-with-table'
+
 
 // Routes
 //import Rutas from 'routes/routes';
@@ -22,9 +27,20 @@ const App = () => {
     return (
         <div>
 
-            <FetchReactAsyncAwait />
+            <FetchReactPromisesTable />
             <hr/>
-            <FetchReactThen />
+            <FetchReactAsyncAwaitTable />
+            <hr/>
+
+            <FetchReactPromisesImages />
+            <hr/>
+            <FetchReactAsyncAwaitImages />
+            <hr/>
+
+
+            <FetchReactPromisesJPH />
+            <hr/>
+            <FetchReactAsyncAwaitJPH />
             
 
         </div>
