@@ -5,22 +5,26 @@ const FetchPromisesWithImages = () => {
 
     const [data, setData] = useState([])
 
-    useEffect( async () => {
+    useEffect(() => {
 
-        try {
+        const loadingData = async () => {
+            try {
 
-            const url = 'https://jsonplaceholder.typicode.com/albums/1/photos'
-            let dataAPI = await fetch(url) 
-            let dataJson = await dataAPI.json()
-            console.log(dataJson)
-            setData(dataJson)
+                const url = 'https://jsonplaceholder.typicode.com/albums/1/photos'
+                let dataAPI = await fetch(url)
+                let dataJson = await dataAPI.json()
+                console.log(dataJson)
+                setData(dataJson)
 
-        } catch (error) {
-            
-            console.log(error)
+            } catch (error) {
 
+                console.log(error)
+
+            }
         }
-        
+
+        loadingData()
+
     }, [])
 
     console.log(data)
@@ -34,7 +38,7 @@ const FetchPromisesWithImages = () => {
                     <Fragment>
                         <div>
                             <div>
-                                <h6> ID {record.id} </h6>
+                                <h4> ID {record.id} </h4>
                                 <p> Title: {record.title} </p>
                             </div>
 
@@ -45,7 +49,7 @@ const FetchPromisesWithImages = () => {
                     </Fragment>
                 ))
             }
-            
+
         </Fragment>
     )
 }

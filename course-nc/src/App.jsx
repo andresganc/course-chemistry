@@ -13,6 +13,9 @@ import FetchReactAsyncAwaitJPH from 'views/2-medium/fetch/fetch-with-async-await
 import FetchReactAsyncAwaitImages from 'views/2-medium/fetch/fetch-with-async-await/fetch-async-await-with-images'
 import FetchReactAsyncAwaitTable from 'views/2-medium/fetch/fetch-with-async-await/fetch-async-await-with-table'
 
+// UseContext
+import UseContextAPIUser from './views/2-medium/hook-use-context/useContextAPIUser'
+
 
 // Routes
 //import Rutas from 'routes/routes';
@@ -26,6 +29,9 @@ import FetchReactAsyncAwaitTable from 'views/2-medium/fetch/fetch-with-async-awa
 const App = () => {
     return (
         <div>
+
+            <UseContextAPIUser />
+            <hr/>
 
             <FetchReactPromisesTable />
             <hr/>
