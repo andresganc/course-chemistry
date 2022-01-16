@@ -24,7 +24,7 @@ const UserState = (props) => {
         let dataJson = await res.json()
         dispatch({
             type: 'GET_USERS',
-            payload: dataJson.data.data
+            payload: dataJson.data
         })
         console.log(dataJson)
 
@@ -37,7 +37,7 @@ const UserState = (props) => {
         let dataJson = await res.json()
         dispatch({
             type: 'GET_PROFILE',
-            payload: dataJson.data.data
+            payload: dataJson.data
         })
         console.log(dataJson)
 

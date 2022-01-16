@@ -1,5 +1,5 @@
 
-import { GET_USERS, GET_PROFILE } from '../types'
+import { GET_USERS, GET_PROFILE } from '../../types/types'
 
 
 export default (state, action) => {

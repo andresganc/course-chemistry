@@ -17,16 +17,17 @@ const UsersList = () => {
     return (
         <Fragment>
             <h3> Users </h3>
-            {/* 
+            
             {
                 users.map( record => (
                     <Fragment>
                         <p key={record.id}> ID : {record.id} </p>
                         <p key={record.id}> Nombre : {record.first_name} </p>
+                        <img src={record.avatar}/>
                     </Fragment>
                 ))
             }
-            */}
+            
         </Fragment>
     )
 }

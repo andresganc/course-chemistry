@@ -12,6 +12,7 @@ function useContextAPIUser() {
     return (
         <Fragment>
             <UserState>
+                <h2> API USECONTEXT</h2>
                 <Profile />
                 <UsersList />
             </UserState>
