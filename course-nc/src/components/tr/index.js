@@ -12,12 +12,23 @@ import colorsBG from 'components/assets/colors/colors-bg'
 import colorsText from 'components/assets/colors/colors-text'
 
 
+// ================== PROPS EXCLUSIVES ==================
+// Table Zebra
+const TableHorizontalZebra = css ` 
+    &:nth-child(even) {
+    background-color: #F5F5F5;
+} `
+
+
 const Tr = styled.tr `
 
     max-width: 100%;
 
     /* FONT */
     ${roboto}
+
+    /* Table Zebra */
+    ${ props => props.tableHorizontalZebra && css ` ${ TableHorizontalZebra } `}
 
     /* PROPS BASE */
     ${propsBase}
