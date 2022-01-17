@@ -2,19 +2,19 @@
 import React from 'react'
 
 // Components 
-import ConditionalRender from 'views/1-basic/render-conditional/ConditionalRender'
-import ArrayRender from 'views/1-basic/render-array/ArrayRender'
+import ConditionalRender from '1-basic/render-conditional/ConditionalRender'
+import ArrayRender from '1-basic/render-array/ArrayRender'
 
 // Fetch
-import FetchReactPromisesJPH from 'views/2-medium/fetch/fetch-with-promises/fetch-promises-api-jsonplaceholder'
-import FetchReactPromisesTable from 'views/2-medium/fetch/fetch-with-promises/fetch-promises-with-table'
-import FetchReactPromisesImages from 'views/2-medium/fetch/fetch-with-promises/fetch-promises-with-images'
-import FetchReactAsyncAwaitJPH from 'views/2-medium/fetch/fetch-with-async-await/fetch-async-await-api-jsonplaceholder'
-import FetchReactAsyncAwaitImages from 'views/2-medium/fetch/fetch-with-async-await/fetch-async-await-with-images'
-import FetchReactAsyncAwaitTable from 'views/2-medium/fetch/fetch-with-async-await/fetch-async-await-with-table'
+import FetchReactPromisesJPH from '2-medium/fetch/fetch-with-promises/fetch-promises-api-jsonplaceholder'
+import FetchReactPromisesTable from '2-medium/fetch/fetch-with-promises/fetch-promises-with-table'
+import FetchReactPromisesImages from '2-medium/fetch/fetch-with-promises/fetch-promises-with-images'
+import FetchReactAsyncAwaitJPH from '2-medium/fetch/fetch-with-async-await/fetch-async-await-api-jsonplaceholder'
+import FetchReactAsyncAwaitImages from '2-medium/fetch/fetch-with-async-await/fetch-async-await-with-images'
+import FetchReactAsyncAwaitTable from '2-medium/fetch/fetch-with-async-await/fetch-async-await-with-table'
 
 // UseContext
-import UseContextAPIUser from './views/2-medium/hook-use-context/useContextAPIUser'
+import UseContextAPIUser from './2-medium/hook-use-context/useContextAPIUser'
 
 
 // Routes

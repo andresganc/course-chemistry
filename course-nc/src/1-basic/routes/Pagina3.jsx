@@ -2,15 +2,15 @@
 import React, { Fragment } from 'react';
 
 // Componentes NC
-import Menu from 'views/1-basic/routes/Nav';
+import Menu from '1-basic/routes/Nav';
 
-function Pagina2 () {
+function Pagina3 () {
     return(
         <Fragment>
             <Menu />
-            <h2> Pagina 2 </h2>
+            <h2> Pagina 3 </h2>
         </Fragment> 
     );
 }
 
-export default Pagina2;
+export default Pagina3;

@@ -4,10 +4,10 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 // Rutas
-import Pagina3 from 'views/1-basic/routes/Pagina3';
-import Pagina2 from 'views/1-basic/routes/Pagina2';
-import PaginaMain from 'views/1-basic/routes/PaginaInicio';
-import NoFound from 'views/1-basic/routes/PaginaNoFound';
+import Pagina3 from '1-basic/routes/Pagina3';
+import Pagina2 from '1-basic/routes/Pagina2';
+import PaginaMain from '1-basic/routes/PaginaInicio';
+import NoFound from '1-basic/routes/PaginaNoFound';
 
 
 function routes() {

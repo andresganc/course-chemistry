@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react';
 
 // Componentes NC
-import Menu from 'views/1-basic/routes/Nav';
+import Menu from '1-basic/routes/Nav';
 
 
 function PaginaInicio () {
