@@ -24,27 +24,27 @@ import Tr from 'components/tr'
 import Td from 'components/td'
 
 // Icons
-import { mdiTextBoxOutline } from '@mdi/js'
+import { mdiTextBoxOutline, mdiEye } from '@mdi/js'
 
 
 const ContainerTable = Styled(Div) `
     
     display: grid;
     justify-content: center;
-    width: 350px;
+    width: 50%;
 
 `
 
 const ImageProfile = Styled(Image) `
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 `
 
 
 const UsersList = () => {
 
-    const { users, getUsers } = useContext(UserContext)
+    const { users, getUsers, getProfile } = useContext(UserContext)
 
     useEffect(() => {
 
@@ -54,20 +54,21 @@ const UsersList = () => {
 
     return (
         <Fragment>
-            <ContainerTable bgGray200 padding10>
+            <ContainerTable bgGray100 padding10>
 
                 <Div displayFlex jcCenter aiCenter bgBlue500 padding3 radiusTL1 radiusTR1>
                     <Icon path={mdiTextBoxOutline} title="API Users" size={1.3} color="#FFFFFF" />
-                    <P fontSize7 textWhite padding5 marginT1> API USERS </P>
+                    <P fontSize6 textWhite padding5 marginT1> API USERS LIST </P>
                 </Div>
 
-                <Table bgWhite padding10 >
+                <Table bgWhite padding10>
                     <THead >
                         <Tr bgGray600 textWhite>
-                            <Th > <P fontSize7> ID </P> </Th>
-                            <Th > <P fontSize7> Name </P></Th>
-                            <Th > <P fontSize7> Image </P> </Th>
-                            <Th > <P fontSize7> Show </P> </Th>
+                            <Th radiusTL1 radiusTR1> <P fontSize7 marginY1 marginX3> ID </P> </Th>
+                            <Th radiusTL1 radiusTR1> <P fontSize7> Name </P></Th>
+                            <Th radiusTL1 radiusTR1> <P fontSize7> Email </P></Th>
+                            <Th radiusTL1 radiusTR1> <P fontSize7 marginX4> Image </P> </Th>
+                            <Th radiusTL1 radiusTR1> <P fontSize7 marginX3> Show </P> </Th>
                         </Tr>
                     </THead>
 
@@ -79,8 +80,9 @@ const UsersList = () => {
                                     <Tr tableHorizontalZebra>
                                         <Td><P key={record.id} fontSize7 marginX3 textGray700> {record.id} </P></Td>
                                         <Td><P key={record.id} fontSize7 marginX3 textGray700> {record.first_name} </P></Td>
+                                        <Td><P key={record.id} fontSize7 marginX3 textGray700> {record.email} </P></Td>
                                         <Td><ImageProfile src={record.avatar} marginX3/></Td>
-                                        <Td><A href='#'><P fontSize8 textBlue500> Show Profile </P></A></Td>
+                                        <Td textCenter><A key={record.id} href='#!' onClick={() => getProfile(record.id) }><Icon path={ mdiEye } title="Show profile" size={.9} color="#2196F3" /></A></Td>
                                     </Tr>
                                 </Fragment>
                             ))

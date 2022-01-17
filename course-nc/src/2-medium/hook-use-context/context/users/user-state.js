@@ -32,7 +32,7 @@ const UserState = (props) => {
     
     const getProfile = async (id) => {
 
-        const url = "https://reqres.in/api/users/' + id"
+        const url = "https://reqres.in/api/users/" + id
         let res = await fetch(url)
         let dataJson = await res.json()
         dispatch({
