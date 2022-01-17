@@ -21,9 +21,11 @@ const UsersList = () => {
             {
                 users.map( record => (
                     <Fragment>
-                        <p key={record.id}> ID : {record.id} </p>
-                        <p key={record.id}> Nombre : {record.first_name} </p>
-                        <img src={record.avatar}/>
+                        <a>
+                            <p key={record.id}> ID : {record.id} </p>
+                            <p key={record.id}> Nombre : {record.first_name} </p>
+                            <img src={record.avatar}/>
+                        </a>
                     </Fragment>
                 ))
             }

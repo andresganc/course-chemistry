@@ -1,0 +1,74 @@
+
+/* ===== CAROUSEL AUTO ===== */
+.container-carousel {
+    position: relative;
+    /* overflow: hidden; */
+    width: 100%;
+    height: 100vh;
+}
+
+.container-carousel .carousel-auto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    float: left;
+    /* animation: animate 3s linear infinite; */
+}
+
+.container-carousel .carousel-auto .carousel {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.container-carousel .carousel-auto .carousel.carousel1 {
+    background-image: url('../img/web-pizzeria.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container-carousel .carousel-auto .carousel.carousel2 {
+    background-image: url('../img/web-profesional.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.container-carousel .carousel-auto .carousel.carousel3 {
+    background-image: url('../img/web-restaurant.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* =====ANIMATIONS ===== */
+@keyframes animate {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+
+@keyframes slideout {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+/* ===== CAROUSEL AUTO ===== */
+
+
+
+
+.modal.modal-state {
+    display: flex;
+}
