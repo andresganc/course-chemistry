@@ -26,10 +26,10 @@ import colorsText from 'components/assets/colors/colors-text'
     const fontSize9 = css ` font-size: .7rem; `
     const fontSize10 = css ` font-size: .6rem; `
 
-// ===== FONT WEIGHT ====
-    const fontWeightLighter = css ` font-weight: lighter; `
-    const fontWeightNormal = css ` font-weight: normal; `
-    const fontWeightBold = css ` font-weight: bold; `
+ // ===== FONT WEIGHT ====
+    const FontWeightLighter = css ` font-weight: lighter; `
+    const FontWeightNormal = css ` font-weight: normal; `
+    const FontWeightBold = css ` font-weight: bold; `
 
 // ================== PROPS EXCLUSIVES ==================
 
@@ -55,11 +55,12 @@ const P = styled.p `
     ${ props => props.fontSize9 && css ` ${ fontSize9 } `}
     ${ props => props.fontSize10 && css ` ${ fontSize10 } `}
 
-    /* WIDTH */
-    ${ props => props.lighter && css ` ${ fontWeightLighter } `}
-    ${ props => props.normal && css ` ${ fontWeightNormal } `}
-    ${ props => props.bold && css ` ${ fontWeightBold } `}
+   /* WIDTH */
+    ${ props => props.fontWeightLighter && css ` ${ FontWeightLighter } `}
+    ${ props => props.fontWeightNormal && css ` ${ FontWeightNormal } `}
+    ${ props => props.fontWeightBold && css ` ${ FontWeightBold } `}
     /* ================== PROPS EXCLUSIVES ================== */
+
 
 
     /* PROPS BASE */

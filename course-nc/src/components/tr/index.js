@@ -29,6 +29,7 @@ const Tr = styled.tr `
 
     /* Table Zebra */
     ${ props => props.tableHorizontalZebra && css ` ${ TableHorizontalZebra } `}
+    
 
     /* PROPS BASE */
     ${propsBase}

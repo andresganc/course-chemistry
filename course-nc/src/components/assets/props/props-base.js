@@ -56,60 +56,60 @@ import {
 
         /* RADIUS */
         /* Radius all */
-        ${props => props.radius1 && css` ${Radius1} `}
-        ${props => props.radius2 && css` ${Radius2} `}
-        ${props => props.radius3 && css` ${Radius3} `}
-        ${props => props.radius4 && css` ${Radius4} `}
-        ${props => props.radius5 && css` ${Radius5} `}
-        ${props => props.radius6 && css` ${Radius6} `}
+        ${props => props.borderRadius1 && css` ${Radius1} `}
+        ${props => props.borderRadius2 && css` ${Radius2} `}
+        ${props => props.borderRadius3 && css` ${Radius3} `}
+        ${props => props.borderRadius4 && css` ${Radius4} `}
+        ${props => props.borderRadius5 && css` ${Radius5} `}
+        ${props => props.borderRadius6 && css` ${Radius6} `}
         /* Radius TL */
-        ${props => props.radiusTL1 && css` ${RadiusTL1} `}
-        ${props => props.radiusTL2 && css` ${RadiusTL2} `}
-        ${props => props.radiusTL3 && css` ${RadiusTL3} `}
-        ${props => props.radiusTL4 && css` ${RadiusTL4} `}
-        ${props => props.radiusTL5 && css` ${RadiusTL5} `}
-        ${props => props.radiusTL6 && css` ${RadiusTL6} `}
+        ${props => props.borderRadiusTL1 && css` ${RadiusTL1} `}
+        ${props => props.borderRadiusTL2 && css` ${RadiusTL2} `}
+        ${props => props.borderRadiusTL3 && css` ${RadiusTL3} `}
+        ${props => props.borderRadiusTL4 && css` ${RadiusTL4} `}
+        ${props => props.borderRadiusTL5 && css` ${RadiusTL5} `}
+        ${props => props.borderRadiusTL6 && css` ${RadiusTL6} `}
         /* Radius TR */
-        ${props => props.radiusTR1 && css` ${RadiusTR1} `}
-        ${props => props.radiusTR2 && css` ${RadiusTR2} `}
-        ${props => props.radiusTR3 && css` ${RadiusTR3} `}
-        ${props => props.radiusTR4 && css` ${RadiusTR4} `}
-        ${props => props.radiusTR5 && css` ${RadiusTR5} `}
-        ${props => props.radiusTR6 && css` ${RadiusTR6} `}
+        ${props => props.borderRadiusTR1 && css` ${RadiusTR1} `}
+        ${props => props.borderRadiusTR2 && css` ${RadiusTR2} `}
+        ${props => props.borderRadiusTR3 && css` ${RadiusTR3} `}
+        ${props => props.borderRadiusTR4 && css` ${RadiusTR4} `}
+        ${props => props.borderRadiusTR5 && css` ${RadiusTR5} `}
+        ${props => props.borderRadiusTR6 && css` ${RadiusTR6} `}
         /* Radius BL */
-        ${props => props.radiusBL1 && css` ${RadiusBL1} `}
-        ${props => props.radiusBL2 && css` ${RadiusBL2} `}
-        ${props => props.radiusBL3 && css` ${RadiusBL3} `}
-        ${props => props.radiusBL4 && css` ${RadiusBL4} `}
-        ${props => props.radiusBL5 && css` ${RadiusBL5} `}
-        ${props => props.radiusBL6 && css` ${RadiusBL6} `}
+        ${props => props.borderRadiusBL1 && css` ${RadiusBL1} `}
+        ${props => props.borderRadiusBL2 && css` ${RadiusBL2} `}
+        ${props => props.borderRadiusBL3 && css` ${RadiusBL3} `}
+        ${props => props.borderRadiusBL4 && css` ${RadiusBL4} `}
+        ${props => props.borderRadiusBL5 && css` ${RadiusBL5} `}
+        ${props => props.borderRadiusBL6 && css` ${RadiusBL6} `}
          /* Radius BR */
-        ${props => props.radiusBR1 && css` ${RadiusBR1} `}
-        ${props => props.radiusBR2 && css` ${RadiusBR2} `}
-        ${props => props.radiusBR3 && css` ${RadiusBR3} `}
-        ${props => props.radiusBR4 && css` ${RadiusBR4} `}
-        ${props => props.radiusBR5 && css` ${RadiusBR5} `}
-        ${props => props.radiusBR6 && css` ${RadiusBR6} `}
+        ${props => props.borderRadiusBR1 && css` ${RadiusBR1} `}
+        ${props => props.borderRadiusBR2 && css` ${RadiusBR2} `}
+        ${props => props.borderRadiusBR3 && css` ${RadiusBR3} `}
+        ${props => props.borderRadiusBR4 && css` ${RadiusBR4} `}
+        ${props => props.borderRadiusBR5 && css` ${RadiusBR5} `}
+        ${props => props.borderRadiusBR6 && css` ${RadiusBR6} `}
 
         /* SHADOW */    
-        ${props => props.shadowBR1 && css` ${ShadowBR1} `}
-        ${props => props.shadowBR2 && css` ${ShadowBR2} `}
-        ${props => props.shadowBL1 && css` ${ShadowBL1} `}
-        ${props => props.shadowBL2 && css` ${ShadowBL2} `}
-        ${props => props.shadowTR1 && css` ${ShadowTR1} `}
-        ${props => props.shadowTR2 && css` ${ShadowTR2} `}
-        ${props => props.shadowTL1 && css` ${ShadowTL1} `}
-        ${props => props.shadowTL2 && css` ${ShadowTL2} `}
+        ${props => props.boxShadowBR1 && css` ${ShadowBR1} `}
+        ${props => props.boxShadowBR2 && css` ${ShadowBR2} `}
+        ${props => props.boxShadowBL1 && css` ${ShadowBL1} `}
+        ${props => props.boxShadowBL2 && css` ${ShadowBL2} `}
+        ${props => props.boxShadowTR1 && css` ${ShadowTR1} `}
+        ${props => props.boxShadowTR2 && css` ${ShadowTR2} `}
+        ${props => props.boxShadowTL1 && css` ${ShadowTL1} `}
+        ${props => props.boxShadowTL2 && css` ${ShadowTL2} `}
 
         /* POSITION */ 
-        ${props => props.absolute && css` ${PositionAbsolute} `}
-        ${props => props.fixed && css` ${PositionFixed} `}
-        ${props => props.relative && css` ${PositionRelative} `}
-        ${props => props.static && css` ${PositionStatic} `}
-        ${props => props.sticky && css` ${PositionSticky} `}
-        ${props => props.inherit && css` ${PositionInherit} `}
-        ${props => props.initial && css` ${PositionInitial} `}
-        ${props => props.unset && css` ${PositionUnset} `}
+        ${props => props.positionAbsolute && css` ${PositionAbsolute} `}
+        ${props => props.positionFixed && css` ${PositionFixed} `}
+        ${props => props.positionRelative && css` ${PositionRelative} `}
+        ${props => props.positionStatic && css` ${PositionStatic} `}
+        ${props => props.positionSticky && css` ${PositionSticky} `}
+        ${props => props.positionInherit && css` ${PositionInherit} `}
+        ${props => props.positionInitial && css` ${PositionInitial} `}
+        ${props => props.positionUnset && css` ${PositionUnset} `}
 
         /* MARGINS */
         /* Margin - Margin All */

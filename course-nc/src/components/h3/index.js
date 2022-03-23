@@ -28,9 +28,9 @@ import colorsText from 'components/assets/colors/colors-text'
 
 
 // ===== FONT WEIGHT ====
-    const fontWeightLighter = css ` font-weight: lighter; `
-    const fontWeightNormal = css ` font-weight: normal; `
-    const fontWeightBold = css ` font-weight: bold; `
+    const FontWeightLighter = css ` font-weight: lighter; `
+    const FontWeightNormal = css ` font-weight: normal; `
+    const FontWeightBold = css ` font-weight: bold; `
 
 // ================== PROPS EXCLUSIVES ==================
 
@@ -57,9 +57,9 @@ const H3 = styled.h3 `
     ${ props => props.fontSize10 && css ` ${ fontSize10 } `}
 
     /* WIDTH */
-    ${ props => props.lighter && css ` ${ fontWeightLighter } `}
-    ${ props => props.normal && css ` ${ fontWeightNormal } `}
-    ${ props => props.bold && css ` ${ fontWeightBold } `}
+    ${ props => props.fontWeightLighter && css ` ${ FontWeightLighter } `}
+    ${ props => props.fontWeightNormal && css ` ${ FontWeightNormal } `}
+    ${ props => props.fontWeightBold && css ` ${ FontWeightBold } `}
     /* ================== PROPS EXCLUSIVES ================== */
 
 

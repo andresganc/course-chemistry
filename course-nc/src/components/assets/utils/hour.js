@@ -2,7 +2,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 
 // NC Components base
-import Typography from '@components/typography'
+import H4 from 'components/h4'
 
 const Hour = () => {
 
@@ -18,7 +18,7 @@ const Hour = () => {
     return (
         <Fragment>
               
-            <Typography h4 textGray900> {`${dateTime.toLocaleTimeString()}`} </Typography>
+            <H4 textGray900> {`${dateTime.toLocaleTimeString()}`} </H4>
 
             {/* 
             Fecha & Hora
